@@ -1,10 +1,10 @@
 # ASSET_MANIFEST — o que é cada recurso e para que serve
 
-_Gerado por `scripts/build-asset-manifest.mjs` em 2026-10-12T11:47:15.154Z.
+_Gerado por `scripts/build-asset-manifest.mjs` em 2026-10-12T11:58:24.472Z.
 Auditoria visual realizada em 2026-10-12; evidências em [`previews/`](previews/)._
 
 **Cobertura:** 609 arquivos classificados em 113 entradas, sem sobras e sem duplicidade (validado pelo gerador).  
-**Bytes PNG:** 10.09 MB · **Status:** 50 implementado, 47 reservado, 12 nao-usado-runtime, 4 metadado
+**Bytes PNG:** 10.09 MB · **Status:** 51 implementado, 46 reservado, 12 nao-usado-runtime, 4 metadado
 
 Legenda de status: `implementado` (em uso hoje, validado em preview) · `reservado`
 (destino definido para fase futura) · `nao-usado-runtime` (fonte Spine/vetor) · `metadado`.
@@ -679,8 +679,8 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 
 - **Arquivos:** `Png/Ui and PopUp/Gams Image.png` · 744×765px
 - **O que é (verificado):** Monte de gemas verdes e moedas com brilho radial amarelo.
-- **Uso no jogo:** Arte de recompensa (popup offline, conclusão de missão/evento).
-- **Fase:** 4 · **Status:** reservado
+- **Uso no jogo:** Arte de recompensa do popup de ganhos offline (Fase 4); missões/eventos reutilizarão.
+- **Fase:** 4 · **Status:** implementado · validado em preview
 - **Chaves no código:** `src/assets/registry.ts` → ui.rewardGlow
 
 ### `ui.gemsIcon` — UI — GemsIcon

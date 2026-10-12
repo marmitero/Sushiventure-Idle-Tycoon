@@ -52,6 +52,18 @@ export class TowerScene extends Phaser.Scene {
     this.loadCars([1, 2]);
 
     this.setupPan();
+    const fresh =
+      session.state.stats.totalPlaySeconds < 3 &&
+      session.state.floors.length === 1 &&
+      Object.values(session.state.staff).every((st) => st.level === 0);
+    if (fresh) {
+      this.time.delayedCall(900, () => {
+        this.game.events.emit(
+          'ui:toast',
+          'Bem-vindo! Toque no andar bloqueado para expandir e contrate sua equipe no botão EQUIPE.',
+        );
+      });
+    }
     this.time.addEvent({
       delay: 100,
       loop: true,

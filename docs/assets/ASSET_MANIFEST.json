@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T11:47:15.154Z",
+  "generatedAt": "2026-10-12T11:58:24.472Z",
   "sourceRoot": "Sprites",
   "auditDate": "2026-10-12",
   "method": "Inspecão visual item a item (folhas de contato em docs/assets/previews/) + parser de headers PNG; nomes de arquivo NUNCA usados como única evidência.",
@@ -8,8 +8,8 @@
     "entries": 113,
     "pngBytes": 10581427,
     "byStatus": {
-      "implementado": 50,
-      "reservado": 47,
+      "implementado": 51,
+      "reservado": 46,
       "nao-usado-runtime": 12,
       "metadado": 4
     }
@@ -4485,10 +4485,10 @@
       "category": "UI",
       "kind": "static",
       "visual": "Monte de gemas verdes e moedas com brilho radial amarelo.",
-      "role": "Arte de recompensa (popup offline, conclusão de missão/evento).",
+      "role": "Arte de recompensa do popup de ganhos offline (Fase 4); missões/eventos reutilizarão.",
       "phase": "4",
-      "status": "reservado",
-      "validated": false,
+      "status": "implementado",
+      "validated": true,
       "registry": [
         "ui.rewardGlow"
       ],

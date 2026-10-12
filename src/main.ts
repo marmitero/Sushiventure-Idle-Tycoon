@@ -21,6 +21,7 @@ async function bootstrap(): Promise<void> {
     analytics: services.analytics,
   });
   setSession(session);
+  session.evaluatePendingOffline(Date.now());
 
   // Persistence lifecycle hooks (constitution 18.3): never lose progress on
   // tab switch / reload / app switch.

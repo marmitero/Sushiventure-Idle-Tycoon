@@ -105,6 +105,14 @@ A v2 da camada de equipe (perLevel 0.25/0.15/0.20/0.10 com growth 2.2-2.5)
 maxava a torre em 12h e foi rejeitada pela simulação; os valores atuais mantêm
 a cauda de progressão em dias, com a equipe acelerando sem dominar.
 
+## 6.1 Ganhos offline
+
+`offlineGain = OfflineRatePerSec × 0.5 × min(elapsed, 2h)`, onde
+`OfflineRatePerSec` usa as camadas de produção (escopos de equipe, cozinha,
+entregas, caixa) **sem** a camada de boost online. Concessão única por ausência
+via receipt `offline-<lastSeenAt>`; piso de elegibilidade 30s; cap 2h (Fase 6
+poderá ampliá-lo com Pontos de Sucesso). Testes: `tests/offline.test.ts`.
+
 ## 7. Explorações conhecidas e proteções
 
 - Salto de relógio/aba em background: `tick` limita dt a 60s por chamada

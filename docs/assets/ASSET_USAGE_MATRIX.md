@@ -1,6 +1,6 @@
 # ASSET_USAGE_MATRIX
 
-_Gerado a partir de `ASSET_MANIFEST.json` em 2026-10-12T11:47:15.154Z.
+_Gerado a partir de `ASSET_MANIFEST.json` em 2026-10-12T11:58:24.472Z.
 Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 
 | Entrada | Categoria | Destino no jogo | Fase | Status | Validado |
@@ -85,7 +85,7 @@ Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 | `ui.btnVibraOff` | UI | Estado off da vibração | 11 | reservado | — |
 | `ui.coinIcon` | UI | Ícone de dinheiro na HUD | 2 | implementado | ✅ |
 | `ui.contentBox` | UI | Fundo das linhas do painel de melhorias | 2 | implementado | ✅ |
-| `ui.rewardGlow` | UI | Arte de recompensa (popup offline, conclusão de missão/evento) | 4 | reservado | — |
+| `ui.rewardGlow` | UI | Arte de recompensa do popup de ganhos offline (Fase 4); missões/eventos reutilizarão | 4 | implementado | ✅ |
 | `ui.gemsIcon` | UI | Ícone de moeda premium (somente se/quando existir) | 9 | reservado | — |
 | `ui.gemsPlus` | UI | Botão "comprar mais gemas" ao lado do saldo premium | 9 | reservado | — |
 | `ui.hubAreaBar` | UI | Barra de área/hub do jogador na tela de cidades | 6 | reservado | — |

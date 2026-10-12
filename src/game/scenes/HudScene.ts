@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { ASSETS, keyFor } from '../../assets/registry';
 import { BALANCE } from '../../core/config/balance';
+import type { OfflineQuote } from '../../core/offline';
 import {
   cashierUpgradeCost,
   floorBaseRevenue,
@@ -49,6 +50,8 @@ export class HudScene extends Phaser.Scene {
   private coinBar!: Phaser.GameObjects.Image;
   private coinIcon!: Phaser.GameObjects.Image;
   private buttons: KitButton[] = [];
+  private mapLock!: Phaser.GameObjects.Image;
+  private shopLock!: Phaser.GameObjects.Image;
   private panelObjects: Phaser.GameObjects.GameObject[] = [];
   private panelOpen = false;
   private panelFocus = 'unlock';
@@ -70,8 +73,10 @@ export class HudScene extends Phaser.Scene {
     this.buildBoostChip();
 
     this.game.events.on('ui:open-upgrades', this.openUpgrades, this);
+    this.game.events.on('ui:toast', this.onToastEvent, this);
     this.events.once('shutdown', () => {
       this.game.events.off('ui:open-upgrades', this.openUpgrades, this);
+      this.game.events.off('ui:toast', this.onToastEvent, this);
     });
 
     const session = getSession();
@@ -87,6 +92,106 @@ export class HudScene extends Phaser.Scene {
     this.time.addEvent({ delay: 250, loop: true, callback: () => this.refreshAffordability() });
     this.input.on('wheel', this.onWheel);
     this.layout();
+    if (session.pendingOffline) this.showOfflinePopup(session.pendingOffline);
+  }
+
+  // --------------------------------------------------------- offline popup
+  private offlineObjects: Phaser.GameObjects.GameObject[] = [];
+
+  private showOfflinePopup(quote: OfflineQuote): void {
+    const session = getSession();
+    const w = this.scale.width;
+    const h = this.scale.height;
+    const pw = Math.min(w - 32, 460);
+    const ph = 470;
+    const dim = this.add.rectangle(w / 2, h / 2, w, h, 0x000000, 0.55).setDepth(DEPTH_PANEL - 1);
+    dim.setInteractive(new Phaser.Geom.Rectangle(0, 0, w, h), Phaser.Geom.Rectangle.Contains);
+    const box = panel(this, w / 2, h / 2, keyFor(ASSETS.ui.popUpBox), pw, ph, DEPTH_PANEL);
+    const glow = this.add
+      .image(w / 2, h / 2 - ph / 2 + 96, keyFor(ASSETS.ui.rewardGlow))
+      .setDepth(DEPTH_PANEL + 1)
+      .setDisplaySize(120, 120);
+    const title = kitText(this, w / 2, h / 2 - ph / 2 + 34, 'BEM-VINDO DE VOLTA!', {
+      size: 28,
+      color: '#4a2c17',
+      stroke: '#fff3d6',
+      strokeThickness: 5,
+    }).setDepth(DEPTH_PANEL + 1);
+    const capSeconds = BALANCE.offline.baseCapSeconds;
+    const lines = [
+      `Tempo ausente: ${formatDuration(quote.elapsedSeconds)}`,
+      quote.capped
+        ? `Contado: ${formatDuration(quote.countedSeconds)} (limite ${formatDuration(capSeconds)})`
+        : `Contado: ${formatDuration(quote.countedSeconds)}`,
+      `Receita offline: ${formatRate(quote.ratePerSec)} × ${(BALANCE.offline.rate * 100).toFixed(0)}%`,
+    ];
+    const body = kitText(this, w / 2, h / 2 - 40, lines.join('\n'), {
+      size: 18,
+      color: '#6b4a2c',
+      stroke: '#fff8ec',
+      strokeThickness: 3,
+    }).setDepth(DEPTH_PANEL + 1);
+    const total = kitText(this, w / 2, h / 2 + 40, formatMoney(quote.gain), {
+      size: 34,
+      color: '#2f6b1f',
+      stroke: '#fff8ec',
+      strokeThickness: 6,
+    }).setDepth(DEPTH_PANEL + 1);
+
+    const double = new KitButton({
+      scene: this,
+      x: w / 2 - 90,
+      y: h / 2 + ph / 2 - 70,
+      texture: keyFor(ASSETS.ui.btnBoost),
+      pressedTexture: keyFor(ASSETS.ui.btnBoostPressed),
+      width: 120,
+      height: 60,
+      label: '×2',
+      labelStyle: { size: 22, color: '#ffffff', stroke: '#7a3c14', strokeThickness: 5 },
+      onDown: () => {
+        void session.requestOfflineDouble().then((res) => {
+          this.showToast(res.message);
+          if (session.offlineDoubleReserved) {
+            double.setEnabled(false, '×2 reservado: toque em COLETAR para aplicar.');
+            total.setText(formatMoney(quote.gain.mulNumber(2)));
+          }
+        });
+      },
+    }).setDepth(DEPTH_PANEL + 2);
+    const collect = new KitButton({
+      scene: this,
+      x: w / 2 + 90,
+      y: h / 2 + ph / 2 - 70,
+      texture: keyFor(ASSETS.ui.btnGreen),
+      pressedTexture: keyFor(ASSETS.ui.btnGreenPressed),
+      width: 150,
+      height: 62,
+      label: 'COLETAR',
+      labelStyle: { size: 22, color: '#ffffff', stroke: '#2f6b1f', strokeThickness: 5 },
+      onDown: () => {
+        const res = session.collectOffline();
+        this.showToast(res.message);
+        this.closeOfflinePopup();
+      },
+    }).setDepth(DEPTH_PANEL + 2);
+
+    this.offlineObjects = [
+      dim,
+      box,
+      glow,
+      title,
+      body,
+      total,
+      double.image,
+      collect.image,
+      ...(double.label ? [double.label] : []),
+      ...(collect.label ? [collect.label] : []),
+    ];
+  }
+
+  private closeOfflinePopup(): void {
+    for (const obj of this.offlineObjects) obj.destroy();
+    this.offlineObjects = [];
   }
 
   // ------------------------------------------------------------------- bars
@@ -143,8 +248,12 @@ export class HudScene extends Phaser.Scene {
       height: 72,
     })
       .setDepth(DEPTH_HUD)
-      .setEnabled(false, 'Mapa de cidades chega na Fase 6.');
+      .setEnabled(false, 'Mapa de cidades chega na Fase 6 (toque para ver os requisitos).');
     map.setOnDisabledClick((reason) => this.showToast(reason));
+    this.mapLock = this.add
+      .image(0, 0, keyFor(ASSETS.mapLock))
+      .setDepth(DEPTH_HUD + 1)
+      .setDisplaySize(30, 36);
 
     const shop = new KitButton({
       scene: this,
@@ -155,8 +264,12 @@ export class HudScene extends Phaser.Scene {
       height: 72,
     })
       .setDepth(DEPTH_HUD)
-      .setEnabled(false, 'Loja premium indisponível: nenhum pagamento configurado.');
+      .setEnabled(false, 'Loja premium: nenhum pagamento configurado neste ambiente (Fase 9).');
     shop.setOnDisabledClick((reason) => this.showToast(reason));
+    this.shopLock = this.add
+      .image(0, 0, keyFor(ASSETS.mapLock))
+      .setDepth(DEPTH_HUD + 1)
+      .setDisplaySize(30, 36);
 
     const equipe = new KitButton({
       scene: this,
@@ -217,6 +330,8 @@ export class HudScene extends Phaser.Scene {
     boostIcon?.setPosition(w - 150, bottom - 6);
     map?.setPosition(24 + 37, bottom - 6);
     shop?.setPosition(24 + 37 + 84, bottom - 6);
+    this.mapLock?.setPosition(24 + 37 + 22, bottom - 6 - 24);
+    this.shopLock?.setPosition(24 + 37 + 84 + 22, bottom - 6 - 24);
   }
 
   override update(): void {
@@ -235,6 +350,10 @@ export class HudScene extends Phaser.Scene {
   }
 
   // ------------------------------------------------------------------ toast
+  private onToastEvent = (message: string): void => {
+    this.showToast(message);
+  };
+
   private showToast(message: string): void {
     this.toast?.destroy();
     this.toast = kitText(this, this.scale.width / 2, this.scale.height * 0.3, message, {
@@ -567,18 +686,37 @@ export class HudScene extends Phaser.Scene {
       (v) => session.setSettings({ reducedMotion: v }),
       -80,
     );
-    const t2 = makeToggle(
-      'Efeitos sonoros',
-      () => session.state.settings.sound,
-      (v) => session.setSettings({ sound: v }),
+    // Audio: the official kit ships NO sound files. Presenting working-looking
+    // toggles would be a decorative control (constitution §23), so these rows
+    // are honestly disabled with the kit's own off-art and an explanation.
+    const audioRow = (label: string, texture: string, dy: number, reason: string): KitButton =>
+      new KitButton({
+        scene: this,
+        x: w / 2,
+        y: h / 2 + dy,
+        texture,
+        width: 56,
+        height: 54,
+        label,
+        labelStyle: { size: 17, color: '#7a5a3a', stroke: '#fff8ec', strokeThickness: 3 },
+      })
+        .setDepth(DEPTH_PANEL + 1)
+        .setEnabled(false, reason)
+        .setOnDisabledClick((r) => this.showToast(r));
+    const t2 = audioRow(
+      'SOM: INDISPONÍVEL',
+      keyFor(ASSETS.ui.btnSoundOff),
       -10,
+      'O kit oficial não inclui áudio; efeitos sonoros entram na Fase 10 com recurso real.',
     );
-    const t3 = makeToggle(
-      'Música',
-      () => session.state.settings.music,
-      (v) => session.setSettings({ music: v }),
+    const t3 = audioRow(
+      'MÚSICA: INDISPONÍVEL',
+      keyFor(ASSETS.ui.btnMusicOff),
       60,
+      'O kit oficial não inclui áudio; música entra na Fase 10 com recurso real.',
     );
+    t2.label?.setX(w / 2 + 60);
+    t3.label?.setX(w / 2 + 60);
     const close = new KitButton({
       scene: this,
       x: w / 2 + pw / 2 - 36,

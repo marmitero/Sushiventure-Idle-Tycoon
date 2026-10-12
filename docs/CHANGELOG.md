@@ -2,6 +2,29 @@
 
 Formato: datas + fases, com evidências. Detalhes operacionais em `AI_STATE.md`.
 
+## 2026-10-12 — Correções de honestidade de UI (relato de QA do diretor)
+
+- Toggles de som/música apresentados como funcionais sem recurso de áudio
+  (controle decorativo, violação da §23) → substituídos por linhas
+  honestamente desativadas com a arte off oficial do kit e motivo ao tocar.
+- Botões de serviço não configurado (mapa/loja) deixam o tint cinza genérico e
+  passam a exibir o cadeado oficial do kit (`map.lock`) + motivo ao tocar.
+- Dica de primeiro uso orienta andar bloqueado e botão EQUIPE (evita leitura
+  de "torre vazia" como placeholder).
+- Classificação registrada no manifesto: `map.lock` e `ui.rewardGlow` →
+  `implementado`.
+
+## 2026-10-12 — Fase 4: ganhos offline
+
+- Cálculo fechado (sem simular segundo a segundo): rate offline sem camada de
+  boost, piso de 30s, cap de 2h, relógio regressivo → 0.
+- Popup composto com `PopUp_Box` + `Gams Image`: ausência, tempo contado,
+  receita, total, COLETAR e ×2 por anúncio (só após completed do provedor).
+- Integridade: receipt `offline-<lastSeenAt>` + carimbo de `lastSeenAt` no
+  mesmo passo atômico; reload/reabrir não paga duas vezes (testado, inclusive
+  fluxo de sessão com repositório e reload).
+- 8 testes novos; total 62. Manifesto e docs sincronizados.
+
 ## 2026-10-12 — Fase 3: funcionários, elevador e entregas
 
 - Equipe com 4 papéis de escopos econômicos distintos (térreo / andares

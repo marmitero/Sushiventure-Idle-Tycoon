@@ -1,4 +1,6 @@
+import { Decimal } from '../core/decimal';
 import { moneyOf, revenuePerSec } from '../core/economy';
+import { computeOffline, type OfflineQuote } from '../core/offline';
 import * as ops from '../core/ops';
 import type { GameState, Result, StaffId } from '../core/state/types';
 import type { SaveManager } from '../persistence/saveManager';
@@ -127,6 +129,66 @@ export class GameSession {
         (b) => b.kind === 'revenue_x2' && b.startedAt <= now && b.startedAt + b.durationSeconds * 1000 > now,
       ) ?? null
     );
+  }
+
+  // ------------------------------------------------------------ offline gains
+  /** Computed once per load; never applied until the player collects. */
+  pendingOffline: OfflineQuote | null = null;
+  private pendingDoubleReceipt: string | null = null;
+
+  evaluatePendingOffline(now: number): OfflineQuote | null {
+    if (this.pendingOffline) return this.pendingOffline;
+    const quote = computeOffline(this.state, now);
+    if (quote.eligible && !this.state.consumedReceipts.includes(quote.receiptId)) {
+      this.pendingOffline = quote;
+    }
+    return this.pendingOffline;
+  }
+
+  /** Dev/prod-safe: asks the provider first; only a completed view doubles. */
+  async requestOfflineDouble(): Promise<{ ok: boolean; message: string }> {
+    if (!this.pendingOffline) return { ok: false, message: 'Nada pendente para dobrar.' };
+    const result = await this.services.ads.showRewarded('offline_double');
+    if (result.status === 'unavailable') return { ok: false, message: result.reason };
+    if (result.status === 'cancelled') return { ok: false, message: 'Anúncio fechado antes do final.' };
+    if (result.status === 'error') return { ok: false, message: result.reason };
+    if (this.state.consumedReceipts.includes(result.receiptId)) {
+      return { ok: false, message: 'Recompensa já utilizada.' };
+    }
+    this.pendingDoubleReceipt = result.receiptId;
+    this.services.analytics.track('offline_double_reserved', { source: this.services.ads.id });
+    return { ok: true, message: 'Recompensa ×2 reservada: colete para aplicar.' };
+  }
+
+  get offlineDoubleReserved(): boolean {
+    return this.pendingDoubleReceipt != null;
+  }
+
+  collectOffline(): { ok: boolean; message: string; gain: Decimal } {
+    const quote = this.pendingOffline;
+    if (!quote) return { ok: false, message: 'Nada para coletar.', gain: Decimal.ZERO };
+    const doubled = this.pendingDoubleReceipt != null;
+    const gain = doubled ? quote.gain.mulNumber(2) : quote.gain;
+    const result = ops.applyOfflineGain(this.state, {
+      gain,
+      now: this.now(),
+      receiptId: quote.receiptId,
+    });
+    if (!result.ok) return { ok: false, message: result.reason, gain: Decimal.ZERO };
+    let next = result.value;
+    if (doubled && this.pendingDoubleReceipt) {
+      next = {
+        ...next,
+        consumedReceipts: [...next.consumedReceipts, this.pendingDoubleReceipt].slice(-200),
+      };
+    }
+    this.state = next;
+    this.save.adopt(this.state);
+    this.pendingOffline = null;
+    this.pendingDoubleReceipt = null;
+    this.services.analytics.track('offline_collected', { doubled });
+    this.emit('offline_collected');
+    return { ok: true, message: doubled ? 'Ganhos offline dobrados!' : 'Ganhos offline coletados.', gain };
   }
 
   async flush(force = false): Promise<boolean> {

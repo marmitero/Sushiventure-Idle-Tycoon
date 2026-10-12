@@ -82,6 +82,27 @@ export function upgradeCashier(state: GameState): Result<GameState> {
   return ok(next);
 }
 
+/**
+ * Applies offline gains for one absence window, exactly once:
+ * the receipt `offline-<lastSeenAt>` is consumed and `lastSeenAt` is stamped
+ * in the same atomic step, so reloads/reopens cannot pay twice (rule 8).
+ */
+export function applyOfflineGain(
+  state: GameState,
+  params: { gain: Decimal; now: number; receiptId: string },
+): Result<GameState> {
+  if (state.consumedReceipts.includes(params.receiptId)) {
+    return fail('Offline gains already collected for this absence');
+  }
+  if (params.gain.lt(Decimal.ZERO)) return fail('Invalid offline gain');
+  const next = earn(state, params.gain);
+  return ok({
+    ...next,
+    lastSeenAt: params.now,
+    consumedReceipts: [...next.consumedReceipts, params.receiptId].slice(-200),
+  });
+}
+
 /** Hires a staff member (level 0 → 1): atomic debit + effect. */
 export function hireStaff(state: GameState, id: StaffId): Result<GameState> {
   if (!STAFF_IDS.includes(id)) return fail('Unknown staff role');

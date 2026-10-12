@@ -449,7 +449,7 @@ export const SPEC = [
     ['ui.btnVibraOff', 'Btn_Vibra_Off.png', 'btnVibraOff', 'Mesmo botão cortado (off).', 'Estado off da vibração.', '11', 'reservado'],
     ['ui.coinIcon', 'CoinIcon.png', 'coinIcon', 'Moeda amarela com cifrão.', 'Ícone de dinheiro na HUD.', '2', 'implementado'],
     ['ui.contentBox', 'ContentBox.png', 'contentBox', 'Barra pêssego clara com um ponto escuro à esquerda (linha de conteúdo com marcador).', 'Fundo das linhas do painel de melhorias.', '2', 'implementado'],
-    ['ui.rewardGlow', 'Gams Image.png', 'rewardGlow', 'Monte de gemas verdes e moedas com brilho radial amarelo.', 'Arte de recompensa (popup offline, conclusão de missão/evento).', '4', 'reservado'],
+    ['ui.rewardGlow', 'Gams Image.png', 'rewardGlow', 'Monte de gemas verdes e moedas com brilho radial amarelo.', 'Arte de recompensa do popup de ganhos offline (Fase 4); missões/eventos reutilizarão.', '4', 'implementado'],
     ['ui.gemsIcon', 'GemsIcon.png', 'gemsIcon', 'Gema verde facetada.', 'Ícone de moeda premium (somente se/quando existir).', '9', 'reservado'],
     ['ui.gemsPlus', 'GemsPlusBar.png', 'gemsPlus', 'Quadrado verde escuro com sinal de + branco.', 'Botão "comprar mais gemas" ao lado do saldo premium.', '9', 'reservado'],
     ['ui.hubAreaBar', 'HubAreaBar.png', 'hubAreaBar', 'Barra verde escura com mapa aparecendo no topo e pino laranja.', 'Barra de área/hub do jogador na tela de cidades.', '6', 'reservado'],

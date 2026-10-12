@@ -3,8 +3,8 @@
 > Estado operacional real do projeto. Atualizado no início e no fim de cada etapa.
 > Nada aqui é marcado como concluído sem evidência (teste, build, push ou preview).
 
-- **Fase atual:** 4 em diante (Fases 0-3 concluídas e validadas)
-- **Última etapa concluída:** Fase 3 — funcionários, elevador e entregas
+- **Fase atual:** 5 em diante (Fases 0-4 concluídas e validadas)
+- **Última etapa concluída:** Fase 4 — ganhos offline + correções de honestidade de UI
 - **Branch:** `arena/a8701903-sushiventure-idle-tycoon`
 - **Último commit relevante:** `64c3d1e` (Fases 0-2)
 - **Estado do push:** ✅ publicado em `origin/arena/a8701903-sushiventure-idle-tycoon`
@@ -29,10 +29,12 @@
 | Elevador com eficiência derivada do operador | Implementado | `elevatorTripMs`, tween do lift guy |
 | Entregas com veículos lazy-load (variantes 1-2) | Implementado | `vehicleIntervalSec`, tráfego na rua (preview) |
 | Migração de save v1 → v2 (bloco staff) | Implementado + testado | `tests/persistence.test.ts` |
+| Ganhos offline (cap 2h, piso 30s, concessão única, popup do kit) | Implementado + testado | `tests/offline.test.ts`, popup no preview |
+| Correções de honestidade: toggles de áudio desativados com motivo; cadeado oficial em serviços bloqueados; dica de primeiro uso | Implementado | preview + CHANGELOG |
 
 ## Funcionalidades testadas
 
-- 54 testes Vitest passando (`npx vitest run`): 4 de consistência do manifesto, 8 de funcionários/ops de equipe, 2 de migração v1→v2, demais de decimal/economia/ops/persistência/registry.
+- 62 testes Vitest passando (`npx vitest run`): 8 de offline (cota, cap, relógio, idempotência, fluxo de sessão com reload), 4 de consistência do manifesto, 8 de equipe, 2 de migração v1→v2, demais de decimal/economia/ops/persistência/registry.
 - Typecheck estrito passando (`npx tsc --noEmit`).
 - Build de produção passando (`npm run build`).
 - Simulação de 12h executada com marcos medidos (ver `docs/GAME_DESIGN/ECONOMY.md` §6).
@@ -80,7 +82,7 @@
 ## Próximas tarefas (prioridade)
 
 1. Validação visual do diretor no preview: elenco contratado, elevador e tráfego de entregas.
-2. Fase 4 — ganhos offline com popup do kit, cap e proteção contra duplicidade.
+2. Fase 5 — receitas, reputação, clientes especiais, missões e conquistas.
 2. Fase 4 — ganhos offline com popup do kit e proteção contra duplicidade.
 3. Fase 5 — receitas, reputação, missões e conquistas.
 4. Atlas packing das sequências de frames (débito de performance).

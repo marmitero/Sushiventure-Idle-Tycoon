@@ -13,7 +13,7 @@
 | `city` | `{id, run}` | Fase 6 usará `id` p/ configurações de cidade |
 | `prestigePoints`, `prestigesCompleted` | `{m,e}` / number | Fase 6 |
 | `boosts[]` | `{id, kind, startedAt, durationSeconds, grantSource}` | início/término persistentes |
-| `consumedReceipts[]` | string[] | idempotência de recompensas (máx. 200) |
+| `consumedReceipts[]` | string[] | idempotência de recompensas (máx. 200); inclui `offline-<lastSeenAt>` e receipts de anúncio |
 | `settings` | `{reducedMotion, sound, music}` | apenas opções com efeito real |
 | `stats` | `{totalPlaySeconds, floorsUnlocked, cashierUpgrades}` | auditoria/missões |
 
