@@ -6,8 +6,8 @@
 - **Fase atual:** 3 em diante (Fases 0, 1 e 2 concluídas e validadas)
 - **Última etapa concluída:** Fase 2 — loop econômico e progressão inicial
 - **Branch:** `arena/a8701903-sushiventure-idle-tycoon`
-- **Último commit relevante:** _(ver `git log`; atualizado a cada push)_
-- **Estado do push:** pendente do commit desta etapa (registrado ao final)
+- **Último commit relevante:** `64c3d1e` (Fases 0-2)
+- **Estado do push:** ✅ publicado em `origin/arena/a8701903-sushiventure-idle-tycoon`
 
 ## Funcionalidades implementadas
 
