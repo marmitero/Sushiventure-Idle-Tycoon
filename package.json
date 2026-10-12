@@ -1,0 +1,35 @@
+{
+  "name": "sushiventure-idle-tycoon",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Sushiventure Idle Tycoon - idle/tycoon de restaurante de sushi com torre vertical (Phaser 3 + TypeScript + Vite)",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "assets": "node scripts/sync-assets.mjs",
+    "predev": "npm run assets",
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "prebuild": "npm run assets",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "typecheck": "tsc --noEmit",
+    "pretest": "npm run assets",
+    "test": "vitest run",
+    "presim": "tsc -p tsconfig.sim.json",
+    "test:watch": "vitest",
+    "sim": "node scripts/simulate-progress.mjs",
+    "validate": "npm run typecheck && npm run test && npm run build",
+    "docs:assets": "node scripts/gen-asset-docs.mjs"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}

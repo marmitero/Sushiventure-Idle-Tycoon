@@ -1,0 +1,522 @@
+path,width,height,bytes
+"png/Backgrounds/Backgrounds.png",1904,3118,117064
+"png/Backgrounds/Clouds.png",791,283,10204
+"png/Cars/Car1/Idle/Cars-Car1_Idle_00.png",240,168,25740
+"png/Cars/Car1/Idle/Cars-Car1_Idle_01.png",240,168,23128
+"png/Cars/Car1/Idle/Cars-Car1_Idle_02.png",240,168,25319
+"png/Cars/Car1/Idle/Cars-Car1_Idle_03.png",240,168,25649
+"png/Cars/Car1/Idle/Cars-Car1_Idle_04.png",240,168,24071
+"png/Cars/Car1/Idle/Cars-Car1_Idle_05.png",240,168,25298
+"png/Cars/Car1/Idle/Cars-Car1_Idle_06.png",240,168,25511
+"png/Cars/Car1/Idle/Cars-Car1_Idle_07.png",240,168,24685
+"png/Cars/Car1/Idle/Cars-Car1_Idle_08.png",240,168,25219
+"png/Cars/Car1/Idle/Cars-Car1_Idle_09.png",240,168,25436
+"png/Cars/Car1/Idle/Cars-Car1_Idle_10.png",240,168,24913
+"png/Cars/Car1/Idle/Cars-Car1_Idle_11.png",240,168,25436
+"png/Cars/Car1/Idle/Cars-Car1_Idle_12.png",240,168,25219
+"png/Cars/Car1/Idle/Cars-Car1_Idle_13.png",240,168,24685
+"png/Cars/Car1/Idle/Cars-Car1_Idle_14.png",240,168,25511
+"png/Cars/Car1/Idle/Cars-Car1_Idle_15.png",240,168,25298
+"png/Cars/Car1/Idle/Cars-Car1_Idle_16.png",240,168,24071
+"png/Cars/Car1/Idle/Cars-Car1_Idle_17.png",240,168,25649
+"png/Cars/Car1/Idle/Cars-Car1_Idle_18.png",240,168,25319
+"png/Cars/Car1/Idle/Cars-Car1_Idle_19.png",240,168,23128
+"png/Cars/Car1/Move/Cars-Car1_Move_00.png",236,167,25655
+"png/Cars/Car1/Move/Cars-Car1_Move_01.png",236,167,24822
+"png/Cars/Car1/Move/Cars-Car1_Move_02.png",236,167,25733
+"png/Cars/Car1/Move/Cars-Car1_Move_03.png",236,167,24986
+"png/Cars/Car1/Move/Cars-Car1_Move_04.png",236,167,25323
+"png/Cars/Car1/Move/Cars-Car1_Move_05.png",236,167,25247
+"png/Cars/Car1/Move/Cars-Car1_Move_06.png",236,167,25110
+"png/Cars/Car1/Move/Cars-Car1_Move_07.png",236,167,25454
+"png/Cars/Car1/Move/Cars-Car1_Move_08.png",236,167,25121
+"png/Cars/Car1/Move/Cars-Car1_Move_09.png",236,167,25096
+"png/Cars/Car1/Move/Cars-Car1_Move_10.png",236,167,25184
+"png/Cars/Car1/Move/Cars-Car1_Move_11.png",236,167,25076
+"png/Cars/Car1/Move/Cars-Car1_Move_12.png",236,167,25090
+"png/Cars/Car1/Move/Cars-Car1_Move_13.png",236,167,25409
+"png/Cars/Car1/Move/Cars-Car1_Move_14.png",236,167,25040
+"png/Cars/Car1/Move/Cars-Car1_Move_15.png",236,167,25178
+"png/Cars/Car1/Move/Cars-Car1_Move_16.png",236,167,25273
+"png/Cars/Car1/Move/Cars-Car1_Move_17.png",236,167,24918
+"png/Cars/Car1/Move/Cars-Car1_Move_18.png",236,167,25673
+"png/Cars/Car1/Move/Cars-Car1_Move_19.png",236,167,24758
+"png/Cars/Car1/Move/Cars-Car1_Move_20.png",236,167,25623
+"png/Cars/Car1/Move/Cars-Car1_Move_21.png",236,167,24752
+"png/Cars/Car1/Move/Cars-Car1_Move_22.png",236,167,25668
+"png/Cars/Car1/Move/Cars-Car1_Move_23.png",236,167,24934
+"png/Cars/Car1/Move/Cars-Car1_Move_24.png",236,167,25257
+"png/Cars/Car1/Move/Cars-Car1_Move_25.png",236,167,25178
+"png/Cars/Car1/Move/Cars-Car1_Move_26.png",236,167,25048
+"png/Cars/Car1/Move/Cars-Car1_Move_27.png",236,167,25414
+"png/Cars/Car1/Move/Cars-Car1_Move_28.png",236,167,25072
+"png/Cars/Car1/Move/Cars-Car1_Move_29.png",236,167,25066
+"png/Cars/Car1/Move/Cars-Car1_Move_30.png",236,167,25170
+"png/Cars/Car1/Move/Cars-Car1_Move_31.png",236,167,25093
+"png/Cars/Car1/Move/Cars-Car1_Move_32.png",236,167,25115
+"png/Cars/Car1/Move/Cars-Car1_Move_33.png",236,167,25443
+"png/Cars/Car1/Move/Cars-Car1_Move_34.png",236,167,25088
+"png/Cars/Car1/Move/Cars-Car1_Move_35.png",236,167,25229
+"png/Cars/Car1/Move/Cars-Car1_Move_36.png",236,167,25312
+"png/Cars/Car1/Move/Cars-Car1_Move_37.png",236,167,24969
+"png/Cars/Car1/Move/Cars-Car1_Move_38.png",236,167,25713
+"png/Cars/Car1/Move/Cars-Car1_Move_39.png",236,167,24802
+"png/Cars/Car2/Idle/Cars-Car2_Idle_00.png",240,160,21475
+"png/Cars/Car2/Idle/Cars-Car2_Idle_01.png",240,160,22014
+"png/Cars/Car2/Idle/Cars-Car2_Idle_02.png",240,160,21930
+"png/Cars/Car2/Idle/Cars-Car2_Idle_03.png",240,160,20510
+"png/Cars/Car2/Idle/Cars-Car2_Idle_04.png",240,160,21953
+"png/Cars/Car2/Idle/Cars-Car2_Idle_05.png",240,160,21892
+"png/Cars/Car2/Idle/Cars-Car2_Idle_06.png",240,160,20397
+"png/Cars/Car2/Idle/Cars-Car2_Idle_07.png",240,160,21840
+"png/Cars/Car2/Idle/Cars-Car2_Idle_08.png",240,160,21919
+"png/Cars/Car2/Idle/Cars-Car2_Idle_09.png",240,160,21275
+"png/Cars/Car2/Idle/Cars-Car2_Idle_10.png",240,160,21832
+"png/Cars/Car2/Idle/Cars-Car2_Idle_11.png",240,160,21275
+"png/Cars/Car2/Idle/Cars-Car2_Idle_12.png",240,160,21919
+"png/Cars/Car2/Idle/Cars-Car2_Idle_13.png",240,160,21840
+"png/Cars/Car2/Idle/Cars-Car2_Idle_14.png",240,160,20397
+"png/Cars/Car2/Idle/Cars-Car2_Idle_15.png",240,160,21892
+"png/Cars/Car2/Idle/Cars-Car2_Idle_16.png",240,160,21953
+"png/Cars/Car2/Idle/Cars-Car2_Idle_17.png",240,160,20510
+"png/Cars/Car2/Idle/Cars-Car2_Idle_18.png",240,160,21930
+"png/Cars/Car2/Idle/Cars-Car2_Idle_19.png",240,160,22014
+"png/Cars/Car2/Move/Cars-Car2_Move_00.png",236,160,21376
+"png/Cars/Car2/Move/Cars-Car2_Move_01.png",236,160,22037
+"png/Cars/Car2/Move/Cars-Car2_Move_02.png",236,160,21680
+"png/Cars/Car2/Move/Cars-Car2_Move_03.png",236,160,21728
+"png/Cars/Car2/Move/Cars-Car2_Move_04.png",236,160,21804
+"png/Cars/Car2/Move/Cars-Car2_Move_05.png",236,160,21793
+"png/Cars/Car2/Move/Cars-Car2_Move_06.png",236,160,21809
+"png/Cars/Car2/Move/Cars-Car2_Move_07.png",236,160,21699
+"png/Cars/Car2/Move/Cars-Car2_Move_08.png",236,160,21544
+"png/Cars/Car2/Move/Cars-Car2_Move_09.png",236,160,21563
+"png/Cars/Car2/Move/Cars-Car2_Move_10.png",236,160,21600
+"png/Cars/Car2/Move/Cars-Car2_Move_11.png",236,160,21551
+"png/Cars/Car2/Move/Cars-Car2_Move_12.png",236,160,21501
+"png/Cars/Car2/Move/Cars-Car2_Move_13.png",236,160,21656
+"png/Cars/Car2/Move/Cars-Car2_Move_14.png",236,160,21748
+"png/Cars/Car2/Move/Cars-Car2_Move_15.png",236,160,21724
+"png/Cars/Car2/Move/Cars-Car2_Move_16.png",236,160,21718
+"png/Cars/Car2/Move/Cars-Car2_Move_17.png",236,160,21660
+"png/Cars/Car2/Move/Cars-Car2_Move_18.png",236,160,21598
+"png/Cars/Car2/Move/Cars-Car2_Move_19.png",236,160,21967
+"png/Cars/Car2/Move/Cars-Car2_Move_20.png",236,160,21303
+"png/Cars/Car2/Move/Cars-Car2_Move_21.png",236,160,21975
+"png/Cars/Car2/Move/Cars-Car2_Move_22.png",236,160,21598
+"png/Cars/Car2/Move/Cars-Car2_Move_23.png",236,160,21668
+"png/Cars/Car2/Move/Cars-Car2_Move_24.png",236,160,21721
+"png/Cars/Car2/Move/Cars-Car2_Move_25.png",236,160,21714
+"png/Cars/Car2/Move/Cars-Car2_Move_26.png",236,160,21755
+"png/Cars/Car2/Move/Cars-Car2_Move_27.png",236,160,21658
+"png/Cars/Car2/Move/Cars-Car2_Move_28.png",236,160,21515
+"png/Cars/Car2/Move/Cars-Car2_Move_29.png",236,160,21530
+"png/Cars/Car2/Move/Cars-Car2_Move_30.png",236,160,21577
+"png/Cars/Car2/Move/Cars-Car2_Move_31.png",236,160,21551
+"png/Cars/Car2/Move/Cars-Car2_Move_32.png",236,160,21551
+"png/Cars/Car2/Move/Cars-Car2_Move_33.png",236,160,21697
+"png/Cars/Car2/Move/Cars-Car2_Move_34.png",236,160,21790
+"png/Cars/Car2/Move/Cars-Car2_Move_35.png",236,160,21771
+"png/Cars/Car2/Move/Cars-Car2_Move_36.png",236,160,21798
+"png/Cars/Car2/Move/Cars-Car2_Move_37.png",236,160,21725
+"png/Cars/Car2/Move/Cars-Car2_Move_38.png",236,160,21669
+"png/Cars/Car2/Move/Cars-Car2_Move_39.png",236,160,22035
+"png/Cars/Car3/Idle/Cars-Car3_Idle_00.png",240,158,24969
+"png/Cars/Car3/Idle/Cars-Car3_Idle_01.png",240,158,25556
+"png/Cars/Car3/Idle/Cars-Car3_Idle_02.png",240,158,25491
+"png/Cars/Car3/Idle/Cars-Car3_Idle_03.png",240,158,25123
+"png/Cars/Car3/Idle/Cars-Car3_Idle_04.png",240,158,25608
+"png/Cars/Car3/Idle/Cars-Car3_Idle_05.png",240,158,25207
+"png/Cars/Car3/Idle/Cars-Car3_Idle_06.png",240,158,25315
+"png/Cars/Car3/Idle/Cars-Car3_Idle_07.png",240,158,25510
+"png/Cars/Car3/Idle/Cars-Car3_Idle_08.png",240,158,24820
+"png/Cars/Car3/Idle/Cars-Car3_Idle_09.png",240,158,25363
+"png/Cars/Car3/Idle/Cars-Car3_Idle_10.png",240,158,25574
+"png/Cars/Car3/Idle/Cars-Car3_Idle_11.png",240,158,25363
+"png/Cars/Car3/Idle/Cars-Car3_Idle_12.png",240,158,24820
+"png/Cars/Car3/Idle/Cars-Car3_Idle_13.png",240,158,25510
+"png/Cars/Car3/Idle/Cars-Car3_Idle_14.png",240,158,25315
+"png/Cars/Car3/Idle/Cars-Car3_Idle_15.png",240,158,25207
+"png/Cars/Car3/Idle/Cars-Car3_Idle_16.png",240,158,25608
+"png/Cars/Car3/Idle/Cars-Car3_Idle_17.png",240,158,25123
+"png/Cars/Car3/Idle/Cars-Car3_Idle_18.png",240,158,25491
+"png/Cars/Car3/Idle/Cars-Car3_Idle_19.png",240,158,25556
+"png/Cars/Car3/Move/Cars-Car3_Move_00.png",237,158,24833
+"png/Cars/Car3/Move/Cars-Car3_Move_01.png",237,158,25785
+"png/Cars/Car3/Move/Cars-Car3_Move_02.png",237,158,25222
+"png/Cars/Car3/Move/Cars-Car3_Move_03.png",237,158,25962
+"png/Cars/Car3/Move/Cars-Car3_Move_04.png",237,158,25612
+"png/Cars/Car3/Move/Cars-Car3_Move_05.png",237,158,25655
+"png/Cars/Car3/Move/Cars-Car3_Move_06.png",237,158,25706
+"png/Cars/Car3/Move/Cars-Car3_Move_07.png",237,158,25791
+"png/Cars/Car3/Move/Cars-Car3_Move_08.png",237,158,25437
+"png/Cars/Car3/Move/Cars-Car3_Move_09.png",237,158,25732
+"png/Cars/Car3/Move/Cars-Car3_Move_10.png",237,158,25310
+"png/Cars/Car3/Move/Cars-Car3_Move_11.png",237,158,25723
+"png/Cars/Car3/Move/Cars-Car3_Move_12.png",237,158,25397
+"png/Cars/Car3/Move/Cars-Car3_Move_13.png",237,158,25725
+"png/Cars/Car3/Move/Cars-Car3_Move_14.png",237,158,25646
+"png/Cars/Car3/Move/Cars-Car3_Move_15.png",237,158,25555
+"png/Cars/Car3/Move/Cars-Car3_Move_16.png",237,158,25533
+"png/Cars/Car3/Move/Cars-Car3_Move_17.png",237,158,25879
+"png/Cars/Car3/Move/Cars-Car3_Move_18.png",237,158,25132
+"png/Cars/Car3/Move/Cars-Car3_Move_19.png",237,158,25706
+"png/Cars/Car3/Move/Cars-Car3_Move_20.png",237,158,24772
+"png/Cars/Car3/Move/Cars-Car3_Move_21.png",237,158,25705
+"png/Cars/Car3/Move/Cars-Car3_Move_22.png",237,158,25133
+"png/Cars/Car3/Move/Cars-Car3_Move_23.png",237,158,25885
+"png/Cars/Car3/Move/Cars-Car3_Move_24.png",237,158,25529
+"png/Cars/Car3/Move/Cars-Car3_Move_25.png",237,158,25566
+"png/Cars/Car3/Move/Cars-Car3_Move_26.png",237,158,25655
+"png/Cars/Car3/Move/Cars-Car3_Move_27.png",237,158,25740
+"png/Cars/Car3/Move/Cars-Car3_Move_28.png",237,158,25393
+"png/Cars/Car3/Move/Cars-Car3_Move_29.png",237,158,25707
+"png/Cars/Car3/Move/Cars-Car3_Move_30.png",237,158,25289
+"png/Cars/Car3/Move/Cars-Car3_Move_31.png",237,158,25738
+"png/Cars/Car3/Move/Cars-Car3_Move_32.png",237,158,25438
+"png/Cars/Car3/Move/Cars-Car3_Move_33.png",237,158,25781
+"png/Cars/Car3/Move/Cars-Car3_Move_34.png",237,158,25702
+"png/Cars/Car3/Move/Cars-Car3_Move_35.png",237,158,25612
+"png/Cars/Car3/Move/Cars-Car3_Move_36.png",237,158,25600
+"png/Cars/Car3/Move/Cars-Car3_Move_37.png",237,158,25957
+"png/Cars/Car3/Move/Cars-Car3_Move_38.png",237,158,25224
+"png/Cars/Car3/Move/Cars-Car3_Move_39.png",237,158,25776
+"png/Cars/Car4/Idle/Cars-Car4_Idle_00.png",196,157,24576
+"png/Cars/Car4/Idle/Cars-Car4_Idle_01.png",196,157,22940
+"png/Cars/Car4/Idle/Cars-Car4_Idle_02.png",196,157,24387
+"png/Cars/Car4/Idle/Cars-Car4_Idle_03.png",196,157,24430
+"png/Cars/Car4/Idle/Cars-Car4_Idle_04.png",196,157,22704
+"png/Cars/Car4/Idle/Cars-Car4_Idle_05.png",196,157,24309
+"png/Cars/Car4/Idle/Cars-Car4_Idle_06.png",196,157,24359
+"png/Cars/Car4/Idle/Cars-Car4_Idle_07.png",196,157,23459
+"png/Cars/Car4/Idle/Cars-Car4_Idle_08.png",196,157,24187
+"png/Cars/Car4/Idle/Cars-Car4_Idle_09.png",196,157,24286
+"png/Cars/Car4/Idle/Cars-Car4_Idle_10.png",196,157,23770
+"png/Cars/Car4/Idle/Cars-Car4_Idle_11.png",196,157,24286
+"png/Cars/Car4/Idle/Cars-Car4_Idle_12.png",196,157,24187
+"png/Cars/Car4/Idle/Cars-Car4_Idle_13.png",196,157,23459
+"png/Cars/Car4/Idle/Cars-Car4_Idle_14.png",196,157,24359
+"png/Cars/Car4/Idle/Cars-Car4_Idle_15.png",196,157,24309
+"png/Cars/Car4/Idle/Cars-Car4_Idle_16.png",196,157,22704
+"png/Cars/Car4/Idle/Cars-Car4_Idle_17.png",196,157,24430
+"png/Cars/Car4/Idle/Cars-Car4_Idle_18.png",196,157,24387
+"png/Cars/Car4/Idle/Cars-Car4_Idle_19.png",196,157,22940
+"png/Cars/Car4/Move/Cars-Car4_Move_00.png",204,158,24618
+"png/Cars/Car4/Move/Cars-Car4_Move_01.png",204,158,23782
+"png/Cars/Car4/Move/Cars-Car4_Move_02.png",204,158,24863
+"png/Cars/Car4/Move/Cars-Car4_Move_03.png",204,158,24338
+"png/Cars/Car4/Move/Cars-Car4_Move_04.png",204,158,24645
+"png/Cars/Car4/Move/Cars-Car4_Move_05.png",204,158,24536
+"png/Cars/Car4/Move/Cars-Car4_Move_06.png",204,158,24588
+"png/Cars/Car4/Move/Cars-Car4_Move_07.png",204,158,24512
+"png/Cars/Car4/Move/Cars-Car4_Move_08.png",204,158,24649
+"png/Cars/Car4/Move/Cars-Car4_Move_09.png",204,158,24340
+"png/Cars/Car4/Move/Cars-Car4_Move_10.png",204,158,24538
+"png/Cars/Car4/Move/Cars-Car4_Move_11.png",204,158,24309
+"png/Cars/Car4/Move/Cars-Car4_Move_12.png",204,158,24616
+"png/Cars/Car4/Move/Cars-Car4_Move_13.png",204,158,24459
+"png/Cars/Car4/Move/Cars-Car4_Move_14.png",204,158,24499
+"png/Cars/Car4/Move/Cars-Car4_Move_15.png",204,158,24444
+"png/Cars/Car4/Move/Cars-Car4_Move_16.png",204,158,24566
+"png/Cars/Car4/Move/Cars-Car4_Move_17.png",204,158,24241
+"png/Cars/Car4/Move/Cars-Car4_Move_18.png",204,158,24772
+"png/Cars/Car4/Move/Cars-Car4_Move_19.png",204,158,23694
+"png/Cars/Car4/Move/Cars-Car4_Move_20.png",204,158,24547
+"png/Cars/Car4/Move/Cars-Car4_Move_21.png",204,158,23694
+"png/Cars/Car4/Move/Cars-Car4_Move_22.png",204,158,24772
+"png/Cars/Car4/Move/Cars-Car4_Move_23.png",204,158,24241
+"png/Cars/Car4/Move/Cars-Car4_Move_24.png",204,158,24566
+"png/Cars/Car4/Move/Cars-Car4_Move_25.png",204,158,24433
+"png/Cars/Car4/Move/Cars-Car4_Move_26.png",204,158,24495
+"png/Cars/Car4/Move/Cars-Car4_Move_27.png",204,158,24450
+"png/Cars/Car4/Move/Cars-Car4_Move_28.png",204,158,24600
+"png/Cars/Car4/Move/Cars-Car4_Move_29.png",204,158,24310
+"png/Cars/Car4/Move/Cars-Car4_Move_30.png",204,158,24519
+"png/Cars/Car4/Move/Cars-Car4_Move_31.png",204,158,24323
+"png/Cars/Car4/Move/Cars-Car4_Move_32.png",204,158,24636
+"png/Cars/Car4/Move/Cars-Car4_Move_33.png",204,158,24503
+"png/Cars/Car4/Move/Cars-Car4_Move_34.png",204,158,24566
+"png/Cars/Car4/Move/Cars-Car4_Move_35.png",204,158,24505
+"png/Cars/Car4/Move/Cars-Car4_Move_36.png",204,158,24622
+"png/Cars/Car4/Move/Cars-Car4_Move_37.png",204,158,24320
+"png/Cars/Car4/Move/Cars-Car4_Move_38.png",204,158,24845
+"png/Cars/Car4/Move/Cars-Car4_Move_39.png",204,158,23778
+"png/Cars/Car5/Idle/Cars-Car5_Idle_00.png",249,163,19773
+"png/Cars/Car5/Idle/Cars-Car5_Idle_01.png",249,163,19526
+"png/Cars/Car5/Idle/Cars-Car5_Idle_02.png",249,163,19732
+"png/Cars/Car5/Idle/Cars-Car5_Idle_03.png",249,163,19715
+"png/Cars/Car5/Idle/Cars-Car5_Idle_04.png",249,163,19597
+"png/Cars/Car5/Idle/Cars-Car5_Idle_05.png",249,163,19830
+"png/Cars/Car5/Idle/Cars-Car5_Idle_06.png",249,163,19555
+"png/Cars/Car5/Idle/Cars-Car5_Idle_07.png",249,163,19731
+"png/Cars/Car5/Idle/Cars-Car5_Idle_08.png",249,163,19798
+"png/Cars/Car5/Idle/Cars-Car5_Idle_09.png",249,163,19347
+"png/Cars/Car5/Idle/Cars-Car5_Idle_10.png",249,163,19754
+"png/Cars/Car5/Idle/Cars-Car5_Idle_11.png",249,163,19347
+"png/Cars/Car5/Idle/Cars-Car5_Idle_12.png",249,163,19798
+"png/Cars/Car5/Idle/Cars-Car5_Idle_13.png",249,163,19731
+"png/Cars/Car5/Idle/Cars-Car5_Idle_14.png",249,163,19555
+"png/Cars/Car5/Idle/Cars-Car5_Idle_15.png",249,163,19830
+"png/Cars/Car5/Idle/Cars-Car5_Idle_16.png",249,163,19597
+"png/Cars/Car5/Idle/Cars-Car5_Idle_17.png",249,163,19715
+"png/Cars/Car5/Idle/Cars-Car5_Idle_18.png",249,163,19732
+"png/Cars/Car5/Idle/Cars-Car5_Idle_19.png",249,163,19526
+"png/Cars/Car5/Move/Cars-Car5_Move_00.png",243,162,19529
+"png/Cars/Car5/Move/Cars-Car5_Move_01.png",243,162,19632
+"png/Cars/Car5/Move/Cars-Car5_Move_02.png",243,162,19716
+"png/Cars/Car5/Move/Cars-Car5_Move_03.png",243,162,19592
+"png/Cars/Car5/Move/Cars-Car5_Move_04.png",243,162,19675
+"png/Cars/Car5/Move/Cars-Car5_Move_05.png",243,162,19768
+"png/Cars/Car5/Move/Cars-Car5_Move_06.png",243,162,19756
+"png/Cars/Car5/Move/Cars-Car5_Move_07.png",243,162,19688
+"png/Cars/Car5/Move/Cars-Car5_Move_08.png",243,162,19742
+"png/Cars/Car5/Move/Cars-Car5_Move_09.png",243,162,19628
+"png/Cars/Car5/Move/Cars-Car5_Move_10.png",243,162,19768
+"png/Cars/Car5/Move/Cars-Car5_Move_11.png",243,162,19616
+"png/Cars/Car5/Move/Cars-Car5_Move_12.png",243,162,19698
+"png/Cars/Car5/Move/Cars-Car5_Move_13.png",243,162,19635
+"png/Cars/Car5/Move/Cars-Car5_Move_14.png",243,162,19691
+"png/Cars/Car5/Move/Cars-Car5_Move_15.png",243,162,19683
+"png/Cars/Car5/Move/Cars-Car5_Move_16.png",243,162,19592
+"png/Cars/Car5/Move/Cars-Car5_Move_17.png",243,162,19498
+"png/Cars/Car5/Move/Cars-Car5_Move_18.png",243,162,19627
+"png/Cars/Car5/Move/Cars-Car5_Move_19.png",243,162,19575
+"png/Cars/Car5/Move/Cars-Car5_Move_20.png",243,162,19486
+"png/Cars/Car5/Move/Cars-Car5_Move_21.png",243,162,19575
+"png/Cars/Car5/Move/Cars-Car5_Move_22.png",243,162,19625
+"png/Cars/Car5/Move/Cars-Car5_Move_23.png",243,162,19498
+"png/Cars/Car5/Move/Cars-Car5_Move_24.png",243,162,19595
+"png/Cars/Car5/Move/Cars-Car5_Move_25.png",243,162,19683
+"png/Cars/Car5/Move/Cars-Car5_Move_26.png",243,162,19690
+"png/Cars/Car5/Move/Cars-Car5_Move_27.png",243,162,19633
+"png/Cars/Car5/Move/Cars-Car5_Move_28.png",243,162,19688
+"png/Cars/Car5/Move/Cars-Car5_Move_29.png",243,162,19606
+"png/Cars/Car5/Move/Cars-Car5_Move_30.png",243,162,19755
+"png/Cars/Car5/Move/Cars-Car5_Move_31.png",243,162,19637
+"png/Cars/Car5/Move/Cars-Car5_Move_32.png",243,162,19704
+"png/Cars/Car5/Move/Cars-Car5_Move_33.png",243,162,19674
+"png/Cars/Car5/Move/Cars-Car5_Move_34.png",243,162,19747
+"png/Cars/Car5/Move/Cars-Car5_Move_35.png",243,162,19738
+"png/Cars/Car5/Move/Cars-Car5_Move_36.png",243,162,19638
+"png/Cars/Car5/Move/Cars-Car5_Move_37.png",243,162,19571
+"png/Cars/Car5/Move/Cars-Car5_Move_38.png",243,162,19700
+"png/Cars/Car5/Move/Cars-Car5_Move_39.png",243,162,19638
+"png/Cashier Girl/ChashierGirl-animation_00.png",92,73,4923
+"png/Cashier Girl/ChashierGirl-animation_01.png",92,73,4976
+"png/Cashier Girl/ChashierGirl-animation_02.png",92,73,5017
+"png/Cashier Girl/ChashierGirl-animation_03.png",92,73,5081
+"png/Cashier Girl/ChashierGirl-animation_04.png",92,73,5118
+"png/Cashier Girl/ChashierGirl-animation_05.png",92,73,5146
+"png/Cashier Girl/ChashierGirl-animation_06.png",92,73,5163
+"png/Cashier Girl/ChashierGirl-animation_07.png",92,73,5210
+"png/Cashier Girl/ChashierGirl-animation_08.png",92,73,5229
+"png/Cashier Girl/ChashierGirl-animation_09.png",92,73,5318
+"png/Cashier Girl/ChashierGirl-animation_10.png",92,73,5412
+"png/Cashier Girl/ChashierGirl-animation_11.png",92,73,5383
+"png/Cashier Girl/ChashierGirl-animation_12.png",92,73,5357
+"png/Cashier Girl/ChashierGirl-animation_13.png",92,73,5387
+"png/Cashier Girl/ChashierGirl-animation_14.png",92,73,5337
+"png/Cashier Girl/ChashierGirl-animation_15.png",92,73,5395
+"png/Cashier Girl/ChashierGirl-animation_16.png",92,73,5363
+"png/Cashier Girl/ChashierGirl-animation_17.png",92,73,5399
+"png/Cashier Girl/ChashierGirl-animation_18.png",92,73,5385
+"png/Cashier Girl/ChashierGirl-animation_19.png",92,73,5265
+"png/Cashier Girl/ChashierGirl-animation_20.png",92,73,5270
+"png/Cashier Girl/ChashierGirl-animation_21.png",92,73,5345
+"png/Cashier Girl/ChashierGirl-animation_22.png",92,73,5494
+"png/Cashier Girl/ChashierGirl-animation_23.png",92,73,5565
+"png/Cashier Girl/ChashierGirl-animation_24.png",92,73,5524
+"png/Cashier Girl/ChashierGirl-animation_25.png",92,73,5566
+"png/Cashier Girl/ChashierGirl-animation_26.png",92,73,5681
+"png/Cashier Girl/ChashierGirl-animation_27.png",92,73,5732
+"png/Cashier Girl/ChashierGirl-animation_28.png",92,73,5694
+"png/Cashier Girl/ChashierGirl-animation_29.png",92,73,5735
+"png/Cashier Girl/ChashierGirl-animation_30.png",92,73,5731
+"png/Cashier Girl/ChashierGirl-animation_31.png",92,73,5667
+"png/Cashier Girl/ChashierGirl-animation_32.png",92,73,5507
+"png/Cashier Girl/ChashierGirl-animation_33.png",92,73,5504
+"png/Cashier Girl/ChashierGirl-animation_34.png",92,73,5516
+"png/Cashier Girl/ChashierGirl-animation_35.png",92,73,5436
+"png/Cashier Girl/ChashierGirl-animation_36.png",92,73,5292
+"png/Cashier Girl/ChashierGirl-animation_37.png",92,73,5257
+"png/Cashier Girl/ChashierGirl-animation_38.png",92,73,5178
+"png/Cashier Girl/ChashierGirl-animation_39.png",92,73,5041
+"png/Cashiers/CashierL1.png",1040,412,57001
+"png/Cashiers/CashierL2.png",1040,412,63641
+"png/Cashiers/CashierL3.png",1040,412,63427
+"png/Cashiers/CashierL4.png",1040,412,68755
+"png/Cashiers/CashierL5.png",1040,412,77022
+"png/Cashiers/CashierL6.png",1040,412,83494
+"png/Chef Guy/Cooking/ChefGuy-Cooking_00.png",100,120,6342
+"png/Chef Guy/Cooking/ChefGuy-Cooking_01.png",100,120,6460
+"png/Chef Guy/Cooking/ChefGuy-Cooking_02.png",100,120,6571
+"png/Chef Guy/Cooking/ChefGuy-Cooking_03.png",100,120,6627
+"png/Chef Guy/Cooking/ChefGuy-Cooking_04.png",100,120,6740
+"png/Chef Guy/Cooking/ChefGuy-Cooking_05.png",100,120,6823
+"png/Chef Guy/Cooking/ChefGuy-Cooking_06.png",100,120,6805
+"png/Chef Guy/Cooking/ChefGuy-Cooking_07.png",100,120,6751
+"png/Chef Guy/Cooking/ChefGuy-Cooking_08.png",100,120,6821
+"png/Chef Guy/Cooking/ChefGuy-Cooking_09.png",100,120,6831
+"png/Chef Guy/Cooking/ChefGuy-Cooking_10.png",100,120,6735
+"png/Chef Guy/Cooking/ChefGuy-Cooking_11.png",100,120,6897
+"png/Chef Guy/Cooking/ChefGuy-Cooking_12.png",100,120,6916
+"png/Chef Guy/Cooking/ChefGuy-Cooking_13.png",100,120,6892
+"png/Chef Guy/Cooking/ChefGuy-Cooking_14.png",100,120,6910
+"png/Chef Guy/Cooking/ChefGuy-Cooking_15.png",100,120,6918
+"png/Chef Guy/Cooking/ChefGuy-Cooking_16.png",100,120,6865
+"png/Chef Guy/Cooking/ChefGuy-Cooking_17.png",100,120,6789
+"png/Chef Guy/Cooking/ChefGuy-Cooking_18.png",100,120,6708
+"png/Chef Guy/Cooking/ChefGuy-Cooking_19.png",100,120,6597
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_00.png",100,120,7937
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_01.png",100,120,7886
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_02.png",100,120,7854
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_03.png",100,120,7856
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_04.png",100,120,7808
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_05.png",100,120,7856
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_06.png",100,120,7745
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_07.png",100,120,7735
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_08.png",100,120,7647
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_09.png",100,120,7694
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_10.png",100,120,7655
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_11.png",100,120,7682
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_12.png",100,120,7708
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_13.png",100,120,7836
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_14.png",100,120,7864
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_15.png",100,120,8042
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_16.png",100,120,7956
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_17.png",100,120,8006
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_18.png",100,120,7904
+"png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_19.png",100,120,7978
+"png/Chef Guy/Walk/ChefGuy-Walk_00.png",100,120,6538
+"png/Chef Guy/Walk/ChefGuy-Walk_01.png",100,120,6631
+"png/Chef Guy/Walk/ChefGuy-Walk_02.png",100,120,6608
+"png/Chef Guy/Walk/ChefGuy-Walk_03.png",100,120,6683
+"png/Chef Guy/Walk/ChefGuy-Walk_04.png",100,120,6780
+"png/Chef Guy/Walk/ChefGuy-Walk_05.png",100,120,6928
+"png/Chef Guy/Walk/ChefGuy-Walk_06.png",100,120,6761
+"png/Chef Guy/Walk/ChefGuy-Walk_07.png",100,120,6649
+"png/Chef Guy/Walk/ChefGuy-Walk_08.png",100,120,6600
+"png/Chef Guy/Walk/ChefGuy-Walk_09.png",100,120,6598
+"png/Chef Guy/Walk/ChefGuy-Walk_10.png",100,120,6506
+"png/Chef Guy/Walk/ChefGuy-Walk_11.png",100,120,6713
+"png/Chef Guy/Walk/ChefGuy-Walk_12.png",100,120,6726
+"png/Chef Guy/Walk/ChefGuy-Walk_13.png",100,120,6652
+"png/Chef Guy/Walk/ChefGuy-Walk_14.png",100,120,6821
+"png/Chef Guy/Walk/ChefGuy-Walk_15.png",100,120,6905
+"png/Chef Guy/Walk/ChefGuy-Walk_16.png",100,120,6815
+"png/Chef Guy/Walk/ChefGuy-Walk_17.png",100,120,6652
+"png/Chef Guy/Walk/ChefGuy-Walk_18.png",100,120,6693
+"png/Chef Guy/Walk/ChefGuy-Walk_19.png",100,120,6756
+"png/Floor Girl/FloorGirl-animation_00.png",84,59,4866
+"png/Floor Girl/FloorGirl-animation_01.png",84,59,4946
+"png/Floor Girl/FloorGirl-animation_02.png",84,59,4965
+"png/Floor Girl/FloorGirl-animation_03.png",84,59,4938
+"png/Floor Girl/FloorGirl-animation_04.png",84,59,4935
+"png/Floor Girl/FloorGirl-animation_05.png",84,59,4925
+"png/Floor Girl/FloorGirl-animation_06.png",84,59,4953
+"png/Floor Girl/FloorGirl-animation_07.png",84,59,4964
+"png/Floor Girl/FloorGirl-animation_08.png",84,59,4986
+"png/Floor Girl/FloorGirl-animation_09.png",84,59,4946
+"png/Floor Girl/FloorGirl-animation_10.png",84,59,4840
+"png/Floor Girl/FloorGirl-animation_11.png",84,59,4951
+"png/Floor Girl/FloorGirl-animation_12.png",84,59,4995
+"png/Floor Girl/FloorGirl-animation_13.png",84,59,4994
+"png/Floor Girl/FloorGirl-animation_14.png",84,59,4973
+"png/Floor Girl/FloorGirl-animation_15.png",84,59,4986
+"png/Floor Girl/FloorGirl-animation_16.png",84,59,4982
+"png/Floor Girl/FloorGirl-animation_17.png",84,59,4994
+"png/Floor Girl/FloorGirl-animation_18.png",84,59,4979
+"png/Floor Girl/FloorGirl-animation_19.png",84,59,4955
+"png/Floors/Floor_Lv0.png",1056,340,48047
+"png/Floors/Floor_Lv1.png",1056,341,38345
+"png/Floors/Floor_Lv10.png",1056,341,76920
+"png/Floors/Floor_Lv2.png",1056,341,39933
+"png/Floors/Floor_Lv3.png",1056,340,41681
+"png/Floors/Floor_Lv4.png",1056,341,46456
+"png/Floors/Floor_Lv5.png",1056,341,48768
+"png/Floors/Floor_Lv6.png",1056,340,50232
+"png/Floors/Floor_Lv7.png",1056,341,54151
+"png/Floors/Floor_Lv8.png",1056,341,60518
+"png/Floors/Floor_Lv9.png",1056,341,71476
+"png/Lift Guy/Lift Guy-animation_00.png",45,91,6124
+"png/Lift Guy/Lift Guy-animation_01.png",45,91,6045
+"png/Lift Guy/Lift Guy-animation_02.png",45,91,6019
+"png/Lift Guy/Lift Guy-animation_03.png",45,91,6039
+"png/Lift Guy/Lift Guy-animation_04.png",45,91,6114
+"png/Lift Guy/Lift Guy-animation_05.png",45,91,6148
+"png/Lift Guy/Lift Guy-animation_06.png",45,91,6221
+"png/Lift Guy/Lift Guy-animation_07.png",45,91,6238
+"png/Lift Guy/Lift Guy-animation_08.png",45,91,6082
+"png/Lift Guy/Lift Guy-animation_09.png",45,91,6241
+"png/Lift Guy/Lift Guy-animation_10.png",45,91,6287
+"png/Lift Guy/Lift Guy-animation_11.png",45,91,6230
+"png/Lift Guy/Lift Guy-animation_12.png",45,91,6128
+"png/Lift Guy/Lift Guy-animation_13.png",45,91,6267
+"png/Lift Guy/Lift Guy-animation_14.png",45,91,6237
+"png/Lift Guy/Lift Guy-animation_15.png",45,91,6099
+"png/Lift Guy/Lift Guy-animation_16.png",45,91,6087
+"png/Lift Guy/Lift Guy-animation_17.png",45,91,6075
+"png/Lift Guy/Lift Guy-animation_18.png",45,91,6040
+"png/Lift Guy/Lift Guy-animation_19.png",45,91,6051
+"png/Open Area Map/Area.png",1903,3118,579478
+"png/Open Area Map/Available Building.png",260,250,4116
+"png/Open Area Map/Clouds.png",442,164,5473
+"png/Open Area Map/Lock.png",83,99,2598
+"png/Open Area Map/Locked Building.png",259,250,4143
+"png/Open Area Map/NamePlate.png",193,73,1498
+"png/Shop Screen/Artboard 1.png",1903,3118,150711
+"png/Shop Screen/Artboard 10.png",484,329,37634
+"png/Shop Screen/Artboard 11.png",433,316,53317
+"png/Shop Screen/Artboard 12.png",397,366,61835
+"png/Shop Screen/Artboard 2.png",1914,454,4767
+"png/Shop Screen/Artboard 3.png",1903,229,2704
+"png/Shop Screen/Artboard 4.png",1904,349,4148
+"png/Shop Screen/Artboard 5.png",542,862,5849
+"png/Shop Screen/Artboard 6.png",268,154,2335
+"png/Shop Screen/Artboard 7.png",443,392,49451
+"png/Shop Screen/Artboard 8.png",490,414,59840
+"png/Shop Screen/Artboard 9.png",481,468,83102
+"png/Ui and PopUp/Ads_Icon.png",76,57,699
+"png/Ui and PopUp/Area Box.png",694,236,1590
+"png/Ui and PopUp/ArrowUpgrade.png",45,51,920
+"png/Ui and PopUp/Boost_Icon.png",55,71,1135
+"png/Ui and PopUp/Btn_Blue_Off.png",451,160,2790
+"png/Ui and PopUp/Btn_Blue.png",451,160,2776
+"png/Ui and PopUp/Btn_Boost Disable.png",347,172,3701
+"png/Ui and PopUp/Btn_Boost Pressed.png",347,171,3679
+"png/Ui and PopUp/Btn_Boost.png",347,172,3322
+"png/Ui and PopUp/Btn_Close.png",85,85,1481
+"png/Ui and PopUp/Btn_Green Pressed.png",256,104,1895
+"png/Ui and PopUp/Btn_Green.png",256,104,1674
+"png/Ui and PopUp/Btn_Help.png",167,163,3890
+"png/Ui and PopUp/Btn_Music_Off.png",168,162,3105
+"png/Ui and PopUp/Btn_Music.png",168,163,2975
+"png/Ui and PopUp/Btn_Orange_Pressed.png",568,201,3489
+"png/Ui and PopUp/Btn_Orange_Small_Off.png",393,143,2560
+"png/Ui and PopUp/Btn_Orange_Small.png",392,143,2426
+"png/Ui and PopUp/Btn_Orange.png",568,201,3595
+"png/Ui and PopUp/Btn_Sound_Off.png",168,162,2907
+"png/Ui and PopUp/Btn_Sound.png",167,163,3249
+"png/Ui and PopUp/Btn_Vibra_Off.png",168,162,2972
+"png/Ui and PopUp/Btn_Vibra.png",168,163,3600
+"png/Ui and PopUp/BtnUp.png",108,104,2115
+"png/Ui and PopUp/BtnUpPressed.png",108,104,2363
+"png/Ui and PopUp/CoinIcon.png",57,54,2197
+"png/Ui and PopUp/ContentBox.png",695,100,1413
+"png/Ui and PopUp/Gams Image.png",744,765,169734
+"png/Ui and PopUp/GemsIcon.png",61,57,2151
+"png/Ui and PopUp/GemsPlusBar.png",57,55,881
+"png/Ui and PopUp/HubAreaBar.png",362,159,6672
+"png/Ui and PopUp/HudCoinBar.png",310,81,1138
+"png/Ui and PopUp/ManyUpgradeBox.png",273,85,771
+"png/Ui and PopUp/ManyUpgradeBoxGreen.png",92,75,372
+"png/Ui and PopUp/MapIcon.png",174,169,9656
+"png/Ui and PopUp/PopUp_Box.png",1065,1297,44630
+"png/Ui and PopUp/RequermentBox.png",259,59,896
+"png/Ui and PopUp/SettingIcon.png",128,122,3621
+"png/Ui and PopUp/SettingIconPressed.png",128,122,3779
+"png/Ui and PopUp/Settings PopUp.png",953,1286,9950
+"png/Ui and PopUp/ShopIcon.png",180,172,4649
+"png/Ui and PopUp/VolumeBar_Bg.png",778,214,3158
+"png/Ui and PopUp/VolumeBar_Btn.png",88,89,1242
+"png/Ui and PopUp/VolumeBar_Yellow.png",641,52,592

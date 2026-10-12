@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist-sim",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "types": ["node"],
+    "declaration": false,
+    "isolatedModules": false
+  },
+  "include": ["src/core"]
+}
