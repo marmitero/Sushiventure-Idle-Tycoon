@@ -4,9 +4,9 @@
 > Nada aqui é marcado como concluído sem evidência (teste, build, push ou preview).
 
 - **Fase atual:** 5 em diante (Fases 0-4 concluídas e validadas)
-- **Última etapa concluída:** Fase 4 — ganhos offline + correções de honestidade de UI
+- **Última etapa concluída:** Alinhamento visual à referência oficial (Screenshot_7.png) — após Fase 4
 - **Branch:** `arena/a8701903-sushiventure-idle-tycoon`
-- **Último commit relevante:** `64c3d1e` (Fases 0-2)
+- **Último commit relevante:** `93c4e02` (Fase 4) + alinhamento visual (este ciclo)
 - **Estado do push:** ✅ publicado em `origin/arena/a8701903-sushiventure-idle-tycoon`
 
 ## Funcionalidades implementadas
@@ -23,6 +23,10 @@
 | Cena de boot com loading e derivação de céu/rua | Implementado | preview ao vivo |
 | Cena da torre (andares, caixa, elenco animado, câmera) | Implementado | preview ao vivo |
 | HUD (dinheiro, $/s, painel de melhorias, configurações) | Implementado | preview ao vivo |
+| **Alinhamento visual à referência oficial (Screenshot_7.png)** | Implementado + testado | `docs/GAME_DESIGN/VISUAL_REFERENCE.md`, `tests/visual-reference.test.ts` (3 testes) |
+| HUD superior: badge de distrito (HubAreaBar) + pílula de gemas + pílula de moeda | Implementado | `HudScene.buildTopBar`, config `core/config/areas.ts` |
+| Placas `ANDAR N` sobre a tábua vazia do kit + badges de upgrade por andar | Implementado | `TowerScene.addFloorSprite` |
+| Preço visível do próximo andar sobre o casulo (btnGreen + moeda + custo) | Implementado | `TowerScene.positionNextSlot` |
 | Boost ×2 via anúncio (somente simulador DEV, idempotente) | Implementado + testado | `ops.grantRevenueBoost`, testes de receipt duplicado |
 | Simulação de progressão headless | Implementado | `npm run sim` |
 | Funcionários (4 papéis, escopos distintos) + contratação/treino | Implementado + testado | `tests/staff.test.ts`, painel EQUIPE no preview |

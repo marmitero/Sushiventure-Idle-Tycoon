@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T11:58:24.472Z",
+  "generatedAt": "2026-10-12T12:35:42.680Z",
   "sourceRoot": "Sprites",
   "auditDate": "2026-10-12",
   "method": "Inspecão visual item a item (folhas de contato em docs/assets/previews/) + parser de headers PNG; nomes de arquivo NUNCA usados como única evidência.",
@@ -8,8 +8,8 @@
     "entries": 113,
     "pngBytes": 10581427,
     "byStatus": {
-      "implementado": 51,
-      "reservado": 46,
+      "implementado": 54,
+      "reservado": 43,
       "nao-usado-runtime": 12,
       "metadado": 4
     }
@@ -4509,10 +4509,10 @@
       "category": "UI",
       "kind": "static",
       "visual": "Gema verde facetada.",
-      "role": "Ícone de moeda premium (somente se/quando existir).",
-      "phase": "9",
-      "status": "reservado",
-      "validated": false,
+      "role": "Ícone da pílula de Pontos de Sucesso na HUD superior (referência Screenshot_7).",
+      "phase": "5",
+      "status": "implementado",
+      "validated": true,
       "registry": [
         "ui.gemsIcon"
       ],
@@ -4557,10 +4557,10 @@
       "category": "UI",
       "kind": "static",
       "visual": "Barra verde escura com mapa aparecendo no topo e pino laranja.",
-      "role": "Barra de área/hub do jogador na tela de cidades.",
-      "phase": "6",
-      "status": "reservado",
-      "validated": false,
+      "role": "Badge de distrito na HUD superior (referência Screenshot_7); o mapa da Fase 6 reutiliza a mesma arte.",
+      "phase": "5",
+      "status": "implementado",
+      "validated": true,
       "registry": [
         "ui.hubAreaBar"
       ],
@@ -4629,10 +4629,10 @@
       "category": "UI",
       "kind": "static",
       "visual": "Quadrado verde (segmento ativo do seletor múltiplo).",
-      "role": "Segmento ativo do seletor de compra múltipla.",
-      "phase": "3",
-      "status": "reservado",
-      "validated": false,
+      "role": "Badge de upgrade por andar na borda direita da torre (referência Screenshot_7), com ui.arrowUpgrade por cima.",
+      "phase": "5",
+      "status": "implementado",
+      "validated": true,
       "registry": [
         "ui.manyUpgradeBoxGreen"
       ],

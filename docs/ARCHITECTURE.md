@@ -83,6 +83,8 @@ rotulado, com confirmação), `NotConfiguredPaymentProvider`,
 - Zoom = clamp(larguraTela / 1150, 0.40, 1.05): portrait mostra a torre legível;
   drag vertical com clamp; follow automático do topo após 4s sem interação.
 - HUD em cena separada (`HudScene`) em coordenadas de tela, com `resize` tratado.
+- Composição visual de torre+HUD segue a referência oficial do kit: tabela
+  elemento→asset em `docs/GAME_DESIGN/VISUAL_REFERENCE.md` (com deltas documentados).
 
 ## 8. Limitações conhecidas
 

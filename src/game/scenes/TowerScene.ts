@@ -1,8 +1,15 @@
 import Phaser from 'phaser';
 import { ASSETS, FRAME_COUNTS, carPaths, keyFor } from '../../assets/registry';
-import { elevatorTripMs, floorVisualLevel, vehicleIntervalSec } from '../../core/economy';
+import {
+  elevatorTripMs,
+  floorUnlockCost,
+  floorVisualLevel,
+  vehicleIntervalSec,
+} from '../../core/economy';
+import { formatMoney } from '../../core/format';
 import type { GameState } from '../../core/state/types';
 import { getSession } from '../session';
+import { kitText } from '../ui/kit';
 import { TOWER } from '../worldLayout';
 
 /**
@@ -16,7 +23,14 @@ export class TowerScene extends Phaser.Scene {
   }
 
   private floorSprites = new Map<number, Phaser.GameObjects.Image>();
+  private plateTexts = new Map<number, Phaser.GameObjects.Text>();
+  private badgeBoxes = new Map<number, Phaser.GameObjects.Image>();
+  private badgeArrows = new Map<number, Phaser.GameObjects.Image>();
   private nextSlot!: Phaser.GameObjects.Image;
+  private nextSlotGroup: Array<Phaser.GameObjects.Image | Phaser.GameObjects.Text> = [];
+  private nextSlotCost!: Phaser.GameObjects.Text;
+  private nextSlotPrice!: Phaser.GameObjects.Image;
+  private nextSlotCoin!: Phaser.GameObjects.Image;
   private cashierSprite!: Phaser.GameObjects.Image;
   private chef: Phaser.GameObjects.Sprite | null = null;
   private liftGuy: Phaser.GameObjects.Sprite | null = null;
@@ -114,6 +128,29 @@ export class TowerScene extends Phaser.Scene {
     this.nextSlot.on('pointerdown', () => {
       this.game.events.emit('ui:open-upgrades', { focus: 'unlock' });
     });
+    // Visible unlock affordance over the slab, as in the official reference
+    // (Screenshot_7.png): green price button + coin + cost + label. The slab
+    // itself remains the tap target; these children are pure feedback.
+    this.nextSlotPrice = this.add
+      .image(0, 0, keyFor(ASSETS.ui.btnGreen))
+      .setDisplaySize(210, 62)
+      .setDepth(2);
+    this.nextSlotCoin = this.add
+      .image(0, 0, keyFor(ASSETS.ui.coinIcon))
+      .setDisplaySize(38, 38)
+      .setDepth(3);
+    this.nextSlotCost = kitText(this, 0, 0, '', {
+      size: 24,
+      color: '#ffffff',
+      stroke: '#2f6b1f',
+      strokeThickness: 5,
+    })
+      .setOrigin(0, 0.5)
+      .setDepth(3);
+    // The slab art already bakes the "ADD NEW FLOOR" band (kit text, English);
+    // the price button carries the actionable info and the panel/toasts carry
+    // the pt-BR wording, so no duplicate label is drawn here.
+    this.nextSlotGroup = [this.nextSlotPrice, this.nextSlotCoin, this.nextSlotCost];
     this.positionNextSlot(state);
   }
 
@@ -126,11 +163,45 @@ export class TowerScene extends Phaser.Scene {
       this.game.events.emit('ui:open-upgrades', { focus: `floor:${index}` });
     });
     this.floorSprites.set(index, sprite);
+
+    // The kit bakes a blank wooden plank into every floor art: the label is
+    // ours to draw (reference shows "FLOOR N" there; pt-BR per product rules).
+    const plate = kitText(this, TOWER.plateX, TOWER.floorBottom(index) - TOWER.plateDy, `ANDAR ${index + 1}`, {
+      size: 24,
+      color: '#f5e6c8',
+      stroke: '#3a2313',
+      strokeThickness: 4,
+    }).setDepth(3);
+    this.plateTexts.set(index, plate);
+
+    // Per-floor upgrade badge on the right edge (green square + yellow arrow),
+    // the explicit affordance shown by the official reference mock.
+    const badgeY = TOWER.floorBottom(index) - TOWER.badgeDy;
+    const box = this.add
+      .image(TOWER.badgeX, badgeY, keyFor(ASSETS.ui.manyUpgradeBoxGreen))
+      .setDisplaySize(62, 62)
+      .setDepth(3)
+      .setInteractive({ useHandCursor: true });
+    box.on('pointerdown', () => {
+      this.game.events.emit('ui:open-upgrades', { focus: `floor:${index}` });
+    });
+    const arrow = this.add
+      .image(TOWER.badgeX, badgeY - 2, keyFor(ASSETS.ui.arrowUpgrade))
+      .setDisplaySize(34, 40)
+      .setDepth(4);
+    this.badgeBoxes.set(index, box);
+    this.badgeArrows.set(index, arrow);
   }
 
   private rebuildTower(state: GameState): void {
     for (const sprite of this.floorSprites.values()) sprite.destroy();
     this.floorSprites.clear();
+    for (const text of this.plateTexts.values()) text.destroy();
+    this.plateTexts.clear();
+    for (const box of this.badgeBoxes.values()) box.destroy();
+    this.badgeBoxes.clear();
+    for (const arrow of this.badgeArrows.values()) arrow.destroy();
+    this.badgeArrows.clear();
     for (const floor of state.floors) this.addFloorSprite(floor.index, floor.level);
     this.cashierSprite.setTexture(keyFor(ASSETS.cashiers(state.cashierLevel)));
     this.positionNextSlot(state);
@@ -138,8 +209,18 @@ export class TowerScene extends Phaser.Scene {
   }
 
   private positionNextSlot(state: GameState): void {
-    this.nextSlot.setY(TOWER.floorBottom(state.floors.length));
-    this.nextSlot.setVisible(state.floors.length < 24);
+    const y = TOWER.floorBottom(state.floors.length);
+    this.nextSlot.setY(y);
+    const visible = state.floors.length < 24;
+    this.nextSlot.setVisible(visible);
+    const midY = y - TOWER.nextSlotDy;
+    const btnX = -120;
+    this.nextSlotPrice.setPosition(btnX, midY);
+    this.nextSlotCoin.setPosition(btnX - 74, midY);
+    this.nextSlotCost.setPosition(btnX - 48, midY);
+    for (const obj of this.nextSlotGroup) obj.setVisible(visible);
+    const cost = formatMoney(floorUnlockCost(state.floors.length));
+    if (this.nextSlotCost.text !== cost) this.nextSlotCost.setText(cost);
   }
 
   private flashTowerTop(state: GameState): void {

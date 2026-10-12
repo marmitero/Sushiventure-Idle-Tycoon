@@ -1,6 +1,6 @@
 # ASSET_USAGE_MATRIX
 
-_Gerado a partir de `ASSET_MANIFEST.json` em 2026-10-12T11:58:24.472Z.
+_Gerado a partir de `ASSET_MANIFEST.json` em 2026-10-12T12:35:42.680Z.
 Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 
 | Entrada | Categoria | Destino no jogo | Fase | Status | Validado |
@@ -86,12 +86,12 @@ Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 | `ui.coinIcon` | UI | Ícone de dinheiro na HUD | 2 | implementado | ✅ |
 | `ui.contentBox` | UI | Fundo das linhas do painel de melhorias | 2 | implementado | ✅ |
 | `ui.rewardGlow` | UI | Arte de recompensa do popup de ganhos offline (Fase 4); missões/eventos reutilizarão | 4 | implementado | ✅ |
-| `ui.gemsIcon` | UI | Ícone de moeda premium (somente se/quando existir) | 9 | reservado | — |
+| `ui.gemsIcon` | UI | Ícone da pílula de Pontos de Sucesso na HUD superior (referência Screenshot_7) | 5 | implementado | ✅ |
 | `ui.gemsPlus` | UI | Botão "comprar mais gemas" ao lado do saldo premium | 9 | reservado | — |
-| `ui.hubAreaBar` | UI | Barra de área/hub do jogador na tela de cidades | 6 | reservado | — |
+| `ui.hubAreaBar` | UI | Badge de distrito na HUD superior (referência Screenshot_7); o mapa da Fase 6 reutiliza a mesma arte | 5 | implementado | ✅ |
 | `ui.hudCoinBar` | UI | Barra de dinheiro no topo da HUD | 2 | implementado | ✅ |
 | `ui.manyUpgradeBox` | UI | Seletor de compra múltipla (x1/x10/max) no painel | 3 | reservado | — |
-| `ui.manyUpgradeBoxGreen` | UI | Segmento ativo do seletor de compra múltipla | 3 | reservado | — |
+| `ui.manyUpgradeBoxGreen` | UI | Badge de upgrade por andar na borda direita da torre (referência Screenshot_7), com ui | 5 | implementado | ✅ |
 | `ui.mapIcon` | UI | Botão de mapa de cidades (hoje: indisponível com motivo) | 2 | implementado | ✅ |
 | `ui.popUpBox` | UI | Corpo do painel de melhorias e de popups futuros | 2 | implementado | ✅ |
 | `ui.requirementBox` | UI | Linhas de requisito em popups de desbloqueio/cidade | 6 | reservado | — |

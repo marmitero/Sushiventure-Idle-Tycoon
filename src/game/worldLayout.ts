@@ -27,6 +27,15 @@ export const TOWER = {
   /** World Y of the two traffic lanes inside bg.street (native scale). */
   roadFarLaneY: 225,
   roadNearLaneY: 305,
+  /** Blank wooden plank baked into every Floor_Lv*.png: the kit expects the
+   *  floor label to be drawn on top of it (see Screenshot_7.png reference). */
+  plateX: -58,
+  plateDy: 270,
+  /** Per-floor upgrade badge (green square + arrow) hugging the right edge. */
+  badgeX: 536,
+  badgeDy: 190,
+  /** Grey band of the locked slab where the reference puts the price button. */
+  nextSlotDy: 200,
   chefRange: 380,
   floorGirlX: 210,
   floorGirlY(index: number): number {

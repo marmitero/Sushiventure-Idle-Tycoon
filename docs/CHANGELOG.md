@@ -2,6 +2,25 @@
 
 Formato: datas + fases, com evidências. Detalhes operacionais em `AI_STATE.md`.
 
+## 2026-10-12 — Alinhamento visual à referência oficial (Screenshot_7.png)
+
+- Diretor enviou `Screenshot_7.png` (commit `58597f9`) como alvo visual do jogo
+  em retrato. Análise item a item em `docs/GAME_DESIGN/VISUAL_REFERENCE.md`
+  (18 linhas: elemento → asset/decisão → estado).
+- Veredito: a composição que estamos produzindo É a da referência (mesma
+  linguagem: torre central, rua viva, HUD composta com peças do kit). Deltas
+  fechados agora: badge de distrito no topo (HubAreaBar + nome real de config),
+  pílula de Pontos de Sucesso (btnGreen + GemsIcon + valor real), placas
+  `ANDAR N` desenhadas sobre a tábua vazia baked no kit, badge verde+seta de
+  upgrade por andar, botão de preço do próximo andar sobre o casulo, barra
+  inferior escura com BOOST à esquerda e MAPA/LOJA rotulados à direita.
+- Deltas documentados (sem arte inventada): cabine do elevador só existe em
+  vetor (`Eps/Lift.eps`, sem rasterizador no sandbox); semáforo/placa drive-thru
+  não existem como PNG no kit; fileira de carros parados é vitrine do promo, no
+  jogo o tráfego é vivo.
+- Manifesto: `ui.hubAreaBar`, `ui.gemsIcon`, `ui.manyUpgradeBoxGreen` →
+  implementado (54 entradas). Testes: 65/65 (`tests/visual-reference.test.ts`).
+
 ## 2026-10-12 — Correções de honestidade de UI (relato de QA do diretor)
 
 - Toggles de som/música apresentados como funcionais sem recurso de áudio

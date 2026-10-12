@@ -1,10 +1,10 @@
 # ASSET_MANIFEST — o que é cada recurso e para que serve
 
-_Gerado por `scripts/build-asset-manifest.mjs` em 2026-10-12T11:58:24.472Z.
+_Gerado por `scripts/build-asset-manifest.mjs` em 2026-10-12T12:35:42.680Z.
 Auditoria visual realizada em 2026-10-12; evidências em [`previews/`](previews/)._
 
 **Cobertura:** 609 arquivos classificados em 113 entradas, sem sobras e sem duplicidade (validado pelo gerador).  
-**Bytes PNG:** 10.09 MB · **Status:** 51 implementado, 46 reservado, 12 nao-usado-runtime, 4 metadado
+**Bytes PNG:** 10.09 MB · **Status:** 54 implementado, 43 reservado, 12 nao-usado-runtime, 4 metadado
 
 Legenda de status: `implementado` (em uso hoje, validado em preview) · `reservado`
 (destino definido para fase futura) · `nao-usado-runtime` (fonte Spine/vetor) · `metadado`.
@@ -687,8 +687,8 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 
 - **Arquivos:** `Png/Ui and PopUp/GemsIcon.png` · 61×57px
 - **O que é (verificado):** Gema verde facetada.
-- **Uso no jogo:** Ícone de moeda premium (somente se/quando existir).
-- **Fase:** 9 · **Status:** reservado
+- **Uso no jogo:** Ícone da pílula de Pontos de Sucesso na HUD superior (referência Screenshot_7).
+- **Fase:** 5 · **Status:** implementado · validado em preview
 - **Chaves no código:** `src/assets/registry.ts` → ui.gemsIcon
 
 ### `ui.gemsPlus` — UI — GemsPlusBar
@@ -703,8 +703,8 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 
 - **Arquivos:** `Png/Ui and PopUp/HubAreaBar.png` · 362×159px
 - **O que é (verificado):** Barra verde escura com mapa aparecendo no topo e pino laranja.
-- **Uso no jogo:** Barra de área/hub do jogador na tela de cidades.
-- **Fase:** 6 · **Status:** reservado
+- **Uso no jogo:** Badge de distrito na HUD superior (referência Screenshot_7); o mapa da Fase 6 reutiliza a mesma arte.
+- **Fase:** 5 · **Status:** implementado · validado em preview
 - **Chaves no código:** `src/assets/registry.ts` → ui.hubAreaBar
 
 ### `ui.hudCoinBar` — UI — HudCoinBar
@@ -727,8 +727,8 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 
 - **Arquivos:** `Png/Ui and PopUp/ManyUpgradeBoxGreen.png` · 92×75px
 - **O que é (verificado):** Quadrado verde (segmento ativo do seletor múltiplo).
-- **Uso no jogo:** Segmento ativo do seletor de compra múltipla.
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Badge de upgrade por andar na borda direita da torre (referência Screenshot_7), com ui.arrowUpgrade por cima.
+- **Fase:** 5 · **Status:** implementado · validado em preview
 - **Chaves no código:** `src/assets/registry.ts` → ui.manyUpgradeBoxGreen
 
 ### `ui.mapIcon` — UI — MapIcon

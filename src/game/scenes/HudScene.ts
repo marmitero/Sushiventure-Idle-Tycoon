@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { ASSETS, keyFor } from '../../assets/registry';
 import { BALANCE } from '../../core/config/balance';
+import { START_AREA } from '../../core/config/areas';
 import type { OfflineQuote } from '../../core/offline';
 import {
   cashierUpgradeCost,
@@ -15,7 +16,7 @@ import {
   staffUpgradeCost,
 } from '../../core/economy';
 import { Decimal } from '../../core/decimal';
-import { formatDuration, formatMoney, formatRate } from '../../core/format';
+import { formatDuration, formatMoney, formatNumber, formatRate } from '../../core/format';
 import type { GameState, StaffId } from '../../core/state/types';
 import { STAFF_IDS } from '../../core/state/types';
 import { getSession } from '../session';
@@ -47,9 +48,22 @@ export class HudScene extends Phaser.Scene {
   private moneyText!: Phaser.GameObjects.Text;
   private rateText!: Phaser.GameObjects.Text;
   private boostText!: Phaser.GameObjects.Text;
+  private boostLabel!: Phaser.GameObjects.Text;
+  private areaBar!: Phaser.GameObjects.Image;
+  private areaText!: Phaser.GameObjects.Text;
+  private gemBar!: Phaser.GameObjects.Image;
+  private gemIcon!: Phaser.GameObjects.Image;
+  private gemText!: Phaser.GameObjects.Text;
   private coinBar!: Phaser.GameObjects.Image;
   private coinIcon!: Phaser.GameObjects.Image;
-  private buttons: KitButton[] = [];
+  private bottomStrip!: Phaser.GameObjects.Rectangle;
+  private mapLabel!: Phaser.GameObjects.Text;
+  private shopLabel!: Phaser.GameObjects.Text;
+  private btnBoost!: KitButton;
+  private btnEquipe!: KitButton;
+  private btnMap!: KitButton;
+  private btnShop!: KitButton;
+  private btnSettings!: KitButton;
   private mapLock!: Phaser.GameObjects.Image;
   private shopLock!: Phaser.GameObjects.Image;
   private panelObjects: Phaser.GameObjects.GameObject[] = [];
@@ -195,12 +209,36 @@ export class HudScene extends Phaser.Scene {
   }
 
   // ------------------------------------------------------------------- bars
+  /**
+   * Top bar follows the official reference (Screenshot_7.png): area badge on
+   * the left (kit HubAreaBar), premium-currency pill (green button art + gem
+   * icon), money pill (kit HudCoinBar + coin) and the settings gear at right.
+   */
   private buildTopBar(): void {
+    this.areaBar = this.add.image(0, 0, keyFor(ASSETS.ui.hubAreaBar)).setDepth(DEPTH_HUD);
+    this.areaText = kitText(this, 0, 0, START_AREA.name, {
+      size: 15,
+      color: '#eafff2',
+      stroke: '#0c3b25',
+      strokeThickness: 4,
+    })
+      .setOrigin(0, 0.5)
+      .setDepth(DEPTH_HUD + 1);
+    this.gemBar = this.add.image(0, 0, keyFor(ASSETS.ui.btnGreen)).setDepth(DEPTH_HUD);
+    this.gemIcon = this.add.image(0, 0, keyFor(ASSETS.ui.gemsIcon)).setDepth(DEPTH_HUD + 1);
+    this.gemText = kitText(this, 0, 0, '0', {
+      size: 18,
+      color: '#ffffff',
+      stroke: '#2f6b1f',
+      strokeThickness: 4,
+    })
+      .setOrigin(0, 0.5)
+      .setDepth(DEPTH_HUD + 1);
     this.coinBar = this.add.image(0, 0, keyFor(ASSETS.ui.hudCoinBar)).setDepth(DEPTH_HUD);
     this.coinIcon = this.add.image(0, 0, keyFor(ASSETS.ui.coinIcon)).setDepth(DEPTH_HUD + 1);
-    this.moneyText = kitText(this, 0, 0, '$0', { size: 30, color: '#fff8ec', stroke: '#3a2313', strokeThickness: 5 });
+    this.moneyText = kitText(this, 0, 0, '$0', { size: 22, color: '#fff8ec', stroke: '#3a2313', strokeThickness: 5 });
     this.moneyText.setOrigin(0, 0.5).setDepth(DEPTH_HUD + 1);
-    this.rateText = kitText(this, 0, 0, '$0/s', { size: 20, color: '#d9f2c4', stroke: '#2c3a12', strokeThickness: 4 });
+    this.rateText = kitText(this, 0, 0, '$0/s', { size: 15, color: '#d9f2c4', stroke: '#2c3a12', strokeThickness: 4 });
     this.rateText.setOrigin(0, 0.5).setDepth(DEPTH_HUD + 1);
   }
 
@@ -209,135 +247,169 @@ export class HudScene extends Phaser.Scene {
     this.boostText.setOrigin(0.5, 0).setDepth(DEPTH_HUD + 1);
   }
 
+  /**
+   * Bottom bar follows the reference: dark strip, BOOST at left, team button
+   * centered, CITY MAP / SHOP icons with labels at right. The upgrade panel is
+   * reached from the tower itself (next-slot price button and per-floor
+   * badges), exactly as the reference composition implies.
+   */
   private buildBottomBar(): void {
     const session = getSession();
-    const upgrades = new KitButton({
+    this.bottomStrip = this.add.rectangle(0, 0, 10, 10, 0x241209, 0.92).setDepth(DEPTH_HUD - 1);
+
+    this.btnEquipe = new KitButton({
       scene: this,
       x: 0,
       y: 0,
       texture: keyFor(ASSETS.ui.btnGreen),
       pressedTexture: keyFor(ASSETS.ui.btnGreenPressed),
-      width: 190,
-      height: 78,
-      label: 'MELHORIAS',
-      labelStyle: { size: 24, color: '#ffffff', stroke: '#2f6b1f', strokeThickness: 5 },
-      onDown: () => this.openUpgrades({ focus: 'unlock' }),
+      width: 138,
+      height: 60,
+      label: 'EQUIPE',
+      labelStyle: { size: 22, color: '#ffffff', stroke: '#2f6b1f', strokeThickness: 5 },
+      onDown: () => this.openStaff(),
     }).setDepth(DEPTH_HUD);
 
-    const boost = new KitButton({
+    this.btnBoost = new KitButton({
       scene: this,
       x: 0,
       y: 0,
       texture: keyFor(ASSETS.ui.btnBoost),
       pressedTexture: keyFor(ASSETS.ui.btnBoostPressed),
-      width: 120,
-      height: 60,
+      width: 122,
+      height: 56,
       onDown: () => {
         void session.claimDoubleRevenueAd().then((res) => this.showToast(res.message));
       },
     }).setDepth(DEPTH_HUD);
     const boostIcon = this.add.image(0, 0, keyFor(ASSETS.ui.boostIcon)).setDepth(DEPTH_HUD + 1);
-    boost.image.setData('icon', boostIcon);
+    this.btnBoost.image.setData('icon', boostIcon);
+    this.boostLabel = kitText(this, 0, 0, 'BOOST', {
+      size: 17,
+      color: '#5a2d0c',
+      stroke: '#ffe9a8',
+      strokeThickness: 3,
+    }).setDepth(DEPTH_HUD + 1);
 
-    const map = new KitButton({
+    this.btnMap = new KitButton({
       scene: this,
       x: 0,
       y: 0,
       texture: keyFor(ASSETS.ui.mapIcon),
-      width: 74,
-      height: 72,
+      width: 64,
+      height: 62,
     })
       .setDepth(DEPTH_HUD)
       .setEnabled(false, 'Mapa de cidades chega na Fase 6 (toque para ver os requisitos).');
-    map.setOnDisabledClick((reason) => this.showToast(reason));
+    this.btnMap.setOnDisabledClick((reason) => this.showToast(reason));
     this.mapLock = this.add
       .image(0, 0, keyFor(ASSETS.mapLock))
       .setDepth(DEPTH_HUD + 1)
-      .setDisplaySize(30, 36);
+      .setDisplaySize(26, 32);
+    this.mapLabel = kitText(this, 0, 0, 'MAPA', {
+      size: 12,
+      color: '#ffe9c4',
+      stroke: '#241209',
+      strokeThickness: 3,
+    }).setDepth(DEPTH_HUD + 1);
 
-    const shop = new KitButton({
+    this.btnShop = new KitButton({
       scene: this,
       x: 0,
       y: 0,
       texture: keyFor(ASSETS.ui.shopIcon),
-      width: 74,
-      height: 72,
+      width: 64,
+      height: 62,
     })
       .setDepth(DEPTH_HUD)
       .setEnabled(false, 'Loja premium: nenhum pagamento configurado neste ambiente (Fase 9).');
-    shop.setOnDisabledClick((reason) => this.showToast(reason));
+    this.btnShop.setOnDisabledClick((reason) => this.showToast(reason));
     this.shopLock = this.add
       .image(0, 0, keyFor(ASSETS.mapLock))
       .setDepth(DEPTH_HUD + 1)
-      .setDisplaySize(30, 36);
+      .setDisplaySize(26, 32);
+    this.shopLabel = kitText(this, 0, 0, 'LOJA', {
+      size: 12,
+      color: '#ffe9c4',
+      stroke: '#241209',
+      strokeThickness: 3,
+    }).setDepth(DEPTH_HUD + 1);
 
-    const equipe = new KitButton({
-      scene: this,
-      x: 0,
-      y: 0,
-      texture: keyFor(ASSETS.ui.btnGreen),
-      pressedTexture: keyFor(ASSETS.ui.btnGreenPressed),
-      width: 150,
-      height: 78,
-      label: 'EQUIPE',
-      labelStyle: { size: 24, color: '#ffffff', stroke: '#2f6b1f', strokeThickness: 5 },
-      onDown: () => this.openStaff(),
-    }).setDepth(DEPTH_HUD);
-
-    const settings = new KitButton({
+    this.btnSettings = new KitButton({
       scene: this,
       x: 0,
       y: 0,
       texture: keyFor(ASSETS.ui.settingsIcon),
       pressedTexture: keyFor(ASSETS.ui.settingsIconPressed),
-      width: 64,
-      height: 62,
+      width: 52,
+      height: 50,
       onDown: () => this.toggleSettings(),
     }).setDepth(DEPTH_HUD);
-    settings.image.setData('role', 'settings');
-
-    this.buttons = [upgrades, boost, map, shop, settings, equipe];
+    this.btnSettings.image.setData('role', 'settings');
   }
 
   // ----------------------------------------------------------------- layout
   private layout(): void {
     const w = this.scale.width;
     const h = this.scale.height;
-    const safeTop = 12;
-    const barW = Math.min(w - 90, 330);
-    const barH = barW * (81 / 310);
-    this.coinBar.setDisplaySize(barW, barH);
-    this.coinBar.setPosition(16 + barW / 2, safeTop + barH / 2);
-    this.coinIcon.setDisplaySize(barH * 0.62, barH * 0.62);
-    this.coinIcon.setPosition(16 + barH * 0.55, safeTop + barH / 2);
-    this.moneyText.setPosition(16 + barH * 1.05, safeTop + barH / 2);
-    this.rateText.setPosition(18, safeTop + barH + 8);
-    this.boostText.setPosition(w / 2, safeTop + barH + 34);
+    const safeTop = 8;
+    const gap = 6;
+    const gearW = 52;
 
-    const settings = this.buttons[4];
-    settings?.setPosition(w - 44, safeTop + 34);
+    // Top row (reference order): area badge · gems pill · coin pill · gear.
+    const areaW = Phaser.Math.Clamp(Math.round(w * 0.3), 104, 150);
+    const areaH = Math.round(areaW * (140 / 360));
+    this.areaBar.setDisplaySize(areaW, areaH);
+    this.areaBar.setPosition(10 + areaW / 2, safeTop + areaH / 2);
+    const barCenterY = safeTop + areaH * 0.66;
+    this.areaText.setPosition(10 + areaW * 0.3, barCenterY);
+    const pillH = 34;
+    let x = 10 + areaW + gap;
+    const gemW = Phaser.Math.Clamp(Math.round(w * 0.22), 82, 118);
+    this.gemBar.setDisplaySize(gemW, pillH);
+    this.gemBar.setPosition(x + gemW / 2, barCenterY);
+    this.gemIcon.setDisplaySize(pillH * 0.78, pillH * 0.78);
+    this.gemIcon.setPosition(x + pillH * 0.52, barCenterY);
+    this.gemText.setPosition(x + pillH * 0.98, barCenterY);
+    x += gemW + gap;
+    const coinW = Math.max(92, w - 10 - gearW - gap - x);
+    this.coinBar.setDisplaySize(coinW, pillH + 6);
+    this.coinBar.setPosition(x + coinW / 2, barCenterY);
+    this.coinIcon.setDisplaySize(pillH * 0.8, pillH * 0.8);
+    this.coinIcon.setPosition(x + pillH * 0.55, barCenterY);
+    this.moneyText.setPosition(x + pillH * 1.02, barCenterY);
+    this.rateText.setPosition(12, safeTop + areaH + 12);
+    this.boostText.setPosition(w / 2, safeTop + areaH + 32);
+    this.btnSettings.setPosition(w - 10 - gearW / 2, safeTop + gearW / 2);
 
-    const bottom = h - 46;
-    const upgrades = this.buttons[0];
-    const boost = this.buttons[1];
-    const map = this.buttons[2];
-    const shop = this.buttons[3];
-    const equipe = this.buttons[5];
-    equipe?.setPosition(w / 2 - 105, bottom);
-    upgrades?.setPosition(w / 2 + 105, bottom);
-    boost?.setPosition(w - 150, bottom - 4);
-    const boostIcon = boost?.image.getData('icon') as Phaser.GameObjects.Image | undefined;
-    boostIcon?.setPosition(w - 150, bottom - 6);
-    map?.setPosition(24 + 37, bottom - 6);
-    shop?.setPosition(24 + 37 + 84, bottom - 6);
-    this.mapLock?.setPosition(24 + 37 + 22, bottom - 6 - 24);
-    this.shopLock?.setPosition(24 + 37 + 84 + 22, bottom - 6 - 24);
+    // Bottom strip: BOOST left · EQUIPE center · MAPA/LOJA right, labeled.
+    const stripH = 84;
+    this.bottomStrip.setSize(w, stripH);
+    this.bottomStrip.setPosition(w / 2, h - stripH / 2);
+    const cy = h - stripH / 2 - 4;
+    const boostX = 12 + 61;
+    this.btnBoost.setPosition(boostX, cy);
+    const boostIcon = this.btnBoost.image.getData('icon') as Phaser.GameObjects.Image | undefined;
+    boostIcon?.setDisplaySize(30, 34);
+    boostIcon?.setPosition(boostX - 26, cy);
+    this.boostLabel.setPosition(boostX + 14, cy);
+    this.btnEquipe.setPosition(w / 2, cy);
+    const shopX = w - 12 - 32;
+    const mapX = shopX - 72;
+    this.btnMap.setPosition(mapX, cy - 6);
+    this.btnShop.setPosition(shopX, cy - 6);
+    this.mapLabel.setPosition(mapX, h - 12);
+    this.shopLabel.setPosition(shopX, h - 12);
+    this.mapLock.setPosition(mapX + 16, cy - 28);
+    this.shopLock.setPosition(shopX + 16, cy - 28);
   }
 
   override update(): void {
     const session = getSession();
     const now = session.now();
     this.moneyText.setText(formatMoney(moneyOf(session.state)));
+    const pts = formatNumber(Decimal.deserialize(session.state.prestigePoints));
+    if (this.gemText.text !== pts) this.gemText.setText(pts);
     this.rateText.setText(`${formatRate(revenuePerSec(session.state, now))}  ·  ×${globalMultiplier(session.state, now).toNumber().toFixed(1)}`);
     const boost = session.activeRevenueBoost();
     if (boost) {
