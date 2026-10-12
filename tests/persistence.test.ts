@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { BALANCE } from '../src/core/config/balance';
 import { D } from '../src/core/decimal';
 import { loadState, serializeState } from '../src/core/state/migrations';
 import { createInitialState } from '../src/core/state/factory';
@@ -48,8 +49,9 @@ describe('save loading & migration', () => {
       settings: { sound: false },
     };
     const result = loadState(JSON.stringify(raw), NOW);
-    expect(result.status).toBe('loaded');
-    if (result.status !== 'loaded') return;
+    // version 1 → 2 is a real migration
+    expect(result.status).toBe('migrated');
+    if (result.status !== 'migrated' && result.status !== 'loaded') return;
     const s = result.state;
     expect(s.floors).toHaveLength(1);
     expect(s.floors[0]?.level).toBe(3);
@@ -71,6 +73,43 @@ describe('save loading & migration', () => {
   it('recovers from null / empty payloads', () => {
     expect(loadState(null, NOW).status).toBe('recovered');
     expect(loadState('', NOW).status).toBe('recovered');
+  });
+
+  it('migrates v1 saves (no staff block) to v2 with unhired staff', () => {
+    const v1 = {
+      version: 1,
+      money: { m: 3, e: 2 },
+      floors: [{ index: 0, level: 2 }],
+      cashierLevel: 2,
+    };
+    const result = loadState(JSON.stringify(v1), NOW);
+    expect(result.status).toBe('migrated');
+    if (result.status !== 'migrated') return;
+    expect(result.state.version).toBe(SAVE_VERSION);
+    expect(result.state.staff.attendant.level).toBe(0);
+    expect(result.state.staff.chef.level).toBe(0);
+    expect(result.state.staff.floorGirl.level).toBe(0);
+    expect(result.state.staff.liftGuy.level).toBe(0);
+    expect(result.state.floors[0]?.level).toBe(2);
+  });
+
+  it('clamps hostile staff levels from the future', () => {
+    const raw = {
+      version: SAVE_VERSION,
+      staff: {
+        attendant: { level: 999 },
+        chef: { level: -3 },
+        floorGirl: { level: 'x' },
+        liftGuy: { level: 7 },
+      },
+    };
+    const result = loadState(JSON.stringify(raw), NOW);
+    expect(result.status).toBe('loaded');
+    if (result.status !== 'loaded') return;
+    expect(result.state.staff.attendant.level).toBe(BALANCE.staff.attendant.maxLevel);
+    expect(result.state.staff.chef.level).toBe(0);
+    expect(result.state.staff.floorGirl.level).toBe(0);
+    expect(result.state.staff.liftGuy.level).toBe(7);
   });
 });
 

@@ -3,8 +3,8 @@
 > Estado operacional real do projeto. Atualizado no início e no fim de cada etapa.
 > Nada aqui é marcado como concluído sem evidência (teste, build, push ou preview).
 
-- **Fase atual:** pré-Fase 3 — manifesto de assets reconstruído (auditoria item a item)
-- **Última etapa concluída:** Manifesto completo de assets (ASSET_MANIFEST) + Fases 0-2
+- **Fase atual:** 4 em diante (Fases 0-3 concluídas e validadas)
+- **Última etapa concluída:** Fase 3 — funcionários, elevador e entregas
 - **Branch:** `arena/a8701903-sushiventure-idle-tycoon`
 - **Último commit relevante:** `64c3d1e` (Fases 0-2)
 - **Estado do push:** ✅ publicado em `origin/arena/a8701903-sushiventure-idle-tycoon`
@@ -25,10 +25,14 @@
 | HUD (dinheiro, $/s, painel de melhorias, configurações) | Implementado | preview ao vivo |
 | Boost ×2 via anúncio (somente simulador DEV, idempotente) | Implementado + testado | `ops.grantRevenueBoost`, testes de receipt duplicado |
 | Simulação de progressão headless | Implementado | `npm run sim` |
+| Funcionários (4 papéis, escopos distintos) + contratação/treino | Implementado + testado | `tests/staff.test.ts`, painel EQUIPE no preview |
+| Elevador com eficiência derivada do operador | Implementado | `elevatorTripMs`, tween do lift guy |
+| Entregas com veículos lazy-load (variantes 1-2) | Implementado | `vehicleIntervalSec`, tráfego na rua (preview) |
+| Migração de save v1 → v2 (bloco staff) | Implementado + testado | `tests/persistence.test.ts` |
 
 ## Funcionalidades testadas
 
-- 43 testes Vitest passando (`npx vitest run`), incluindo 4 testes de consistência do manifesto (cobertura total, unicidade, registry⊆manifesto, entradas implementadas com chave de código).
+- 54 testes Vitest passando (`npx vitest run`): 4 de consistência do manifesto, 8 de funcionários/ops de equipe, 2 de migração v1→v2, demais de decimal/economia/ops/persistência/registry.
 - Typecheck estrito passando (`npx tsc --noEmit`).
 - Build de produção passando (`npm run build`).
 - Simulação de 12h executada com marcos medidos (ver `docs/GAME_DESIGN/ECONOMY.md` §6).
@@ -75,8 +79,8 @@
 
 ## Próximas tarefas (prioridade)
 
-1. Revisão do diretor sobre o manifesto (destinos reservados e status).
-2. Fase 3 — funcionários com efeitos econômicos reais + elevador + veículos de entrega, consumindo SOMENTE entradas `reservado`/`implementado` do manifesto.
+1. Validação visual do diretor no preview: elenco contratado, elevador e tráfego de entregas.
+2. Fase 4 — ganhos offline com popup do kit, cap e proteção contra duplicidade.
 2. Fase 4 — ganhos offline com popup do kit e proteção contra duplicidade.
 3. Fase 5 — receitas, reputação, missões e conquistas.
 4. Atlas packing das sequências de frames (débito de performance).

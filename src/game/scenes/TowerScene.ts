@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
-import { ASSETS, keyFor } from '../../assets/registry';
-import { floorVisualLevel } from '../../core/economy';
+import { ASSETS, FRAME_COUNTS, carPaths, keyFor } from '../../assets/registry';
+import { elevatorTripMs, floorVisualLevel, vehicleIntervalSec } from '../../core/economy';
 import type { GameState } from '../../core/state/types';
 import { getSession } from '../session';
 import { TOWER } from '../worldLayout';
@@ -18,10 +18,10 @@ export class TowerScene extends Phaser.Scene {
   private floorSprites = new Map<number, Phaser.GameObjects.Image>();
   private nextSlot!: Phaser.GameObjects.Image;
   private cashierSprite!: Phaser.GameObjects.Image;
-  private chef!: Phaser.GameObjects.Sprite;
-  private liftGuy!: Phaser.GameObjects.Sprite;
-  private floorGirl!: Phaser.GameObjects.Sprite;
-  private cashierGirl!: Phaser.GameObjects.Sprite;
+  private chef: Phaser.GameObjects.Sprite | null = null;
+  private liftGuy: Phaser.GameObjects.Sprite | null = null;
+  private floorGirl: Phaser.GameObjects.Sprite | null = null;
+  private cashierGirl: Phaser.GameObjects.Sprite | null = null;
   private cloudSprites: Phaser.GameObjects.Image[] = [];
   private camTargetY = 0;
   private manualCamUntil = 0;
@@ -44,8 +44,12 @@ export class TowerScene extends Phaser.Scene {
       if (cause === 'floor_unlocked' || cause === 'floor_upgraded' || cause === 'cashier_upgraded') {
         this.rebuildTower(state);
       }
+      if (cause === 'staff_hired' || cause === 'staff_upgraded') {
+        this.refreshCast(state);
+      }
       this.applyCamera(false);
     });
+    this.loadCars([1, 2]);
 
     this.setupPan();
     this.time.addEvent({
@@ -141,30 +145,184 @@ export class TowerScene extends Phaser.Scene {
   }
 
   // -------------------------------------------------------------------- cast
+  /**
+   * The cast mirrors the payroll: a character only exists on screen when the
+   * corresponding staff member is hired (manifest-driven, no phantom workers).
+   */
   private buildCast(): void {
-    this.cashierGirl = this.add.sprite(TOWER.cashierGirlX, TOWER.cashierGirlY, 'Cashier Girl/ChashierGirl-animation_00');
-    this.cashierGirl.setDepth(3);
-    this.cashierGirl.play('anim.cashierGirl');
+    this.refreshCast(getSession().state);
+  }
 
-    this.chef = this.add.sprite(0, TOWER.chefY, 'Chef Guy/Walk/ChefGuy-Walk_00');
-    this.chef.setDepth(4);
-    this.chef.play('anim.chefWalk');
+  private refreshCast(state: GameState): void {
+    const hired = (id: 'attendant' | 'chef' | 'floorGirl' | 'liftGuy'): boolean =>
+      (state.staff[id]?.level ?? 0) > 0;
 
-    this.floorGirl = this.add.sprite(TOWER.floorGirlX, TOWER.floorGirlY(0), 'Floor Girl/FloorGirl-animation_00');
-    this.floorGirl.setDepth(3);
-    this.floorGirl.play('anim.floorGirl');
+    const wantCashier = hired('attendant');
+    if (wantCashier && !this.cashierGirl) {
+      this.cashierGirl = this.add
+        .sprite(TOWER.cashierGirlX, TOWER.cashierGirlY, 'Cashier Girl/ChashierGirl-animation_00')
+        .setDepth(3);
+      this.cashierGirl.play('anim.cashierGirl');
+    } else if (!wantCashier && this.cashierGirl) {
+      this.cashierGirl.destroy();
+      this.cashierGirl = null as unknown as Phaser.GameObjects.Sprite;
+    }
 
-    this.liftGuy = this.add.sprite(TOWER.shaftX, TOWER.floorCenterY(0), 'Lift Guy/Lift Guy-animation_00');
-    this.liftGuy.setDepth(3);
-    this.liftGuy.play('anim.liftGuy');
+    const wantChef = hired('chef');
+    if (wantChef && !this.chef) {
+      this.chef = this.add.sprite(0, TOWER.chefY, 'Chef Guy/Walk/ChefGuy-Walk_00').setDepth(4);
+      this.chef.play('anim.chefWalk');
+    } else if (!wantChef && this.chef) {
+      this.chef.destroy();
+      this.chef = null as unknown as Phaser.GameObjects.Sprite;
+    }
+
+    const wantFloor = hired('floorGirl');
+    if (wantFloor && !this.floorGirl) {
+      const floorIndex = Math.min(1, state.floors.length - 1);
+      this.floorGirl = this.add
+        .sprite(TOWER.floorGirlX, TOWER.floorGirlY(floorIndex), 'Floor Girl/FloorGirl-animation_00')
+        .setDepth(3);
+      this.floorGirl.play('anim.floorGirl');
+    } else if (!wantFloor && this.floorGirl) {
+      this.floorGirl.destroy();
+      this.floorGirl = null as unknown as Phaser.GameObjects.Sprite;
+    }
+
+    const wantLift = hired('liftGuy');
+    if (wantLift && !this.liftGuy) {
+      this.liftGuy = this.add
+        .sprite(TOWER.shaftX, TOWER.floorCenterY(0), 'Lift Guy/Lift Guy-animation_00')
+        .setDepth(3);
+      this.liftGuy.play('anim.liftGuy');
+      this.startLiftTween(state);
+    } else if (!wantLift && this.liftGuy) {
+      this.tweens.killTweensOf(this.liftGuy);
+      this.liftGuy.destroy();
+      this.liftGuy = null as unknown as Phaser.GameObjects.Sprite;
+    } else if (wantLift && this.liftGuy) {
+      this.startLiftTween(state);
+    }
+  }
+
+  /** Elevator speed comes from the economy (lift guy level), not from a constant. */
+  private startLiftTween(state: GameState): void {
+    if (!this.liftGuy) return;
+    this.tweens.killTweensOf(this.liftGuy);
+    const topFloor = Math.min(2, Math.max(0, state.floors.length - 1));
     this.tweens.add({
       targets: this.liftGuy,
-      y: TOWER.floorCenterY(2),
-      duration: 4200,
+      y: TOWER.floorCenterY(topFloor),
+      duration: elevatorTripMs(state),
       yoyo: true,
       repeat: -1,
       ease: 'Sine.InOut',
     });
+  }
+
+  // --------------------------------------------------------------- deliveries
+  /**
+   * Delivery traffic: vehicles cross the street and sometimes stop to drop an
+   * order. Frequency derives from `vehicleIntervalSec` (lift guy efficiency),
+   * so the visual is feedback of a documented economic layer — no hidden
+   * effect (constitution 11.2).
+   */
+  private carsReady = new Set<number>();
+  private cars: Phaser.GameObjects.Sprite[] = [];
+  private lastCarAt = 0;
+
+  private loadCars(variants: number[]): void {
+    for (const car of variants) {
+      for (const p of carPaths(car)) {
+        if (!this.textures.exists(keyFor(p))) this.load.image(keyFor(p), `/assets/${p}`);
+      }
+    }
+    this.load.once('complete', () => {
+      for (const car of variants) {
+        if (this.carsReady.has(car)) continue;
+        const moveFrames: Phaser.Types.Animations.AnimationFrame[] = [];
+        const idleFrames: Phaser.Types.Animations.AnimationFrame[] = [];
+        for (let f = 0; f < FRAME_COUNTS.carMove; f += 1) {
+          const key = keyFor(`png/Cars/Car${car}/Move/Cars-Car${car}_Move_${String(f).padStart(2, '0')}.png`);
+          if (this.textures.exists(key)) moveFrames.push({ key });
+        }
+        for (let f = 0; f < FRAME_COUNTS.carIdle; f += 1) {
+          const key = keyFor(`png/Cars/Car${car}/Idle/Cars-Car${car}_Idle_${String(f).padStart(2, '0')}.png`);
+          if (this.textures.exists(key)) idleFrames.push({ key });
+        }
+        if (moveFrames.length > 0) {
+          this.anims.create({ key: `anim.car${car}.move`, frames: moveFrames, frameRate: 24, repeat: -1 });
+        }
+        if (idleFrames.length > 0) {
+          this.anims.create({ key: `anim.car${car}.idle`, frames: idleFrames, frameRate: 12, repeat: -1 });
+        }
+        this.carsReady.add(car);
+      }
+    });
+    this.load.start();
+  }
+
+  private spawnCar(): void {
+    const variants = [...this.carsReady];
+    if (variants.length === 0) return;
+    const car = variants[Math.floor(Math.random() * variants.length)] ?? 1;
+    const dirRight = Math.random() < 0.5;
+    const laneY = dirRight ? TOWER.roadNearLaneY : TOWER.roadFarLaneY;
+    const startX = dirRight ? -1200 : 1200;
+    const sprite = this.add.sprite(startX, laneY, `Cars/Car${car}/Move/Cars-Car${car}_Move_00`);
+    sprite.setDepth(1);
+    sprite.setFlipX(!dirRight);
+    sprite.play(`anim.car${car}.move`);
+    const stopX = Phaser.Math.Between(-350, 350);
+    const data = {
+      dir: dirRight ? 1 : -1,
+      speed: Phaser.Math.Between(150, 210),
+      stopX,
+      stopping: true,
+      stopUntil: 0,
+      car,
+    };
+    sprite.setData('drive', data);
+    this.cars.push(sprite);
+  }
+
+  private updateCars(): void {
+    const session = getSession();
+    const now = this.time.now;
+    if (!session.state.settings.reducedMotion && this.carsReady.size > 0) {
+      const interval = vehicleIntervalSec(session.state) * 1000;
+      if (now - this.lastCarAt > interval && this.cars.length < 4) {
+        this.lastCarAt = now;
+        this.spawnCar();
+      }
+    }
+    const dt = this.game.loop.delta / 1000;
+    for (const sprite of [...this.cars]) {
+      const data = sprite.getData('drive') as {
+        dir: number;
+        speed: number;
+        stopX: number;
+        stopping: boolean;
+        stopUntil: number;
+        car: number;
+      };
+      if (data.stopping && data.stopUntil === 0 && Math.abs(sprite.x - data.stopX) < 12) {
+        data.stopUntil = now + Phaser.Math.Between(1500, 3500);
+        sprite.play(`anim.car${data.car}.idle`, true);
+      } else if (data.stopUntil > 0 && now >= data.stopUntil) {
+        data.stopUntil = -1;
+        data.stopping = false;
+        sprite.play(`anim.car${data.car}.move`, true);
+      } else if (data.stopUntil === 0) {
+        sprite.x += data.dir * data.speed * dt;
+      } else if (data.stopUntil === -1) {
+        sprite.x += data.dir * data.speed * dt;
+      }
+      if (sprite.x < -1400 || sprite.x > 1400) {
+        sprite.destroy();
+        this.cars.splice(this.cars.indexOf(sprite), 1);
+      }
+    }
   }
 
   // ------------------------------------------------------------------ camera
@@ -220,6 +378,7 @@ export class TowerScene extends Phaser.Scene {
         this.cameras.main.scrollY = Phaser.Math.Linear(current, target, 0.08);
       }
     }
+    this.updateCars();
     // Chef patrol: walk <-> cook cycle gives the kitchen visible life.
     if (this.chef && this.anims.exists('anim.chefWalk')) {
       const t = this.time.now / 1000;

@@ -6,9 +6,11 @@ import {
   floorUpgradeCost,
   moneyOf,
   revenuePerSec,
+  staffHireCost,
+  staffUpgradeCost,
 } from './economy';
-import type { GameState, Result } from './state/types';
-import { fail, ok } from './state/types';
+import type { GameState, Result, StaffId } from './state/types';
+import { STAFF_IDS, fail, ok } from './state/types';
 
 /**
  * Atomic economy operations (constitution rules 7 & 8):
@@ -77,6 +79,33 @@ export function upgradeCashier(state: GameState): Result<GameState> {
   const next = withMoney(state, money.sub(cost));
   next.cashierLevel = state.cashierLevel + 1;
   next.stats = { ...next.stats, cashierUpgrades: next.stats.cashierUpgrades + 1 };
+  return ok(next);
+}
+
+/** Hires a staff member (level 0 → 1): atomic debit + effect. */
+export function hireStaff(state: GameState, id: StaffId): Result<GameState> {
+  if (!STAFF_IDS.includes(id)) return fail('Unknown staff role');
+  const current = state.staff[id]?.level ?? 0;
+  if (current > 0) return fail('Staff already hired');
+  const cost = staffHireCost(id);
+  const money = moneyOf(state);
+  if (money.lt(cost)) return fail('Not enough money');
+  const next = withMoney(state, money.sub(cost));
+  next.staff = { ...next.staff, [id]: { level: 1 } };
+  return ok(next);
+}
+
+/** Trains a hired staff member (level → level+1, capped). */
+export function upgradeStaff(state: GameState, id: StaffId): Result<GameState> {
+  if (!STAFF_IDS.includes(id)) return fail('Unknown staff role');
+  const current = state.staff[id]?.level ?? 0;
+  if (current <= 0) return fail('Staff not hired yet');
+  const cost = staffUpgradeCost(id, current);
+  if (cost == null) return fail('Staff at maximum level');
+  const money = moneyOf(state);
+  if (money.lt(cost)) return fail('Not enough money');
+  const next = withMoney(state, money.sub(cost));
+  next.staff = { ...next.staff, [id]: { level: current + 1 } };
   return ok(next);
 }
 

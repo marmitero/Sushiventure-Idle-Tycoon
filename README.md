@@ -60,5 +60,5 @@ Veja [`docs/assets/ASSET_LICENSES.md`](docs/assets/ASSET_LICENSES.md).
 
 ## Status rápido
 
-Fases 0–2 concluídas e testadas (auditoria, fundação técnica e loop econômico
-inicial). Detalhes e evidências em [`AI_STATE.md`](AI_STATE.md).
+Fases 0–3 concluídas e testadas (auditoria, fundação técnica, loop econômico e
+equipe/elevador/entregas). Detalhes e evidências em [`AI_STATE.md`](AI_STATE.md).

@@ -30,6 +30,52 @@ async function main() {
   const milestones = [];
   const mark = (name) => milestones.push({ name, atSeconds: t });
 
+  const staffDelta = (id, levelFrom) => {
+    const probe = {
+      ...state,
+      staff: { ...state.staff, [id]: { level: levelFrom + 1 } },
+    };
+    return economy
+      .revenuePerSec(probe, now0 + t * 1000)
+      .sub(economy.revenuePerSec(state, now0 + t * 1000));
+  };
+
+  const buyStaff = () => {
+    // hire in fixed priority when comfortably affordable
+    for (const id of ['attendant', 'chef', 'floorGirl', 'liftGuy']) {
+      const level = state.staff[id].level;
+      if (level === 0) {
+        const cost = economy.staffHireCost(id);
+        if (economy.moneyOf(state).gte(cost.mul(D(2)))) {
+          const r = ops.hireStaff(state, id);
+          if (r.ok) {
+            state = r.value;
+            mark(`contrata ${id}`);
+            return true;
+          }
+        }
+        return false;
+      }
+    }
+    // train best revenue-per-cost
+    let best = null;
+    for (const id of ['attendant', 'chef', 'floorGirl', 'liftGuy']) {
+      const level = state.staff[id].level;
+      const cost = economy.staffUpgradeCost(id, level);
+      if (!cost) continue;
+      const ratio = staffDelta(id, level).div(cost);
+      if (!best || ratio.cmp(best.ratio) > 0) best = { id, cost, ratio };
+    }
+    if (best && economy.moneyOf(state).gte(best.cost)) {
+      const r = ops.upgradeStaff(state, best.id);
+      if (r.ok) {
+        state = r.value;
+        return true;
+      }
+    }
+    return false;
+  };
+
   const buySomething = () => {
     // policy: unlock next floor while it is cheap relative to wallet,
     // otherwise upgrade the floor with best revenue-per-cost ratio.
@@ -72,7 +118,7 @@ async function main() {
         return true;
       }
     }
-    return false;
+    return buyStaff();
   };
 
   let lastMilestoneFloors = 1;
@@ -96,6 +142,7 @@ async function main() {
   console.log('--- estado final ---');
   console.log('  andares           :', state.floors.map((f) => `#${f.index + 1}nv${f.level}`).join(' '));
   console.log('  caixa             :', state.cashierLevel);
+  console.log('  equipe            :', Object.entries(state.staff).map(([k, v]) => `${k}:${v.level}`).join(' '));
   console.log('  dinheiro          :', economy.moneyOf(state).toNumber().toExponential(3));
   console.log('  receita/s         :', economy.revenuePerSec(state, now0).toNumber().toExponential(3));
   console.log('  ganho acumulado   :', Decimal.deserialize(state.lifetimeEarned).toNumber().toExponential(3));

@@ -13,6 +13,12 @@ export function createRunState(now: number, cityId = 'sakura-bay', run = 1): Gam
     lifetimeEarned: Decimal.ZERO.serialize(),
     floors: [{ index: 0, level: 1 }],
     cashierLevel: 1,
+    staff: {
+      attendant: { level: 0 },
+      chef: { level: 0 },
+      floorGirl: { level: 0 },
+      liftGuy: { level: 0 },
+    },
     city: { id: cityId, run },
     prestigePoints: Decimal.ZERO.serialize(),
     prestigesCompleted: 0,

@@ -1,6 +1,6 @@
 import { moneyOf, revenuePerSec } from '../core/economy';
 import * as ops from '../core/ops';
-import type { GameState, Result } from '../core/state/types';
+import type { GameState, Result, StaffId } from '../core/state/types';
 import type { SaveManager } from '../persistence/saveManager';
 import type { AnalyticsProvider, RewardedAdProvider } from '../services/contracts';
 
@@ -81,6 +81,14 @@ export class GameSession {
 
   upgradeCashier(): boolean {
     return this.apply(ops.upgradeCashier(this.state), 'cashier_upgraded');
+  }
+
+  hireStaff(id: StaffId): boolean {
+    return this.apply(ops.hireStaff(this.state, id), 'staff_hired');
+  }
+
+  upgradeStaff(id: StaffId): boolean {
+    return this.apply(ops.upgradeStaff(this.state, id), 'staff_upgraded');
   }
 
   setSettings(patch: Partial<GameState['settings']>): void {

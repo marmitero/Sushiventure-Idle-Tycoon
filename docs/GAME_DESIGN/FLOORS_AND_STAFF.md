@@ -17,28 +17,36 @@
 - Efeito: multiplicador **global** [1, 1.5, 2.2, 3.2, 4.6, 6.5]; custos em tabela.
 - Não é "botão de dinheiro": o painel mostra o antes → depois do multiplicador.
 
-## Funcionários (Fase 3 — projeto)
+## Funcionários (implementado — Fase 3)
 
-| Papel | Asset | Efeito planejado (distinto) |
+| Papel | Asset (manifesto) | Efeito (escopo próprio, sem sobreposição) |
 |---|---|---|
-| Atendente (Cashier Girl) | 40f | +receita do térreo/caixa por nível (aditivo em StaffMult) |
-| Chef (Chef Guy) | 3×20f | reduz "tempo de preparo" → aumenta base dos andares |
-| Floor Girl | 20f | +receita dos andares acima do 1º por nível |
-| Lift Guy | 20f | +eficiência do elevador → bônus de entregas e offline cap leve |
+| Atendente de Caixa (Cashier Girl) | `cast.cashierGirl` | ×(1+0.15·nv) **somente no térreo** (índice 0) |
+| Chef de Cozinha (Chef Guy) | `cast.chef.*` | ×(1+0.08·nv) **sobre a soma de todos os andares** |
+| Atendente de Andar (Floor Girl) | `cast.floorGirl` | ×(1+0.12·nv) **somente andares superiores** (índice ≥ 1) |
+| Operador de Elevador (Lift Guy) | `cast.liftGuy` | ×(1+0.06·nv) **camada de eficiência de entregas/elevador** |
 
-Cada funcionário: custo de contratação, custo por nível, efeito por nível,
-persistência, representação visual no local de trabalho e teste próprio.
-Nenhum funcionário terá efeito idêntico ao de outro (pilar D).
+- Nível 0 = não contratado; contratar = nível 1. Custos em `balance.staff`
+  (contratação + curva de treino por papel, caps 25).
+- Personagem só existe na cena quando está contratado (sem "funcionário
+  fantasma"); contratação/treino atualizam elenco, elevador e entregas.
+- Ops atômicas `hireStaff`/`upgradeStaff` com testes (`tests/staff.test.ts`),
+  incluindo escopos distintos verificados por receita esperada exata.
 
-## Elevador
+## Elevador (implementado — Fase 3, intencionalmente leve)
 
-Hoje: decorativo intencional (lift guy percorre o shaft embutido dos floors).
-Fase 3: estado (espera/movimento), tempo de deslocamento e eficiência com
-efeito pequeno e documentado na receita de entregas — sem simulação logística
-complexa (regra 11.1).
+- Tempo de viagem deriva do nível do operador: `baseTripMs / (1+0.1·(nv-1))`,
+  piso de 900 ms (`elevatorTripMs`).
+- O operador sobe/desce o shaft embutido dos floors com esse tempo; feedback
+  visual do mesmo valor que alimenta a camada de entregas (regra 11.1: sem
+  simulação logística complexa).
 
-## Entregas (Fase 3)
+## Entregas (implementado — Fase 3)
 
-- Carros (5 variantes, idle/move) entram pela rua, param e saem; frequência
-  liga-se ao nível de entregas; se algum dia afetarem receita, a relação será
-  documentada em ECONOMY.md (hoje: nenhum efeito oculto).
+- Veículos das variantes 1–2 (`vehicle.car1/2.*`, lazy-load) cruzam a rua,
+  param para entregar e saem; intervalo = `baseVehicleIntervalSec / deliveryMult`
+  com clamp [6s, 40s] (`vehicleIntervalSec`).
+- **Relação econômica documentada:** a frequência visual deriva da camada
+  `delivery` (operador de elevador); os carros não acrescentam efeito oculto
+  próprio (regra 11.2). Variantes 3–5 ficam reservadas para cidades (Fase 6).
+- `reducedMotion` desativa o tráfego (acessibilidade).

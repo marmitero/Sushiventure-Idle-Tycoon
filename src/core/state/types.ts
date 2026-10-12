@@ -5,7 +5,14 @@
  * multiplier stacks, affordability) is recomputed by `src/core/economy.ts`.
  */
 
-export const SAVE_VERSION = 1;
+export const SAVE_VERSION = 2;
+
+export type StaffId = 'attendant' | 'chef' | 'floorGirl' | 'liftGuy';
+
+export const STAFF_IDS: StaffId[] = ['attendant', 'chef', 'floorGirl', 'liftGuy'];
+
+/** Level 0 = not hired. */
+export type StaffState = Record<StaffId, { level: number }>;
 
 export interface FloorState {
   /** Tower position, 0 = ground restaurant hall. */
@@ -40,6 +47,7 @@ export interface GameState {
 
   floors: FloorState[];
   cashierLevel: number;
+  staff: StaffState;
 
   city: CityState;
   prestigePoints: { m: number; e: number };

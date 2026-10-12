@@ -2,6 +2,23 @@
 
 Formato: datas + fases, com evidências. Detalhes operacionais em `AI_STATE.md`.
 
+## 2026-10-12 — Fase 3: funcionários, elevador e entregas
+
+- Equipe com 4 papéis de escopos econômicos distintos (térreo / andares
+  superiores / cozinha / entregas), contratação e treino atômicos, caps e
+  curvas próprias em `balance.staff`; personagem só aparece quando contratado.
+- Elevador: tempo de viagem deriva do nível do operador (`elevatorTripMs`);
+  entregas: intervalo de veículos deriva da mesma camada (`vehicleIntervalSec`),
+  sem efeito oculto dos carros (regra 11.2); `reducedMotion` desliga o tráfego.
+- Veículos 1-2 com lazy-load pós-boot e animações move/idle; variantes 3-5
+  reclassificadas no manifesto para cidades (Fase 6).
+- HUD: botão EQUIPE (asset `ui.btnUp`/label kit) e painel de equipe com
+  efeito atual → próximo e custos explicados.
+- Save v2: bloco `staff` com migração v1→v2 testada e sanitização de níveis.
+- Balanceamento v3 da camada de equipe validado por simulação (ECONOMY.md §6);
+  a v2 da equipe foi rejeitada por maxar a torre em 12h.
+- Manifesto atualizado: 50 entradas `implementado`; testes de consistência 54/54.
+
 ## 2026-10-12 — Manifesto de assets (re-auditoria item a item)
 
 - Nova fonte canônica: `docs/assets/ASSET_MANIFEST.md` / `.json` — 113 entradas

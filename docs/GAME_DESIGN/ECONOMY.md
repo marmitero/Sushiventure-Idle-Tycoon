@@ -21,15 +21,18 @@ reais e efeito real (Parte 19).
 ## 3. Fórmula de receita
 
 ```
-RevenuePerSec = GlobalMult × Σ_floors FloorBase(index, level)
+ScopeMult(i)  = i == 0 ? AttendantMult : FloorGirlMult          (escopo por andar)
+FloorSum      = Σ_floors FloorBase(i, L) × ScopeMult(i)
+RevenuePerSec = FloorSum × KitchenMult × DeliveryMult × GlobalMult
 FloorBase(i, L) = baseRevenuePerSec × indexGrowth^i × levelGrowth^(L-1)   (L ≥ 1; L=0 → 0)
-GlobalMult = CashierMult × StaffMult × RecipeMult × ReputationMult
+GlobalMult = CashierMult × RecipeMult × ReputationMult
            × EventMult × PrestigeMult × BoostMult
 ```
 
-- Cada camada multiplicativa é aplicada **uma única vez**; bônus aditivos de um
-  mesmo tipo somam dentro da própria camada (ex.: dois funcionários somam em
-  `StaffMult`), impedindo double-dip (regra da constituição).
+- Cada camada multiplicativa é aplicada **uma única vez** e cada funcionário
+  atua em **um escopo próprio** (térreo / andares superiores / cozinha /
+  entregas), o que impede double-dip por construção (regra da constituição).
+  Multiplicadores de equipe: `1 + perLevel × nível` (nível 0 → ×1).
 - `BoostMult` = 2 enquanto houver boost `revenue_x2` ativo (início/término
   persistentes), senão 1.
 
@@ -45,6 +48,11 @@ Parâmetros (únicos, em `src/core/config/balance.ts`):
 | `upgradeBaseCost` / por nível / por índice | 15 / 2.9 / 4.5 |
 | `cashier.multipliers` | [1, 1.5, 2.2, 3.2, 4.6, 6.5] |
 | `cashier.upgradeCosts` | [–, 400, 6k, 90k, 1.5M, 30M] |
+| `staff.*.perLevel` | attendant 0.15 · chef 0.08 · floorGirl 0.12 · liftGuy 0.06 |
+| `staff.*.hireCost` | 200 · 900 · 3k · 9k |
+| `staff.*.upgradeBase / growth` | 300/2.6 · 800/2.7 · 2k/2.7 · 6k/2.8 |
+| `elevator.baseTripMs / min` | 4200 / 900 |
+| `elevator.baseVehicleIntervalSec` | 24 (clamp 6–40) |
 | `maxTickSeconds` | 60 |
 
 ## 4. Custos
@@ -82,6 +90,20 @@ Leitura: primeiro desbloqueio em ~2 min; 4 andares em ~19 min; 8 andares em ~9h;
 max completo exige dias — compatível com idle web com sessões curtas e offline.
 A primeira versão (crescimentos 3.2/2.1/1.7) maxava tudo em 0.19h e foi
 rejeitada pela simulação antes de chegar ao jogador.
+
+Medição v3 (2026-10-12, com equipe — política gulosa inclui contratar/treinar):
+
+```
+0.14h  contrata attendant     1.39h  6 andares
+0.27h  contrata chef          2.16h  7 andares
+0.45h  contrata floorGirl     3.56h  8 andares
+0.70h  contrata liftGuy       5.80h  caixa max
+12h → andares #1-6 nv10, #7 nv9, #8 nv7; equipe nv 13-15; receita ≈ 3.0e5/s
+```
+
+A v2 da camada de equipe (perLevel 0.25/0.15/0.20/0.10 com growth 2.2-2.5)
+maxava a torre em 12h e foi rejeitada pela simulação; os valores atuais mantêm
+a cauda de progressão em dias, com a equipe acelerando sem dominar.
 
 ## 7. Explorações conhecidas e proteções
 

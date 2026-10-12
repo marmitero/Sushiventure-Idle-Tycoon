@@ -36,6 +36,56 @@ export const BALANCE = {
     upgradeCosts: [0, 400, 6_000, 90_000, 1_500_000, 30_000_000],
   },
 
+  /**
+   * Staff (Phase 3). Each role multiplies a DISTINCT scope of the revenue
+   * formula (docs/GAME_DESIGN/ECONOMY.md §3), so no bonus can stack twice:
+   *  - attendant : ground floor (index 0) only
+   *  - floorGirl : upper floors (index >= 1) only
+   *  - chef      : kitchen, multiplies the whole floor sum
+   *  - liftGuy   : deliveries/elevator, global efficiency layer
+   * Level 0 = not hired. Multiplier = 1 + perLevel × level.
+   */
+  staff: {
+    attendant: {
+      hireCost: 200,
+      upgradeBase: 300,
+      upgradeGrowth: 2.6,
+      maxLevel: 25,
+      perLevel: 0.15,
+    },
+    chef: {
+      hireCost: 900,
+      upgradeBase: 800,
+      upgradeGrowth: 2.7,
+      maxLevel: 25,
+      perLevel: 0.08,
+    },
+    floorGirl: {
+      hireCost: 3_000,
+      upgradeBase: 2_000,
+      upgradeGrowth: 2.7,
+      maxLevel: 25,
+      perLevel: 0.12,
+    },
+    liftGuy: {
+      hireCost: 9_000,
+      upgradeBase: 6_000,
+      upgradeGrowth: 2.8,
+      maxLevel: 25,
+      perLevel: 0.06,
+    },
+  },
+
+  elevator: {
+    /** Base round-trip time in ms at lift level 1; scales down with level. */
+    baseTripMs: 4200,
+    minTripMs: 900,
+    /** Base seconds between delivery vehicles; divided by delivery multiplier. */
+    baseVehicleIntervalSec: 24,
+    minVehicleIntervalSec: 6,
+    maxVehicleIntervalSec: 40,
+  },
+
   offline: {
     /** Fraction of active revenue earned while offline. */
     rate: 0.5,

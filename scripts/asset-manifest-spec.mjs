@@ -210,11 +210,15 @@ export const SPEC = [
       'Hatch amarelo/laranja',
       'Van cinza/clara de entrega',
     ][car - 1] + '; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).',
-    role: 'Veículo estacionado/aguardando pedido na rua (sistema de entregas).',
-    phase: '3',
-    status: 'reservado',
+    role: car <= 2
+      ? 'Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3).'
+      : 'Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).',
+    phase: car <= 2 ? '3' : '6',
+    status: car <= 2 ? 'implementado' : 'reservado',
     validated: false,
-    notes: 'Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.',
+    notes: car <= 2
+      ? 'Carregado sob demanda após o boot (lazy); validação visual pendente do preview.'
+      : 'Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.',
   })),
   ...[1, 2, 3, 4, 5].map((car) => ({
     id: `vehicle.car${car}.move`,
@@ -225,11 +229,15 @@ export const SPEC = [
     registry: [`carMove(${car}, f)`],
     visual:
       'Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).',
-    role: 'Entrada/saída de veículos na rua para entregas concluídas.',
-    phase: '3',
-    status: 'reservado',
+    role: car <= 2
+      ? 'Entrada/saída de veículos na rua para entregas concluídas (Fase 3).'
+      : 'Variante visual de entrega para cidades futuras (Fase 6).',
+    phase: car <= 2 ? '3' : '6',
+    status: car <= 2 ? 'implementado' : 'reservado',
     validated: false,
+    notes: car <= 2 ? 'Lazy-load; validação visual pendente do preview.' : 'Sem carga em runtime até a Fase 6.',
   })),
+
 
   // ------------------------------------------------------------- MAPA/CIDADES
   {
@@ -418,8 +426,8 @@ export const SPEC = [
     ['ui.areaBox', 'Area Box.png', 'areaBox', 'Retângulo laranja/areia sólido arredondado (preenchimento de painel de área).', 'Painel de área/hub na tela de cidades.', '6', 'reservado'],
     ['ui.arrowUpgrade', 'ArrowUpgrade.png', 'arrowUpgrade', 'Seta amarela apontando para cima.', 'Indicador de "melhorar" em botões/linhas de upgrade.', '2', 'implementado'],
     ['ui.boostIcon', 'Boost_Icon.png', 'boostIcon', 'Raio amarelo (boost).', 'Ícone do botão de boost ×2.', '2', 'implementado'],
-    ['ui.btnUp', 'BtnUp.png', 'btnUp', 'Botão quadrado verde com ícone de prancheta/lista.', 'Abrir lista/painel de melhorias (alternativa ao botão de texto).', '3', 'reservado'],
-    ['ui.btnUpPressed', 'BtnUpPressed.png', 'btnUpPressed', 'Mesmo botão em versão pressionada (tons escuros).', 'Estado pressed do btnUp.', '3', 'reservado'],
+    ['ui.btnUp', 'BtnUp.png', 'btnUp', 'Botão quadrado verde com ícone de prancheta/lista.', 'Ícone de prancheta usado como identidade do botão EQUIPE (HUD).', '3', 'implementado'],
+    ['ui.btnUpPressed', 'BtnUpPressed.png', 'btnUpPressed', 'Mesmo botão em versão pressionada (tons escuros).', 'Estado pressed do btnUp.', '3', 'implementado'],
     ['ui.btnBlue', 'Btn_Blue.png', 'btnBlue', 'Botão retangular azul claro com borda escura.', 'Botão secundário/informativo em popups.', '4', 'reservado'],
     ['ui.btnBlueOff', 'Btn_Blue_Off.png', 'btnBlueOff', 'Botão azul acinzentado (desativado).', 'Estado desativado de compras no painel (motivo exibido junto).', '2', 'implementado'],
     ['ui.btnBoost', 'Btn_Boost.png', 'btnBoost', 'Botão amarelo/laranja arredondado (boost).', 'Botão de boost recompensado.', '2', 'implementado'],

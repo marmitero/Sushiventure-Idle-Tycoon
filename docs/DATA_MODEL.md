@@ -4,11 +4,12 @@
 
 | Campo | Tipo | Observação |
 |---|---|---|
-| `version` | number | `SAVE_VERSION = 1`; migrações em `state/migrations.ts` |
+| `version` | number | `SAVE_VERSION = 2`; migrações em `state/migrations.ts` |
 | `createdAt`, `lastSeenAt` | epoch ms | base para ganhos offline (Fase 4) |
 | `money`, `lifetimeEarned` | `{m,e}` | Decimal serializado |
 | `floors[]` | `{index, level}` | torre contígua; `level 1..10` |
 | `cashierLevel` | 1..6 | |
+| `staff` | `{attendant, chef, floorGirl, liftGuy}: {level}` | nível 0 = não contratado (Fase 3) |
 | `city` | `{id, run}` | Fase 6 usará `id` p/ configurações de cidade |
 | `prestigePoints`, `prestigesCompleted` | `{m,e}` / number | Fase 6 |
 | `boosts[]` | `{id, kind, startedAt, durationSeconds, grantSource}` | início/término persistentes |
@@ -37,6 +38,8 @@ sempre recalculados por `core/economy.ts`.
 
 - Toda mudança estrutural futura incrementa `SAVE_VERSION` e adiciona função de
   migração testada (ex.: `tests/persistence.test.ts` cobre sanitização hostil).
+- v1 → v2: saves antigos sem bloco `staff` carregam com equipe não contratada
+  (teste dedicado); níveis hostis são clampados ao cap de cada papel.
 - Save de versão maior que a suportada é recusado com recuperação segura
   (evita corromper dados de um cliente mais novo).
 

@@ -50,6 +50,19 @@ function sanitize(raw: unknown): GameState | null {
   }
   state.floors = clean.length > 0 ? clean : [{ index: 0, level: 1 }];
 
+  // v1 saves have no staff block: migration fills hired=false (level 0).
+  const staffRaw = (r.staff ?? {}) as Record<string, unknown>;
+  const readLevel = (key: string, max: number): number => {
+    const entry = staffRaw[key] as Record<string, unknown> | undefined;
+    return Math.min(max, Math.max(0, Math.trunc(num(entry?.level, 0))));
+  };
+  state.staff = {
+    attendant: { level: readLevel('attendant', BALANCE.staff.attendant.maxLevel) },
+    chef: { level: readLevel('chef', BALANCE.staff.chef.maxLevel) },
+    floorGirl: { level: readLevel('floorGirl', BALANCE.staff.floorGirl.maxLevel) },
+    liftGuy: { level: readLevel('liftGuy', BALANCE.staff.liftGuy.maxLevel) },
+  };
+
   const city = r.city as Record<string, unknown> | undefined;
   state.city = {
     id: typeof city?.id === 'string' && city.id.length > 0 ? city.id : 'sakura-bay',

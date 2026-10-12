@@ -1,10 +1,10 @@
 # ASSET_MANIFEST — o que é cada recurso e para que serve
 
-_Gerado por `scripts/build-asset-manifest.mjs` em 2026-10-12T11:27:50.557Z.
+_Gerado por `scripts/build-asset-manifest.mjs` em 2026-10-12T11:47:15.154Z.
 Auditoria visual realizada em 2026-10-12; evidências em [`previews/`](previews/)._
 
 **Cobertura:** 609 arquivos classificados em 113 entradas, sem sobras e sem duplicidade (validado pelo gerador).  
-**Bytes PNG:** 10.09 MB · **Status:** 44 implementado, 53 reservado, 12 nao-usado-runtime, 4 metadado
+**Bytes PNG:** 10.09 MB · **Status:** 50 implementado, 47 reservado, 12 nao-usado-runtime, 4 metadado
 
 Legenda de status: `implementado` (em uso hoje, validado em preview) · `reservado`
 (destino definido para fase futura) · `nao-usado-runtime` (fonte Spine/vetor) · `metadado`.
@@ -223,86 +223,91 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 
 - **Arquivos:** `Png/Cars/Car1/Idle/Cars-Car1_Idle_00.png` … `Png/Cars/Car1/Idle/Cars-Car1_Idle_19.png` (20 arquivos) · 240×168px
 - **O que é (verificado):** Van roxa com rack de teto; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).
-- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas).
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3).
+- **Fase:** 3 · **Status:** implementado
 - **Chaves no código:** `src/assets/registry.ts` → carIdle(1, f)
-- **Observação:** Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.
+- **Observação:** Carregado sob demanda após o boot (lazy); validação visual pendente do preview.
 
 ### `vehicle.car2.idle` — Veículo 2 — parada/vibração (animação)
 
 - **Arquivos:** `Png/Cars/Car2/Idle/Cars-Car2_Idle_00.png` … `Png/Cars/Car2/Idle/Cars-Car2_Idle_19.png` (20 arquivos) · 240×160px
 - **O que é (verificado):** Picape teal (verde-azulada); loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).
-- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas).
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3).
+- **Fase:** 3 · **Status:** implementado
 - **Chaves no código:** `src/assets/registry.ts` → carIdle(2, f)
-- **Observação:** Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.
+- **Observação:** Carregado sob demanda após o boot (lazy); validação visual pendente do preview.
 
 ### `vehicle.car3.idle` — Veículo 3 — parada/vibração (animação)
 
 - **Arquivos:** `Png/Cars/Car3/Idle/Cars-Car3_Idle_00.png` … `Png/Cars/Car3/Idle/Cars-Car3_Idle_19.png` (20 arquivos) · 240×158px
 - **O que é (verificado):** Compacto azul com estepe traseiro; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).
-- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas).
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).
+- **Fase:** 6 · **Status:** reservado
 - **Chaves no código:** `src/assets/registry.ts` → carIdle(3, f)
-- **Observação:** Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.
+- **Observação:** Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.
 
 ### `vehicle.car4.idle` — Veículo 4 — parada/vibração (animação)
 
 - **Arquivos:** `Png/Cars/Car4/Idle/Cars-Car4_Idle_00.png` … `Png/Cars/Car4/Idle/Cars-Car4_Idle_19.png` (20 arquivos) · 196×157px
 - **O que é (verificado):** Hatch amarelo/laranja; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).
-- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas).
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).
+- **Fase:** 6 · **Status:** reservado
 - **Chaves no código:** `src/assets/registry.ts` → carIdle(4, f)
-- **Observação:** Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.
+- **Observação:** Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.
 
 ### `vehicle.car5.idle` — Veículo 5 — parada/vibração (animação)
 
 - **Arquivos:** `Png/Cars/Car5/Idle/Cars-Car5_Idle_00.png` … `Png/Cars/Car5/Idle/Cars-Car5_Idle_19.png` (20 arquivos) · 249×163px
 - **O que é (verificado):** Van cinza/clara de entrega; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).
-- **Uso no jogo:** Veículo estacionado/aguardando pedido na rua (sistema de entregas).
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).
+- **Fase:** 6 · **Status:** reservado
 - **Chaves no código:** `src/assets/registry.ts` → carIdle(5, f)
-- **Observação:** Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.
+- **Observação:** Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.
 
 ### `vehicle.car1.move` — Veículo 1 — movimento (animação)
 
 - **Arquivos:** `Png/Cars/Car1/Move/Cars-Car1_Move_00.png` … `Png/Cars/Car1/Move/Cars-Car1_Move_39.png` (40 arquivos) · 236×167px
 - **O que é (verificado):** Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).
-- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas.
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas (Fase 3).
+- **Fase:** 3 · **Status:** implementado
 - **Chaves no código:** `src/assets/registry.ts` → carMove(1, f)
+- **Observação:** Lazy-load; validação visual pendente do preview.
 
 ### `vehicle.car2.move` — Veículo 2 — movimento (animação)
 
 - **Arquivos:** `Png/Cars/Car2/Move/Cars-Car2_Move_00.png` … `Png/Cars/Car2/Move/Cars-Car2_Move_39.png` (40 arquivos) · 236×160px
 - **O que é (verificado):** Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).
-- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas.
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas (Fase 3).
+- **Fase:** 3 · **Status:** implementado
 - **Chaves no código:** `src/assets/registry.ts` → carMove(2, f)
+- **Observação:** Lazy-load; validação visual pendente do preview.
 
 ### `vehicle.car3.move` — Veículo 3 — movimento (animação)
 
 - **Arquivos:** `Png/Cars/Car3/Move/Cars-Car3_Move_00.png` … `Png/Cars/Car3/Move/Cars-Car3_Move_39.png` (40 arquivos) · 237×158px
 - **O que é (verificado):** Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).
-- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas.
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Variante visual de entrega para cidades futuras (Fase 6).
+- **Fase:** 6 · **Status:** reservado
 - **Chaves no código:** `src/assets/registry.ts` → carMove(3, f)
+- **Observação:** Sem carga em runtime até a Fase 6.
 
 ### `vehicle.car4.move` — Veículo 4 — movimento (animação)
 
 - **Arquivos:** `Png/Cars/Car4/Move/Cars-Car4_Move_00.png` … `Png/Cars/Car4/Move/Cars-Car4_Move_39.png` (40 arquivos) · 204×158px
 - **O que é (verificado):** Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).
-- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas.
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Variante visual de entrega para cidades futuras (Fase 6).
+- **Fase:** 6 · **Status:** reservado
 - **Chaves no código:** `src/assets/registry.ts` → carMove(4, f)
+- **Observação:** Sem carga em runtime até a Fase 6.
 
 ### `vehicle.car5.move` — Veículo 5 — movimento (animação)
 
 - **Arquivos:** `Png/Cars/Car5/Move/Cars-Car5_Move_00.png` … `Png/Cars/Car5/Move/Cars-Car5_Move_39.png` (40 arquivos) · 243×162px
 - **O que é (verificado):** Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).
-- **Uso no jogo:** Entrada/saída de veículos na rua para entregas concluídas.
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Variante visual de entrega para cidades futuras (Fase 6).
+- **Fase:** 6 · **Status:** reservado
 - **Chaves no código:** `src/assets/registry.ts` → carMove(5, f)
+- **Observação:** Sem carga em runtime até a Fase 6.
 
 ## Mapa
 
@@ -490,8 +495,8 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 
 - **Arquivos:** `Png/Ui and PopUp/BtnUp.png` · 108×104px
 - **O que é (verificado):** Botão quadrado verde com ícone de prancheta/lista.
-- **Uso no jogo:** Abrir lista/painel de melhorias (alternativa ao botão de texto).
-- **Fase:** 3 · **Status:** reservado
+- **Uso no jogo:** Ícone de prancheta usado como identidade do botão EQUIPE (HUD).
+- **Fase:** 3 · **Status:** implementado · validado em preview
 - **Chaves no código:** `src/assets/registry.ts` → ui.btnUp
 
 ### `ui.btnUpPressed` — UI — BtnUpPressed
@@ -499,7 +504,7 @@ Legenda de status: `implementado` (em uso hoje, validado em preview) · `reserva
 - **Arquivos:** `Png/Ui and PopUp/BtnUpPressed.png` · 108×104px
 - **O que é (verificado):** Mesmo botão em versão pressionada (tons escuros).
 - **Uso no jogo:** Estado pressed do btnUp.
-- **Fase:** 3 · **Status:** reservado
+- **Fase:** 3 · **Status:** implementado · validado em preview
 - **Chaves no código:** `src/assets/registry.ts` → ui.btnUpPressed
 
 ### `ui.btnBlue` — UI — Btn_Blue

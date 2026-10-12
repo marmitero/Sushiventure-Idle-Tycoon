@@ -24,6 +24,9 @@ export const TOWER = {
   cashierGirlY: -140,
   chefX: 0,
   chefY: 46,
+  /** World Y of the two traffic lanes inside bg.street (native scale). */
+  roadFarLaneY: 225,
+  roadNearLaneY: 305,
   chefRange: 380,
   floorGirlX: 210,
   floorGirlY(index: number): number {

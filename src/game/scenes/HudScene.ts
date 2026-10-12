@@ -9,10 +9,14 @@ import {
   globalMultiplier,
   moneyOf,
   revenuePerSec,
+  staffHireCost,
+  staffMultiplierValue,
+  staffUpgradeCost,
 } from '../../core/economy';
 import { Decimal } from '../../core/decimal';
 import { formatDuration, formatMoney, formatRate } from '../../core/format';
-import type { GameState } from '../../core/state/types';
+import type { GameState, StaffId } from '../../core/state/types';
+import { STAFF_IDS } from '../../core/state/types';
 import { getSession } from '../session';
 import { KitButton, kitText, panel } from '../ui/kit';
 
@@ -48,6 +52,8 @@ export class HudScene extends Phaser.Scene {
   private panelObjects: Phaser.GameObjects.GameObject[] = [];
   private panelOpen = false;
   private panelFocus = 'unlock';
+  private panelMode: 'upgrades' | 'staff' = 'upgrades';
+  private panelTitle = 'MELHORIAS DO RESTAURANTE';
   private settingsOpen = false;
   private toast: Phaser.GameObjects.Text | null = null;
   private rowButtons = new Map<string, KitButton>();
@@ -152,6 +158,19 @@ export class HudScene extends Phaser.Scene {
       .setEnabled(false, 'Loja premium indisponível: nenhum pagamento configurado.');
     shop.setOnDisabledClick((reason) => this.showToast(reason));
 
+    const equipe = new KitButton({
+      scene: this,
+      x: 0,
+      y: 0,
+      texture: keyFor(ASSETS.ui.btnGreen),
+      pressedTexture: keyFor(ASSETS.ui.btnGreenPressed),
+      width: 150,
+      height: 78,
+      label: 'EQUIPE',
+      labelStyle: { size: 24, color: '#ffffff', stroke: '#2f6b1f', strokeThickness: 5 },
+      onDown: () => this.openStaff(),
+    }).setDepth(DEPTH_HUD);
+
     const settings = new KitButton({
       scene: this,
       x: 0,
@@ -164,7 +183,7 @@ export class HudScene extends Phaser.Scene {
     }).setDepth(DEPTH_HUD);
     settings.image.setData('role', 'settings');
 
-    this.buttons = [upgrades, boost, map, shop, settings];
+    this.buttons = [upgrades, boost, map, shop, settings, equipe];
   }
 
   // ----------------------------------------------------------------- layout
@@ -190,7 +209,9 @@ export class HudScene extends Phaser.Scene {
     const boost = this.buttons[1];
     const map = this.buttons[2];
     const shop = this.buttons[3];
-    upgrades?.setPosition(w / 2, bottom);
+    const equipe = this.buttons[5];
+    equipe?.setPosition(w / 2 - 105, bottom);
+    upgrades?.setPosition(w / 2 + 105, bottom);
     boost?.setPosition(w - 150, bottom - 4);
     const boostIcon = boost?.image.getData('icon') as Phaser.GameObjects.Image | undefined;
     boostIcon?.setPosition(w - 150, bottom - 6);
@@ -238,7 +259,21 @@ export class HudScene extends Phaser.Scene {
 
   // ------------------------------------------------------------------ panel
   private openUpgrades = (payload: { focus?: string }): void => {
+    this.panelMode = 'upgrades';
+    this.panelTitle = 'MELHORIAS DO RESTAURANTE';
     this.panelFocus = payload.focus ?? 'unlock';
+    if (this.settingsOpen) this.toggleSettings();
+    if (!this.panelOpen) {
+      this.panelOpen = true;
+      this.scrollOffset = 0;
+    }
+    this.refreshPanel();
+  };
+
+  private openStaff = (): void => {
+    this.panelMode = 'staff';
+    this.panelTitle = 'EQUIPE DO RESTAURANTE';
+    this.panelFocus = 'staff:attendant';
     if (this.settingsOpen) this.toggleSettings();
     if (!this.panelOpen) {
       this.panelOpen = true;
@@ -296,6 +331,36 @@ export class HudScene extends Phaser.Scene {
     return rows;
   }
 
+  private static readonly STAFF_META: Record<
+    StaffId,
+    { name: string; scope: string }
+  > = {
+    attendant: { name: 'Atendente de Caixa', scope: 'Receita do térreo (1º andar)' },
+    chef: { name: 'Chef de Cozinha', scope: 'Produção de todos os andares' },
+    floorGirl: { name: 'Atendente de Andar', scope: 'Receita dos andares superiores (2º+)' },
+    liftGuy: { name: 'Operador de Elevador', scope: 'Entregas e velocidade do elevador' },
+  };
+
+  private buildStaffRows(state: GameState): UpgradeRow[] {
+    return STAFF_IDS.map((id) => {
+      const meta = HudScene.STAFF_META[id];
+      const level = state.staff[id]?.level ?? 0;
+      const maxLevel = BALANCE.staff[id].maxLevel;
+      const hired = level > 0;
+      const current = staffMultiplierValue(id, level);
+      const next = staffMultiplierValue(id, level + 1);
+      const cost = hired ? staffUpgradeCost(id, level) : staffHireCost(id);
+      return {
+        id: `staff:${id}`,
+        title: `${meta.name}${hired ? ` — Nv ${level}` : ' — não contratado'}`,
+        detail: `${meta.scope}: ×${current.toFixed(2)} → ×${next.toFixed(2)}`,
+        cost: cost ?? null,
+        maxed: hired && level >= maxLevel,
+        buy: () => (hired ? getSession().upgradeStaff(id) : getSession().hireStaff(id)),
+      };
+    });
+  }
+
   private refreshPanel(): void {
     if (!this.panelOpen) return;
     for (const obj of this.panelObjects) obj.destroy();
@@ -319,7 +384,7 @@ export class HudScene extends Phaser.Scene {
       /* swallow clicks */
     });
 
-    const title = kitText(this, px, py - ph / 2 + 38, 'MELHORIAS DO RESTAURANTE', {
+    const title = kitText(this, px, py - ph / 2 + 38, this.panelTitle, {
       size: 30,
       color: '#4a2c17',
       stroke: '#fff3d6',
@@ -341,7 +406,8 @@ export class HudScene extends Phaser.Scene {
     this.contentContainer = this.add.container(0, 0).setDepth(DEPTH_PANEL + 1);
     this.panelObjects.push(this.contentContainer);
 
-    this.rows = this.buildRows(session.state);
+    this.rows =
+      this.panelMode === 'staff' ? this.buildStaffRows(session.state) : this.buildRows(session.state);
     this.rows.forEach((row, i) => this.addRow(row, i));
 
     this.maskGraphics = this.make.graphics({ x: 0, y: 0 }, false);

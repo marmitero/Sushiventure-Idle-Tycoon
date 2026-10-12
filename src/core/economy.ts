@@ -1,6 +1,7 @@
 import { BALANCE } from './config/balance';
 import { Decimal, D } from './decimal';
-import type { GameState } from './state/types';
+import type { GameState, StaffId } from './state/types';
+import { STAFF_IDS } from './state/types';
 
 /**
  * Pure economy layer. No visuals, no side effects, no persistence.
@@ -49,13 +50,59 @@ export function multiplierBreakdown(state: GameState, now: number): MultiplierBr
   const cashierIdx = Math.min(state.cashierLevel, BALANCE.cashier.multipliers.length) - 1;
   return {
     cashier: D(BALANCE.cashier.multipliers[cashierIdx] ?? 1),
-    staff: D(1), // Phase 3
+    staff: D(1), // staff act per-scope (staffMultipliers), never globally
     recipes: D(1), // Phase 5
     reputation: D(1), // Phase 5
     events: D(1), // Phase 7
     prestige: D(1), // Phase 6
     boosts: boostMultiplier(state, now),
   };
+}
+
+/**
+ * Staff multipliers, one per DISTINCT scope (ECONOMY.md §3):
+ *  ground   → attendant, applies only to floor index 0
+ *  upper    → floorGirl, applies only to floors index >= 1
+ *  kitchen  → chef, applies to the whole floor sum
+ *  delivery → liftGuy (elevator efficiency), global efficiency layer
+ */
+export interface StaffMultipliers {
+  ground: Decimal;
+  upper: Decimal;
+  kitchen: Decimal;
+  delivery: Decimal;
+}
+
+export function staffLevel(state: GameState, id: StaffId): number {
+  return state.staff[id]?.level ?? 0;
+}
+
+export function staffMultiplierValue(id: StaffId, level: number): number {
+  const cfg = BALANCE.staff[id];
+  if (level <= 0) return 1;
+  return 1 + cfg.perLevel * level;
+}
+
+export function staffMultipliers(state: GameState): StaffMultipliers {
+  return {
+    ground: D(staffMultiplierValue('attendant', staffLevel(state, 'attendant'))),
+    upper: D(staffMultiplierValue('floorGirl', staffLevel(state, 'floorGirl'))),
+    kitchen: D(staffMultiplierValue('chef', staffLevel(state, 'chef'))),
+    delivery: D(staffMultiplierValue('liftGuy', staffLevel(state, 'liftGuy'))),
+  };
+}
+
+/** Cost to hire (level 0 → 1). */
+export function staffHireCost(id: StaffId): Decimal {
+  return D(BALANCE.staff[id].hireCost);
+}
+
+/** Cost to train a hired staff member from `level` to `level + 1`. */
+export function staffUpgradeCost(id: StaffId, level: number): Decimal | null {
+  if (level <= 0) return null;
+  const cfg = BALANCE.staff[id];
+  if (level >= cfg.maxLevel) return null;
+  return D(cfg.upgradeBase).mul(D(cfg.upgradeGrowth).powInt(level - 1));
 }
 
 export function globalMultiplier(state: GameState, now: number): Decimal {
@@ -72,18 +119,46 @@ export function floorBaseRevenue(index: number, level: number): Decimal {
   return base.mul(indexMult).mul(levelMult);
 }
 
+/** Scope multiplier of one floor (attendant on ground, floorGirl upstairs). */
+function floorScopeMult(state: GameState, index: number, staff: StaffMultipliers): Decimal {
+  return index === 0 ? staff.ground : staff.upper;
+}
+
 export function floorRevenuePerSec(state: GameState, index: number, now: number): Decimal {
   const floor = state.floors.find((f) => f.index === index);
   if (!floor || floor.level <= 0) return Decimal.ZERO;
-  return floorBaseRevenue(index, floor.level).mul(globalMultiplier(state, now));
+  const staff = staffMultipliers(state);
+  return floorBaseRevenue(index, floor.level)
+    .mul(floorScopeMult(state, index, staff))
+    .mul(staff.kitchen)
+    .mul(staff.delivery)
+    .mul(globalMultiplier(state, now));
 }
 
 export function revenuePerSec(state: GameState, now: number): Decimal {
+  const staff = staffMultipliers(state);
   let sum = Decimal.ZERO;
   for (const floor of state.floors) {
-    sum = sum.add(floorBaseRevenue(floor.index, floor.level));
+    sum = sum.add(floorBaseRevenue(floor.index, floor.level).mul(floorScopeMult(state, floor.index, staff)));
   }
-  return sum.mul(globalMultiplier(state, now));
+  return sum.mul(staff.kitchen).mul(staff.delivery).mul(globalMultiplier(state, now));
+}
+
+/** Elevator round-trip time in ms (visual + delivery pacing). */
+export function elevatorTripMs(state: GameState): number {
+  const level = Math.max(1, staffLevel(state, 'liftGuy'));
+  const trip = BALANCE.elevator.baseTripMs / (1 + 0.1 * (level - 1));
+  return Math.max(BALANCE.elevator.minTripMs, trip);
+}
+
+/** Seconds between delivery vehicles; shorter as delivery efficiency grows. */
+export function vehicleIntervalSec(state: GameState): number {
+  const delivery = staffMultiplierValue('liftGuy', staffLevel(state, 'liftGuy'));
+  const interval = BALANCE.elevator.baseVehicleIntervalSec / delivery;
+  return Math.min(
+    BALANCE.elevator.maxVehicleIntervalSec,
+    Math.max(BALANCE.elevator.minVehicleIntervalSec, interval),
+  );
 }
 
 /** Cost to unlock tower position `index` (must equal current floor count). */

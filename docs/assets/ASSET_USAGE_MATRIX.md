@@ -1,6 +1,6 @@
 # ASSET_USAGE_MATRIX
 
-_Gerado a partir de `ASSET_MANIFEST.json` em 2026-10-12T11:27:50.557Z.
+_Gerado a partir de `ASSET_MANIFEST.json` em 2026-10-12T11:47:15.154Z.
 Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 
 | Entrada | Categoria | Destino no jogo | Fase | Status | Validado |
@@ -30,16 +30,16 @@ Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 | `cast.chef.walkFullOrder` | Elenco | Momento de entrega do pedido no ciclo da cozinha | 1 | implementado | ✅ |
 | `cast.floorGirl` | Elenco | Funcionária visual dos andares superiores | 1 | implementado | ✅ |
 | `cast.liftGuy` | Elenco | Operador visual dentro do shaft de elevador embutido nos floors | 1 | implementado | ✅ |
-| `vehicle.car1.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas) | 3 | reservado | — |
-| `vehicle.car2.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas) | 3 | reservado | — |
-| `vehicle.car3.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas) | 3 | reservado | — |
-| `vehicle.car4.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas) | 3 | reservado | — |
-| `vehicle.car5.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas) | 3 | reservado | — |
-| `vehicle.car1.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas | 3 | reservado | — |
-| `vehicle.car2.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas | 3 | reservado | — |
-| `vehicle.car3.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas | 3 | reservado | — |
-| `vehicle.car4.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas | 3 | reservado | — |
-| `vehicle.car5.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas | 3 | reservado | — |
+| `vehicle.car1.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3) | 3 | implementado | — |
+| `vehicle.car2.idle` | Veículos | Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3) | 3 | implementado | — |
+| `vehicle.car3.idle` | Veículos | Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6) | 6 | reservado | — |
+| `vehicle.car4.idle` | Veículos | Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6) | 6 | reservado | — |
+| `vehicle.car5.idle` | Veículos | Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6) | 6 | reservado | — |
+| `vehicle.car1.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas (Fase 3) | 3 | implementado | — |
+| `vehicle.car2.move` | Veículos | Entrada/saída de veículos na rua para entregas concluídas (Fase 3) | 3 | implementado | — |
+| `vehicle.car3.move` | Veículos | Variante visual de entrega para cidades futuras (Fase 6) | 6 | reservado | — |
+| `vehicle.car4.move` | Veículos | Variante visual de entrega para cidades futuras (Fase 6) | 6 | reservado | — |
+| `vehicle.car5.move` | Veículos | Variante visual de entrega para cidades futuras (Fase 6) | 6 | reservado | — |
 | `map.area` | Mapa | Tela de seleção/expansão de cidades (Fase 6) | 6 | reservado | — |
 | `map.building.available` | Mapa | Marcador de cidade desbloqueável no mapa | 6 | reservado | — |
 | `map.building.locked` | Mapa | Marcador de cidade ainda bloqueada | 6 | reservado | — |
@@ -62,8 +62,8 @@ Destino concreto de cada entrada da auditoria; detalhe completo no manifesto.
 | `ui.areaBox` | UI | Painel de área/hub na tela de cidades | 6 | reservado | — |
 | `ui.arrowUpgrade` | UI | Indicador de "melhorar" em botões/linhas de upgrade | 2 | implementado | ✅ |
 | `ui.boostIcon` | UI | Ícone do botão de boost ×2 | 2 | implementado | ✅ |
-| `ui.btnUp` | UI | Abrir lista/painel de melhorias (alternativa ao botão de texto) | 3 | reservado | — |
-| `ui.btnUpPressed` | UI | Estado pressed do btnUp | 3 | reservado | — |
+| `ui.btnUp` | UI | Ícone de prancheta usado como identidade do botão EQUIPE (HUD) | 3 | implementado | ✅ |
+| `ui.btnUpPressed` | UI | Estado pressed do btnUp | 3 | implementado | ✅ |
 | `ui.btnBlue` | UI | Botão secundário/informativo em popups | 4 | reservado | — |
 | `ui.btnBlueOff` | UI | Estado desativado de compras no painel (motivo exibido junto) | 2 | implementado | ✅ |
 | `ui.btnBoost` | UI | Botão de boost recompensado | 2 | implementado | ✅ |

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T11:27:50.557Z",
+  "generatedAt": "2026-10-12T11:47:15.154Z",
   "sourceRoot": "Sprites",
   "auditDate": "2026-10-12",
   "method": "Inspecão visual item a item (folhas de contato em docs/assets/previews/) + parser de headers PNG; nomes de arquivo NUNCA usados como única evidência.",
@@ -8,8 +8,8 @@
     "entries": 113,
     "pngBytes": 10581427,
     "byStatus": {
-      "implementado": 44,
-      "reservado": 53,
+      "implementado": 50,
+      "reservado": 47,
       "nao-usado-runtime": 12,
       "metadado": 4
     }
@@ -1425,14 +1425,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Van roxa com rack de teto; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
-      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3).",
       "phase": "3",
-      "status": "reservado",
+      "status": "implementado",
       "validated": false,
       "registry": [
         "carIdle(1, f)"
       ],
-      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "notes": "Carregado sob demanda após o boot (lazy); validação visual pendente do preview.",
       "fileCount": 20,
       "files": [
         {
@@ -1563,14 +1563,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Picape teal (verde-azulada); loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
-      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas, Fase 3).",
       "phase": "3",
-      "status": "reservado",
+      "status": "implementado",
       "validated": false,
       "registry": [
         "carIdle(2, f)"
       ],
-      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "notes": "Carregado sob demanda após o boot (lazy); validação visual pendente do preview.",
       "fileCount": 20,
       "files": [
         {
@@ -1701,14 +1701,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Compacto azul com estepe traseiro; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
-      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
-      "phase": "3",
+      "role": "Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).",
+      "phase": "6",
       "status": "reservado",
       "validated": false,
       "registry": [
         "carIdle(3, f)"
       ],
-      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "notes": "Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.",
       "fileCount": 20,
       "files": [
         {
@@ -1839,14 +1839,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Hatch amarelo/laranja; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
-      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
-      "phase": "3",
+      "role": "Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).",
+      "phase": "6",
       "status": "reservado",
       "validated": false,
       "registry": [
         "carIdle(4, f)"
       ],
-      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "notes": "Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.",
       "fileCount": 20,
       "files": [
         {
@@ -1977,14 +1977,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Van cinza/clara de entrega; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
-      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
-      "phase": "3",
+      "role": "Variante visual adicional de entrega, vinculada a cidades futuras (Fase 6).",
+      "phase": "6",
       "status": "reservado",
       "validated": false,
       "registry": [
         "carIdle(5, f)"
       ],
-      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "notes": "Fora do carregamento: 5 variantes = 6,7 MB; cidades usarão variantes próprias.",
       "fileCount": 20,
       "files": [
         {
@@ -2115,14 +2115,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
-      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas (Fase 3).",
       "phase": "3",
-      "status": "reservado",
+      "status": "implementado",
       "validated": false,
       "registry": [
         "carMove(1, f)"
       ],
-      "notes": "",
+      "notes": "Lazy-load; validação visual pendente do preview.",
       "fileCount": 40,
       "files": [
         {
@@ -2373,14 +2373,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
-      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas (Fase 3).",
       "phase": "3",
-      "status": "reservado",
+      "status": "implementado",
       "validated": false,
       "registry": [
         "carMove(2, f)"
       ],
-      "notes": "",
+      "notes": "Lazy-load; validação visual pendente do preview.",
       "fileCount": 40,
       "files": [
         {
@@ -2631,14 +2631,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
-      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
-      "phase": "3",
+      "role": "Variante visual de entrega para cidades futuras (Fase 6).",
+      "phase": "6",
       "status": "reservado",
       "validated": false,
       "registry": [
         "carMove(3, f)"
       ],
-      "notes": "",
+      "notes": "Sem carga em runtime até a Fase 6.",
       "fileCount": 40,
       "files": [
         {
@@ -2889,14 +2889,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
-      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
-      "phase": "3",
+      "role": "Variante visual de entrega para cidades futuras (Fase 6).",
+      "phase": "6",
       "status": "reservado",
       "validated": false,
       "registry": [
         "carMove(4, f)"
       ],
-      "notes": "",
+      "notes": "Sem carga em runtime até a Fase 6.",
       "fileCount": 40,
       "files": [
         {
@@ -3147,14 +3147,14 @@
       "category": "Veículos",
       "kind": "sequence",
       "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
-      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
-      "phase": "3",
+      "role": "Variante visual de entrega para cidades futuras (Fase 6).",
+      "phase": "6",
       "status": "reservado",
       "validated": false,
       "registry": [
         "carMove(5, f)"
       ],
-      "notes": "",
+      "notes": "Sem carga em runtime até a Fase 6.",
       "fileCount": 40,
       "files": [
         {
@@ -3933,10 +3933,10 @@
       "category": "UI",
       "kind": "static",
       "visual": "Botão quadrado verde com ícone de prancheta/lista.",
-      "role": "Abrir lista/painel de melhorias (alternativa ao botão de texto).",
+      "role": "Ícone de prancheta usado como identidade do botão EQUIPE (HUD).",
       "phase": "3",
-      "status": "reservado",
-      "validated": false,
+      "status": "implementado",
+      "validated": true,
       "registry": [
         "ui.btnUp"
       ],
@@ -3959,8 +3959,8 @@
       "visual": "Mesmo botão em versão pressionada (tons escuros).",
       "role": "Estado pressed do btnUp.",
       "phase": "3",
-      "status": "reservado",
-      "validated": false,
+      "status": "implementado",
+      "validated": true,
       "registry": [
         "ui.btnUpPressed"
       ],
