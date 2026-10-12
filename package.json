@@ -21,7 +21,8 @@
     "test:watch": "vitest",
     "sim": "node scripts/simulate-progress.mjs",
     "validate": "npm run typecheck && npm run test && npm run build",
-    "docs:assets": "node scripts/gen-asset-docs.mjs"
+    "docs:assets": "node scripts/gen-asset-docs.mjs",
+    "manifest": "node scripts/build-asset-manifest.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"

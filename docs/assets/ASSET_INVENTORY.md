@@ -1,13 +1,17 @@
 # ASSET_INVENTORY — Sushiventure Idle Tycoon
 
-_Gerado automaticamente por `scripts/gen-asset-docs.mjs` em 2026-10-12T10:54:27.216Z_
+_Gerado automaticamente por `scripts/gen-asset-docs.mjs` em 2026-10-12T11:29:17.953Z_
+
+> **Fonte canônica de "o que é cada recurso e para que serve":**
+> [`ASSET_MANIFEST.md`](ASSET_MANIFEST.md) (gerado a partir da auditoria visual).
+> Este inventário é apenas a listagem bruta de arquivos/dimensões.
 
 Fonte: `Sprites/Png` (originais versionados no repositório). Derivados de runtime
 vivem em `public/assets/` (gitignored) e são regenerados por `npm run assets`.
 
 **Total de PNGs de runtime:** 521  
 **Bytes totais:** 9.91 MB  
-**Manifest:** `public/assets/manifest.json` (gerado em 2026-10-12T10:52:46.496Z)
+**Manifest:** `public/assets/manifest.json` (gerado em 2026-10-12T11:02:27.045Z)
 
 Fontes não-runtime presentes no repositório (não entram no build):
 

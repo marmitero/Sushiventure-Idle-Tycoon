@@ -3,8 +3,8 @@
 > Estado operacional real do projeto. Atualizado no início e no fim de cada etapa.
 > Nada aqui é marcado como concluído sem evidência (teste, build, push ou preview).
 
-- **Fase atual:** 3 em diante (Fases 0, 1 e 2 concluídas e validadas)
-- **Última etapa concluída:** Fase 2 — loop econômico e progressão inicial
+- **Fase atual:** pré-Fase 3 — manifesto de assets reconstruído (auditoria item a item)
+- **Última etapa concluída:** Manifesto completo de assets (ASSET_MANIFEST) + Fases 0-2
 - **Branch:** `arena/a8701903-sushiventure-idle-tycoon`
 - **Último commit relevante:** `64c3d1e` (Fases 0-2)
 - **Estado do push:** ✅ publicado em `origin/arena/a8701903-sushiventure-idle-tycoon`
@@ -14,6 +14,7 @@
 | Sistema | Estado | Evidência |
 |---|---|---|
 | Auditoria de repositório/assets/CraftPix | Implementado | `docs/PROJECT_AUDIT.md`, `docs/assets/*` |
+| **Manifesto de assets item a item (o que é + para que serve)** | Implementado + testado | `docs/assets/ASSET_MANIFEST.md/.json`, `npm run manifest`, cobertura validada (609/609) |
 | Pipeline de assets derivados + manifesto | Implementado + testado | `scripts/sync-assets.mjs`, `tests/assets-registry.test.ts` |
 | Núcleo Decimal (mantissa/expoente) | Implementado + testado | `tests/decimal.test.ts` (9 testes) |
 | Economia pura (receita, custos, multiplicadores) | Implementado + testado | `tests/economy.test.ts` |
@@ -27,7 +28,7 @@
 
 ## Funcionalidades testadas
 
-- 39 testes Vitest passando (`npx vitest run`).
+- 43 testes Vitest passando (`npx vitest run`), incluindo 4 testes de consistência do manifesto (cobertura total, unicidade, registry⊆manifesto, entradas implementadas com chave de código).
 - Typecheck estrito passando (`npx tsc --noEmit`).
 - Build de produção passando (`npm run build`).
 - Simulação de 12h executada com marcos medidos (ver `docs/GAME_DESIGN/ECONOMY.md` §6).
@@ -74,7 +75,8 @@
 
 ## Próximas tarefas (prioridade)
 
-1. Fase 3 — funcionários com efeitos econômicos reais + elevador + veículos de entrega.
+1. Revisão do diretor sobre o manifesto (destinos reservados e status).
+2. Fase 3 — funcionários com efeitos econômicos reais + elevador + veículos de entrega, consumindo SOMENTE entradas `reservado`/`implementado` do manifesto.
 2. Fase 4 — ganhos offline com popup do kit e proteção contra duplicidade.
 3. Fase 5 — receitas, reputação, missões e conquistas.
 4. Atlas packing das sequências de frames (débito de performance).

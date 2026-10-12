@@ -25,6 +25,11 @@ _Data: 2026-10-12 · Branch auditada: `arena/a8701903-sushiventure-idle-tycoon` 
   `license.txt`, `FontLink.txt`, atalho `.url`.
 - Inventário completo e reproduzível: [`docs/assets/ASSET_INVENTORY.md`](assets/ASSET_INVENTORY.md)
   e `docs/assets/asset_inventory.csv` (gerados por `scripts/gen-asset-docs.mjs`).
+- **Manifesto item a item (o que é cada recurso + uso no jogo):**
+  [`docs/assets/ASSET_MANIFEST.md`](assets/ASSET_MANIFEST.md) /
+  [`ASSET_MANIFEST.json`](assets/ASSET_MANIFEST.json), gerados por
+  `npm run manifest` com validação de cobertura (609 arquivos classificados
+  exatamente uma vez; o gerador falha se sobrar arquivo).
 - Folhas de contato visuais: [`docs/assets/previews/`](assets/previews/) (8 imagens).
 - **Duplicatas:** 49 grupos, todos dentro de `Png/Cars/*/Idle` — frames espelhados
   do loop de animação (01↔19, 02↔18 …). Esperado, não é defeito.

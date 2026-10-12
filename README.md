@@ -40,7 +40,8 @@ npm run dev        # gera assets derivados e sobe o servidor em 0.0.0.0:5173
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Módulos, fluxos e contratos de serviço |
 | [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) | Modelo de save e migrações |
 | [`docs/GAME_DESIGN/`](docs/GAME_DESIGN/GAME_DESIGN_DOCUMENT.md) | Design de jogo, economia, prestígio, offline, missões |
-| [`docs/assets/ASSET_INVENTORY.md`](docs/assets/ASSET_INVENTORY.md) | Inventário gerado dos recursos gráficos |
+| [`docs/assets/ASSET_MANIFEST.md`](docs/assets/ASSET_MANIFEST.md) | **Manifesto: o que é cada recurso e para que serve** |
+| [`docs/assets/ASSET_INVENTORY.md`](docs/assets/ASSET_INVENTORY.md) | Inventário bruto gerado (arquivos/dimensões/bytes) |
 | [`docs/assets/ASSET_USAGE_MATRIX.md`](docs/assets/ASSET_USAGE_MATRIX.md) | Asset → destino → implementado/validado |
 | [`docs/assets/ASSET_LICENSES.md`](docs/assets/ASSET_LICENSES.md) | Licença CraftPix e obrigações |
 | [`docs/monetization/MONETIZATION.md`](docs/monetization/MONETIZATION.md) | Estratégia e integrações de monetização |

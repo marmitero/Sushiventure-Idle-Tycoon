@@ -2,6 +2,26 @@
 
 Formato: datas + fases, com evidências. Detalhes operacionais em `AI_STATE.md`.
 
+## 2026-10-12 — Manifesto de assets (re-auditoria item a item)
+
+- Nova fonte canônica: `docs/assets/ASSET_MANIFEST.md` / `.json` — 113 entradas
+  cobrindo os 609 arquivos do repositório, cada uma com descrição visual
+  verificada (folhas de contato em `docs/assets/previews/`, incluindo novas
+  folhas de UI em escala nativa, partes Spine e atlases), uso no jogo, fase,
+  status e chaves de código.
+- Gerador `scripts/build-asset-manifest.mjs` com **validação de cobertura**:
+  falha se qualquer arquivo ficar sem classificação ou for classificado duas
+  vezes. Status: 44 implementado, 53 reservado, 12 nao-usado-runtime, 4 metadado.
+- `ASSET_USAGE_MATRIX.md` passa a ser gerado do manifesto (sem descrição manual
+  paralela que possa divergir).
+- Testes novos (4): cobertura/unicidade do manifesto, registry ⊆ manifesto,
+  entradas `implementado` com chave de registry e arquivo runtime. Total: 43.
+- Correções de atribuição da matriz anterior: `HubAreaBar` (barra de hub com
+  mapa) diferenciado de `NamePlate` (placa de nome); `ContentBox` descrito como
+  linha com marcador; `Area Box` como preenchimento de painel de área;
+  `Gams Image` como monte de gemas com brilho (recompensa); artboards da loja
+  descritos um a um; cores/modelos dos 5 veículos documentados.
+
 ## 2026-10-12 — Fases 0, 1 e 2
 
 ### Auditoria (Fase 0)

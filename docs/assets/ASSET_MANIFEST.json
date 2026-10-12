@@ -1,0 +1,5575 @@
+{
+  "generatedAt": "2026-10-12T11:27:50.557Z",
+  "sourceRoot": "Sprites",
+  "auditDate": "2026-10-12",
+  "method": "Inspecão visual item a item (folhas de contato em docs/assets/previews/) + parser de headers PNG; nomes de arquivo NUNCA usados como única evidência.",
+  "totals": {
+    "files": 609,
+    "entries": 113,
+    "pngBytes": 10581427,
+    "byStatus": {
+      "implementado": 44,
+      "reservado": 53,
+      "nao-usado-runtime": 12,
+      "metadado": 4
+    }
+  },
+  "entries": [
+    {
+      "id": "tower.floor.locked",
+      "title": "Andar bloqueado (casulo de expansão)",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Casulo de andar ainda não construído: persiana metálica fechada com placa vermelha \"CLOSED\", faixa marrom \"ADD NEW FLOOR\" e coluna escura do shaft de elevador à esquerda. Telhado igual ao dos andares construídos.",
+      "role": "Slot do próximo andar na torre. É tocável e abre o painel de melhorias focado no desbloqueio.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(0)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv0.png",
+          "width": 1056,
+          "height": 340,
+          "bytes": 48047
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv1",
+      "title": "Andar construído — nível visual 1",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Interior vazio: balcão simples, cozinha básica ao fundo e shaft escuro à esquerda.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 1 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(1)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv1.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 38345
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv2",
+      "title": "Andar construído — nível visual 2",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv2: adiciona exaustor/equipamento de parede e bancada inox.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 2 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(2)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv2.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 39933
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv3",
+      "title": "Andar construído — nível visual 3",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv3: divisória de madeira e mais bancada; cozinha ganha segunda estação.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 3 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(3)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv3.png",
+          "width": 1056,
+          "height": 340,
+          "bytes": 41681
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv4",
+      "title": "Andar construído — nível visual 4",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv4: linha de cozinha completa com coifas e armários.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 4 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(4)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv4.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 46456
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv5",
+      "title": "Andar construído — nível visual 5",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv5: quadro de menus na parede e estação de preparo ampliada.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 5 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(5)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv5.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 48768
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv6",
+      "title": "Andar construído — nível visual 6",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv6: decoração (quadros/luminárias) e bancada auxiliar.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 6 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(6)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv6.png",
+          "width": 1056,
+          "height": 340,
+          "bytes": 50232
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv7",
+      "title": "Andar construído — nível visual 7",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv7: mesas de atendimento e mais equipamentos suspensos.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 7 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(7)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv7.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 54151
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv8",
+      "title": "Andar construído — nível visual 8",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv8: iluminação quente de balcão e vitrine acesa.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 8 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(8)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv8.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 60518
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv9",
+      "title": "Andar construído — nível visual 9",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv9: plantas, vitrines cheias e cozinha totalmente equipada.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 9 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(9)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv9.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 71476
+        }
+      ]
+    },
+    {
+      "id": "tower.floor.lv10",
+      "title": "Andar construído — nível visual 10",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv10: restaurante completo e aconchegante, iluminação máxima e plantas nos dois lados.",
+      "role": "Arte do andar de índice i quando seu nível lógico é 10 (mapeamento 1:1 nível→arte).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floors(10)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Floors/Floor_Lv10.png",
+          "width": 1056,
+          "height": 341,
+          "bytes": 76920
+        }
+      ]
+    },
+    {
+      "id": "tower.cashier.lv1",
+      "title": "Fachada térrea / caixa — nível 1",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Fachada térrea com logo \"SUSHI TOWER\" no topo, placa CASHIER, janela de atendimento à esquerda, placa DRIVE THRU à direita e shaft escuro.",
+      "role": "Arte do térreo (storefront) quando cashierLevel = 1. Base da torre; o logo do jogo vem rasterizado aqui.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashiers(1)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Cashiers/CashierL1.png",
+          "width": 1040,
+          "height": 412,
+          "bytes": 57001
+        }
+      ]
+    },
+    {
+      "id": "tower.cashier.lv2",
+      "title": "Fachada térrea / caixa — nível 2",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv2: adiciona quadro de menu iluminado na janela.",
+      "role": "Arte do térreo (storefront) quando cashierLevel = 2. Base da torre; o logo do jogo vem rasterizado aqui.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashiers(2)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Cashiers/CashierL2.png",
+          "width": 1040,
+          "height": 412,
+          "bytes": 63641
+        }
+      ]
+    },
+    {
+      "id": "tower.cashier.lv3",
+      "title": "Fachada térrea / caixa — nível 3",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv3: toldo vermelho sobre a janela do caixa.",
+      "role": "Arte do térreo (storefront) quando cashierLevel = 3. Base da torre; o logo do jogo vem rasterizado aqui.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashiers(3)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Cashiers/CashierL3.png",
+          "width": 1040,
+          "height": 412,
+          "bytes": 63427
+        }
+      ]
+    },
+    {
+      "id": "tower.cashier.lv4",
+      "title": "Fachada térrea / caixa — nível 4",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv4: toldo listrado vermelho/branco + semáforo lateral de entregas.",
+      "role": "Arte do térreo (storefront) quando cashierLevel = 4. Base da torre; o logo do jogo vem rasterizado aqui.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashiers(4)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Cashiers/CashierL4.png",
+          "width": 1040,
+          "height": 412,
+          "bytes": 68755
+        }
+      ]
+    },
+    {
+      "id": "tower.cashier.lv5",
+      "title": "Fachada térrea / caixa — nível 5",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv5: fachada com mais sinalização lateral e detalhes de madeira.",
+      "role": "Arte do térreo (storefront) quando cashierLevel = 5. Base da torre; o logo do jogo vem rasterizado aqui.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashiers(5)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Cashiers/CashierL5.png",
+          "width": 1040,
+          "height": 412,
+          "bytes": 77022
+        }
+      ]
+    },
+    {
+      "id": "tower.cashier.lv6",
+      "title": "Fachada térrea / caixa — nível 6",
+      "category": "Torre",
+      "kind": "static",
+      "visual": "Nv6: vitrines verdes acesas e dois semáforos laterais (operação plena).",
+      "role": "Arte do térreo (storefront) quando cashierLevel = 6. Base da torre; o logo do jogo vem rasterizado aqui.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashiers(6)"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Cashiers/CashierL6.png",
+          "width": 1040,
+          "height": 412,
+          "bytes": 83494
+        }
+      ]
+    },
+    {
+      "id": "scene.background",
+      "title": "Backdrop urbano vertical completo",
+      "category": "Cenário",
+      "kind": "static",
+      "visual": "Canvas vertical 1904×3118: céu em degradê azul (topo), skyline de prédios coloridos com vegetação (~61–72% da altura), calçada clara, rua asfaltada com faixa pontilhada e solo escuro na base.",
+      "role": "Fonte única do cenário: no boot é derivado em memória em `bg.sky` (céu+skyline, parallax lento) e `bg.street` (calçada+rua+solo, espaço de mundo onde a torre assenta e os carros passarão).",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "background"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Backgrounds/Backgrounds.png",
+          "width": 1904,
+          "height": 3118,
+          "bytes": 117064
+        }
+      ]
+    },
+    {
+      "id": "scene.clouds",
+      "title": "Nuvem de parallax",
+      "category": "Cenário",
+      "kind": "static",
+      "visual": "Nuvem branca/ciano suave, recortada com transparência.",
+      "role": "Instâncias em parallax no céu da cena da torre.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "clouds"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Backgrounds/Clouds.png",
+          "width": 791,
+          "height": 283,
+          "bytes": 10204
+        }
+      ]
+    },
+    {
+      "id": "cast.cashierGirl",
+      "title": "Atendente do caixa (animação)",
+      "category": "Elenco",
+      "kind": "sequence",
+      "visual": "Moça com headset e avental laranja atrás de um balcão com pilha de bandejas/caixas e monitor de pedidos; a animação movimenta braços/cabeça atendendo o caixa.",
+      "role": "Funcionária visual do térreo, posicionada na janela do caixa.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "cashierGirl(f)"
+      ],
+      "notes": "Nome original do arquivo contém typo do kit (\"ChashierGirl\"); preservado.",
+      "fileCount": 40,
+      "files": [
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_00.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 4923
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_01.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 4976
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_02.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5017
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_03.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5081
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_04.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5118
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_05.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5146
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_06.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5163
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_07.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5210
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_08.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5229
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_09.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5318
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_10.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5412
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_11.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5383
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_12.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5357
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_13.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5387
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_14.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5337
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_15.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5395
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_16.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5363
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_17.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5399
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_18.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5385
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_19.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5265
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_20.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5270
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_21.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5345
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_22.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5494
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_23.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5565
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_24.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5524
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_25.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5566
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_26.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5681
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_27.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5732
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_28.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5694
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_29.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5735
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_30.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5731
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_31.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5667
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_32.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5507
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_33.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5504
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_34.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5516
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_35.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5436
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_36.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5292
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_37.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5257
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_38.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5178
+        },
+        {
+          "path": "Png/Cashier Girl/ChashierGirl-animation_39.png",
+          "width": 92,
+          "height": 73,
+          "bytes": 5041
+        }
+      ]
+    },
+    {
+      "id": "cast.chef.cooking",
+      "title": "Chef cozinhando (animação)",
+      "category": "Elenco",
+      "kind": "sequence",
+      "visual": "Chef de uniforme branco e chapéu mexendo/preparendo panela; braços e vapor animados.",
+      "role": "Estado \"cozinhando\" do chef no ciclo de vida da cozinha.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "chefCooking(f)"
+      ],
+      "notes": "",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_00.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6342
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_01.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6460
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_02.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6571
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_03.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6627
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_04.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6740
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_05.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6823
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_06.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6805
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_07.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6751
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_08.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6821
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_09.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6831
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_10.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6735
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_11.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6897
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_12.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6916
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_13.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6892
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_14.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6910
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_15.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6918
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_16.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6865
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_17.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6789
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_18.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6708
+        },
+        {
+          "path": "Png/Chef Guy/Cooking/ChefGuy-Cooking_19.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6597
+        }
+      ]
+    },
+    {
+      "id": "cast.chef.walk",
+      "title": "Chef andando vazio (animação)",
+      "category": "Elenco",
+      "kind": "sequence",
+      "visual": "Chef caminhando sem carregar nada (ciclo de passada).",
+      "role": "Deslocamento do chef entre estação e balcão.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "chefWalk(f)"
+      ],
+      "notes": "",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_00.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6538
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_01.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6631
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_02.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6608
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_03.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6683
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_04.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6780
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_05.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6928
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_06.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6761
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_07.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6649
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_08.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6600
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_09.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6598
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_10.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6506
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_11.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6713
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_12.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6726
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_13.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6652
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_14.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6821
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_15.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6905
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_16.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6815
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_17.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6652
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_18.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6693
+        },
+        {
+          "path": "Png/Chef Guy/Walk/ChefGuy-Walk_19.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 6756
+        }
+      ]
+    },
+    {
+      "id": "cast.chef.walkFullOrder",
+      "title": "Chef andando com pedido completo (animação)",
+      "category": "Elenco",
+      "kind": "sequence",
+      "visual": "Chef caminhando carregando bandeja/pilha de pedidos prontos.",
+      "role": "Momento de entrega do pedido no ciclo da cozinha.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "chefWalkFull(f)"
+      ],
+      "notes": "",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_00.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7937
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_01.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7886
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_02.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7854
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_03.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7856
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_04.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7808
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_05.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7856
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_06.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7745
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_07.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7735
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_08.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7647
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_09.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7694
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_10.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7655
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_11.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7682
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_12.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7708
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_13.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7836
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_14.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7864
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_15.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 8042
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_16.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7956
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_17.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 8006
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_18.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7904
+        },
+        {
+          "path": "Png/Chef Guy/Walk Full Order/ChefGuy-Walk Full Order_19.png",
+          "width": 100,
+          "height": 120,
+          "bytes": 7978
+        }
+      ]
+    },
+    {
+      "id": "cast.floorGirl",
+      "title": "Funcionária de andar (animação)",
+      "category": "Elenco",
+      "kind": "sequence",
+      "visual": "Moça com headset em pé/atendendo junto a um balcão com monitor (estação de atendimento de andar).",
+      "role": "Funcionária visual dos andares superiores.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "floorGirl(f)"
+      ],
+      "notes": "",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_00.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4866
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_01.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4946
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_02.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4965
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_03.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4938
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_04.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4935
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_05.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4925
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_06.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4953
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_07.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4964
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_08.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4986
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_09.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4946
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_10.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4840
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_11.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4951
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_12.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4995
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_13.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4994
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_14.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4973
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_15.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4986
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_16.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4982
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_17.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4994
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_18.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4979
+        },
+        {
+          "path": "Png/Floor Girl/FloorGirl-animation_19.png",
+          "width": 84,
+          "height": 59,
+          "bytes": 4955
+        }
+      ]
+    },
+    {
+      "id": "cast.liftGuy",
+      "title": "Operador do elevador (animação)",
+      "category": "Elenco",
+      "kind": "sequence",
+      "visual": "Homem de uniforme segurando uma caixa/pacote, em pé (idle respirando).",
+      "role": "Operador visual dentro do shaft de elevador embutido nos floors.",
+      "phase": "1",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "liftGuy(f)"
+      ],
+      "notes": "O kit não traz shaft isolado em PNG; o shaft existe embutido nos Floor_*.png (ver auditoria).",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_00.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6124
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_01.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6045
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_02.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6019
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_03.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6039
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_04.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6114
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_05.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_06.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6221
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_07.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6238
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_08.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6082
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_09.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6241
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_10.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6287
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_11.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6230
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_12.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6128
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_13.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6267
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_14.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6237
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_15.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6099
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_16.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6087
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_17.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6075
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_18.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6040
+        },
+        {
+          "path": "Png/Lift Guy/Lift Guy-animation_19.png",
+          "width": 45,
+          "height": 91,
+          "bytes": 6051
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car1.idle",
+      "title": "Veículo 1 — parada/vibração (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Van roxa com rack de teto; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carIdle(1, f)"
+      ],
+      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_00.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25740
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_01.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 23128
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_02.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25319
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_03.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25649
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_04.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 24071
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_05.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25298
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_06.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25511
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_07.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 24685
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_08.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25219
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_09.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25436
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_10.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 24913
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_11.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25436
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_12.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25219
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_13.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 24685
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_14.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25511
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_15.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25298
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_16.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 24071
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_17.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25649
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_18.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 25319
+        },
+        {
+          "path": "Png/Cars/Car1/Idle/Cars-Car1_Idle_19.png",
+          "width": 240,
+          "height": 168,
+          "bytes": 23128
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car2.idle",
+      "title": "Veículo 2 — parada/vibração (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Picape teal (verde-azulada); loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carIdle(2, f)"
+      ],
+      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_00.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21475
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_01.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 22014
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_02.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21930
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_03.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 20510
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_04.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21953
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_05.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21892
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_06.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 20397
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_07.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21840
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_08.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21919
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_09.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21275
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_10.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21832
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_11.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21275
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_12.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21919
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_13.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21840
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_14.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 20397
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_15.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21892
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_16.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21953
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_17.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 20510
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_18.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 21930
+        },
+        {
+          "path": "Png/Cars/Car2/Idle/Cars-Car2_Idle_19.png",
+          "width": 240,
+          "height": 160,
+          "bytes": 22014
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car3.idle",
+      "title": "Veículo 3 — parada/vibração (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Compacto azul com estepe traseiro; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carIdle(3, f)"
+      ],
+      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_00.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 24969
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_01.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25556
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_02.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25491
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_03.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25123
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_04.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25608
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_05.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25207
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_06.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25315
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_07.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25510
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_08.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 24820
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_09.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25363
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_10.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25574
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_11.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25363
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_12.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 24820
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_13.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25510
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_14.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25315
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_15.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25207
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_16.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25608
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_17.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25123
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_18.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25491
+        },
+        {
+          "path": "Png/Cars/Car3/Idle/Cars-Car3_Idle_19.png",
+          "width": 240,
+          "height": 158,
+          "bytes": 25556
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car4.idle",
+      "title": "Veículo 4 — parada/vibração (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Hatch amarelo/laranja; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carIdle(4, f)"
+      ],
+      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_00.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24576
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_01.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 22940
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_02.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24387
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_03.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24430
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_04.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 22704
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_05.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24309
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_06.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24359
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_07.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 23459
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_08.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24187
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_09.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24286
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_10.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 23770
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_11.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24286
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_12.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24187
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_13.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 23459
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_14.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24359
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_15.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24309
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_16.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 22704
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_17.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24430
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_18.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 24387
+        },
+        {
+          "path": "Png/Cars/Car4/Idle/Cars-Car4_Idle_19.png",
+          "width": 196,
+          "height": 157,
+          "bytes": 22940
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car5.idle",
+      "title": "Veículo 5 — parada/vibração (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Van cinza/clara de entrega; loop de suspensão/vibração parado (frames 01↔19 espelhados, loop ping-pong natural).",
+      "role": "Veículo estacionado/aguardando pedido na rua (sistema de entregas).",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carIdle(5, f)"
+      ],
+      "notes": "Carregamento sob demanda (6,7 MB no total dos 5 veículos); fora do boot.",
+      "fileCount": 20,
+      "files": [
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_00.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19773
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_01.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19526
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_02.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19732
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_03.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19715
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_04.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19597
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_05.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19830
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_06.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19555
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_07.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19731
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_08.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19798
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_09.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19347
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_10.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19754
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_11.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19347
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_12.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19798
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_13.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19731
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_14.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19555
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_15.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19830
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_16.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19597
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_17.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19715
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_18.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19732
+        },
+        {
+          "path": "Png/Cars/Car5/Idle/Cars-Car5_Idle_19.png",
+          "width": 249,
+          "height": 163,
+          "bytes": 19526
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car1.move",
+      "title": "Veículo 1 — movimento (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carMove(1, f)"
+      ],
+      "notes": "",
+      "fileCount": 40,
+      "files": [
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_00.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25655
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_01.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24822
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_02.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25733
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_03.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24986
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_04.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25323
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_05.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25247
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_06.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25110
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_07.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25454
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_08.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25121
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_09.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25096
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_10.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25184
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_11.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25076
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_12.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25090
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_13.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25409
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_14.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25040
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_15.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25178
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_16.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25273
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_17.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24918
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_18.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25673
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_19.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24758
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_20.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25623
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_21.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24752
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_22.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25668
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_23.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24934
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_24.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25257
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_25.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25178
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_26.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25048
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_27.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25414
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_28.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25072
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_29.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25066
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_30.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25170
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_31.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25093
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_32.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25115
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_33.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25443
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_34.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25088
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_35.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25229
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_36.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25312
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_37.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24969
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_38.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 25713
+        },
+        {
+          "path": "Png/Cars/Car1/Move/Cars-Car1_Move_39.png",
+          "width": 236,
+          "height": 167,
+          "bytes": 24802
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car2.move",
+      "title": "Veículo 2 — movimento (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carMove(2, f)"
+      ],
+      "notes": "",
+      "fileCount": 40,
+      "files": [
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_00.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21376
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_01.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 22037
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_02.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21680
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_03.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21728
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_04.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21804
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_05.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21793
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_06.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21809
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_07.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21699
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_08.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21544
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_09.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21563
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_10.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21600
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_11.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21551
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_12.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21501
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_13.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21656
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_14.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21748
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_15.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21724
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_16.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21718
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_17.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21660
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_18.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21598
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_19.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21967
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_20.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21303
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_21.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21975
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_22.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21598
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_23.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21668
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_24.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21721
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_25.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21714
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_26.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21755
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_27.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21658
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_28.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21515
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_29.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21530
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_30.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21577
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_31.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21551
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_32.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21551
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_33.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21697
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_34.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21790
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_35.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21771
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_36.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21798
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_37.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21725
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_38.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 21669
+        },
+        {
+          "path": "Png/Cars/Car2/Move/Cars-Car2_Move_39.png",
+          "width": 236,
+          "height": 160,
+          "bytes": 22035
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car3.move",
+      "title": "Veículo 3 — movimento (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carMove(3, f)"
+      ],
+      "notes": "",
+      "fileCount": 40,
+      "files": [
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_00.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 24833
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_01.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25785
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_02.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25222
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_03.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25962
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_04.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25612
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_05.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25655
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_06.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25706
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_07.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25791
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_08.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25437
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_09.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25732
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_10.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25310
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_11.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25723
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_12.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25397
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_13.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25725
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_14.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25646
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_15.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25555
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_16.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25533
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_17.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25879
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_18.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25132
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_19.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25706
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_20.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 24772
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_21.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25705
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_22.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25133
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_23.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25885
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_24.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25529
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_25.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25566
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_26.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25655
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_27.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25740
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_28.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25393
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_29.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25707
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_30.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25289
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_31.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25738
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_32.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25438
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_33.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25781
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_34.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25702
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_35.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25612
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_36.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25600
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_37.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25957
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_38.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25224
+        },
+        {
+          "path": "Png/Cars/Car3/Move/Cars-Car3_Move_39.png",
+          "width": 237,
+          "height": 158,
+          "bytes": 25776
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car4.move",
+      "title": "Veículo 4 — movimento (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carMove(4, f)"
+      ],
+      "notes": "",
+      "fileCount": 40,
+      "files": [
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_00.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24618
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_01.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 23782
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_02.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24863
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_03.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24338
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_04.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24645
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_05.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24536
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_06.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24588
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_07.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24512
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_08.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24649
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_09.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24340
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_10.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24538
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_11.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24309
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_12.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24616
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_13.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24459
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_14.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24499
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_15.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24444
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_16.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24566
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_17.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24241
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_18.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24772
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_19.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 23694
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_20.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24547
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_21.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 23694
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_22.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24772
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_23.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24241
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_24.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24566
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_25.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24433
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_26.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24495
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_27.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24450
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_28.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24600
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_29.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24310
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_30.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24519
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_31.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24323
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_32.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24636
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_33.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24503
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_34.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24566
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_35.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24505
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_36.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24622
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_37.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24320
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_38.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 24845
+        },
+        {
+          "path": "Png/Cars/Car4/Move/Cars-Car4_Move_39.png",
+          "width": 204,
+          "height": 158,
+          "bytes": 23778
+        }
+      ]
+    },
+    {
+      "id": "vehicle.car5.move",
+      "title": "Veículo 5 — movimento (animação)",
+      "category": "Veículos",
+      "kind": "sequence",
+      "visual": "Mesmo veículo da variante correspondente em deslocamento: rodas e suspensão animadas (40 frames).",
+      "role": "Entrada/saída de veículos na rua para entregas concluídas.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "carMove(5, f)"
+      ],
+      "notes": "",
+      "fileCount": 40,
+      "files": [
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_00.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19529
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_01.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19632
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_02.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19716
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_03.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19592
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_04.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19675
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_05.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19768
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_06.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19756
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_07.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19688
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_08.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19742
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_09.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19628
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_10.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19768
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_11.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19616
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_12.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19698
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_13.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19635
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_14.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19691
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_15.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19683
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_16.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19592
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_17.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19498
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_18.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19627
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_19.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19575
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_20.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19486
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_21.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19575
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_22.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19625
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_23.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19498
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_24.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19595
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_25.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19683
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_26.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19690
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_27.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19633
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_28.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19688
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_29.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19606
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_30.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19755
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_31.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19637
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_32.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19704
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_33.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19674
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_34.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19747
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_35.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19738
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_36.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19638
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_37.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19571
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_38.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19700
+        },
+        {
+          "path": "Png/Cars/Car5/Move/Cars-Car5_Move_39.png",
+          "width": 243,
+          "height": 162,
+          "bytes": 19638
+        }
+      ]
+    },
+    {
+      "id": "map.area",
+      "title": "Mapa de cidades (ilha)",
+      "category": "Mapa",
+      "kind": "static",
+      "visual": "Ilha verde com estradas cinzas e pontos de marcador, sobre mar azul; o conteúdo útil ocupa a faixa central de um canvas vertical 1903×3118.",
+      "role": "Tela de seleção/expansão de cidades (Fase 6).",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "mapArea"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Open Area Map/Area.png",
+          "width": 1903,
+          "height": 3118,
+          "bytes": 579478
+        }
+      ]
+    },
+    {
+      "id": "map.building.available",
+      "title": "Marcador de prédio disponível",
+      "category": "Mapa",
+      "kind": "static",
+      "visual": "Edifício em perspectiva com telhado marrom/madeira e base clara (estado disponível).",
+      "role": "Marcador de cidade desbloqueável no mapa.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "mapAvailable"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Open Area Map/Available Building.png",
+          "width": 260,
+          "height": 250,
+          "bytes": 4116
+        }
+      ]
+    },
+    {
+      "id": "map.building.locked",
+      "title": "Marcador de prédio bloqueado",
+      "category": "Mapa",
+      "kind": "static",
+      "visual": "Mesmo edifício em tons de cinza/grafite (estado bloqueado).",
+      "role": "Marcador de cidade ainda bloqueada.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "mapLocked"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Open Area Map/Locked Building.png",
+          "width": 259,
+          "height": 250,
+          "bytes": 4143
+        }
+      ]
+    },
+    {
+      "id": "map.lock",
+      "title": "Cadeado",
+      "category": "Mapa",
+      "kind": "static",
+      "visual": "Cadeado laranja com haste marrom.",
+      "role": "Ícone de bloqueio sobre marcadores e requisitos.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "mapLock"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Open Area Map/Lock.png",
+          "width": 83,
+          "height": 99,
+          "bytes": 2598
+        }
+      ]
+    },
+    {
+      "id": "map.namePlate",
+      "title": "Placa de nome",
+      "category": "Mapa",
+      "kind": "static",
+      "visual": "Placa verde escura com pino laranja à esquerda (suporte para nome da cidade).",
+      "role": "Placa com o nome da cidade no mapa.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "mapPlate"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Open Area Map/NamePlate.png",
+          "width": 193,
+          "height": 73,
+          "bytes": 1498
+        }
+      ]
+    },
+    {
+      "id": "map.clouds",
+      "title": "Nuvens do mapa",
+      "category": "Mapa",
+      "kind": "static",
+      "visual": "Grupo de nuvens claras para decorar a tela do mapa.",
+      "role": "Decoração/parallax da tela de cidades.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "mapClouds"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Open Area Map/Clouds.png",
+          "width": 442,
+          "height": 164,
+          "bytes": 5473
+        }
+      ]
+    },
+    {
+      "id": "shop.background",
+      "title": "Fundo da loja (padrão)",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Padrão de losangos azuis (textura de fundo da tela de loja).",
+      "role": "Fundo da loja premium (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "shopBackground"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 1.png",
+          "width": 1903,
+          "height": 3118,
+          "bytes": 150711
+        }
+      ]
+    },
+    {
+      "id": "shop.header",
+      "title": "Barra de cabeçalho da loja",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Barra horizontal marrom sólida (cabeçalho).",
+      "role": "Cabeçalho da tela de loja.",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "shopHeader"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 2.png",
+          "width": 1914,
+          "height": 454,
+          "bytes": 4767
+        }
+      ]
+    },
+    {
+      "id": "shop.divider",
+      "title": "Divisor fino degradê",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Filete horizontal em degradê azul (divisor de seções).",
+      "role": "Divisor de seções da loja.",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "shopDivider"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 3.png",
+          "width": 1903,
+          "height": 229,
+          "bytes": 2704
+        }
+      ]
+    },
+    {
+      "id": "shop.scroll",
+      "title": "Barra de rolagem/seleção degradê",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Barra horizontal degradê azul com fade branco no topo (trilho de scroll/abas).",
+      "role": "Trilho de rolagem ou seletor de abas da loja.",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "shopScrollbar"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 4.png",
+          "width": 1904,
+          "height": 349,
+          "bytes": 4148
+        }
+      ]
+    },
+    {
+      "id": "shop.panelGreen",
+      "title": "Painel verde com cabeçalho",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Painel verde claro com faixa de cabeçalho verde escura.",
+      "role": "Painel de listas/seções da loja.",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "shopPanelGreen"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 5.png",
+          "width": 542,
+          "height": 862,
+          "bytes": 5849
+        }
+      ]
+    },
+    {
+      "id": "shop.panelOrange",
+      "title": "Painel laranja arredondado",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Retângulo laranja arredondado com sombra (painel/botão grande).",
+      "role": "Painel de destaque ou CTA da loja.",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "shopPanelOrange"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 6.png",
+          "width": 268,
+          "height": 154,
+          "bytes": 2335
+        }
+      ]
+    },
+    {
+      "id": "shop.iap.piggy",
+      "title": "Ícone de pacote IAP — piggy",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Porquinho rosa com moedas e gemas (pacote IAP menor).",
+      "role": "Ícone de produto na loja premium; só aparece com pagamentos reais configurados (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "iapPiggy"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 7.png",
+          "width": 443,
+          "height": 392,
+          "bytes": 49451
+        }
+      ]
+    },
+    {
+      "id": "shop.iap.chest",
+      "title": "Ícone de pacote IAP — chest",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Baú azul transbordando gemas e moedas (pacote IAP médio).",
+      "role": "Ícone de produto na loja premium; só aparece com pagamentos reais configurados (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "iapChest"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 8.png",
+          "width": 490,
+          "height": 414,
+          "bytes": 59840
+        }
+      ]
+    },
+    {
+      "id": "shop.iap.cart",
+      "title": "Ícone de pacote IAP — cart",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Carrinho de mercado cheio de gemas/moedas (pacote IAP grande).",
+      "role": "Ícone de produto na loja premium; só aparece com pagamentos reais configurados (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "iapCart"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 9.png",
+          "width": 481,
+          "height": 468,
+          "bytes": 83102
+        }
+      ]
+    },
+    {
+      "id": "shop.iap.redGem",
+      "title": "Ícone de pacote IAP — redGem",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Gema vermelha grande com moedas (pacote especial).",
+      "role": "Ícone de produto na loja premium; só aparece com pagamentos reais configurados (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "iapRedGem"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 10.png",
+          "width": 484,
+          "height": 329,
+          "bytes": 37634
+        }
+      ]
+    },
+    {
+      "id": "shop.iap.gemPile",
+      "title": "Ícone de pacote IAP — gemPile",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Pilha de gemas verdes com moedas (pacote de gemas).",
+      "role": "Ícone de produto na loja premium; só aparece com pagamentos reais configurados (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "iapGemPile"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 11.png",
+          "width": 433,
+          "height": 316,
+          "bytes": 53317
+        }
+      ]
+    },
+    {
+      "id": "shop.iap.basket",
+      "title": "Ícone de pacote IAP — basket",
+      "category": "Loja",
+      "kind": "static",
+      "visual": "Cesta de madeira cheia de gemas/moedas (pacote promocional).",
+      "role": "Ícone de produto na loja premium; só aparece com pagamentos reais configurados (Fase 9).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "iapBasket"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Shop Screen/Artboard 12.png",
+          "width": 397,
+          "height": 366,
+          "bytes": 61835
+        }
+      ]
+    },
+    {
+      "id": "ui.adsIcon",
+      "title": "UI — Ads_Icon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Quadrado marrom com triângulo branco de play (ícone de vídeo/anúncio).",
+      "role": "Ícone de \"assistir anúncio\" em ofertas recompensadas.",
+      "phase": "7",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.adsIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Ads_Icon.png",
+          "width": 76,
+          "height": 57,
+          "bytes": 699
+        }
+      ]
+    },
+    {
+      "id": "ui.areaBox",
+      "title": "UI — Area Box",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Retângulo laranja/areia sólido arredondado (preenchimento de painel de área).",
+      "role": "Painel de área/hub na tela de cidades.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.areaBox"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Area Box.png",
+          "width": 694,
+          "height": 236,
+          "bytes": 1590
+        }
+      ]
+    },
+    {
+      "id": "ui.arrowUpgrade",
+      "title": "UI — ArrowUpgrade",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Seta amarela apontando para cima.",
+      "role": "Indicador de \"melhorar\" em botões/linhas de upgrade.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.arrowUpgrade"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/ArrowUpgrade.png",
+          "width": 45,
+          "height": 51,
+          "bytes": 920
+        }
+      ]
+    },
+    {
+      "id": "ui.boostIcon",
+      "title": "UI — Boost_Icon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Raio amarelo (boost).",
+      "role": "Ícone do botão de boost ×2.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.boostIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Boost_Icon.png",
+          "width": 55,
+          "height": 71,
+          "bytes": 1135
+        }
+      ]
+    },
+    {
+      "id": "ui.btnUp",
+      "title": "UI — BtnUp",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão quadrado verde com ícone de prancheta/lista.",
+      "role": "Abrir lista/painel de melhorias (alternativa ao botão de texto).",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnUp"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/BtnUp.png",
+          "width": 108,
+          "height": 104,
+          "bytes": 2115
+        }
+      ]
+    },
+    {
+      "id": "ui.btnUpPressed",
+      "title": "UI — BtnUpPressed",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Mesmo botão em versão pressionada (tons escuros).",
+      "role": "Estado pressed do btnUp.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnUpPressed"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/BtnUpPressed.png",
+          "width": 108,
+          "height": 104,
+          "bytes": 2363
+        }
+      ]
+    },
+    {
+      "id": "ui.btnBlue",
+      "title": "UI — Btn_Blue",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão retangular azul claro com borda escura.",
+      "role": "Botão secundário/informativo em popups.",
+      "phase": "4",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnBlue"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Blue.png",
+          "width": 451,
+          "height": 160,
+          "bytes": 2776
+        }
+      ]
+    },
+    {
+      "id": "ui.btnBlueOff",
+      "title": "UI — Btn_Blue_Off",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão azul acinzentado (desativado).",
+      "role": "Estado desativado de compras no painel (motivo exibido junto).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnBlueOff"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Blue_Off.png",
+          "width": 451,
+          "height": 160,
+          "bytes": 2790
+        }
+      ]
+    },
+    {
+      "id": "ui.btnBoost",
+      "title": "UI — Btn_Boost",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão amarelo/laranja arredondado (boost).",
+      "role": "Botão de boost recompensado.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnBoost"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Boost.png",
+          "width": 347,
+          "height": 172,
+          "bytes": 3322
+        }
+      ]
+    },
+    {
+      "id": "ui.btnBoostPressed",
+      "title": "UI — Btn_Boost Pressed",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Versão pressionada marrom do botão de boost.",
+      "role": "Estado pressed do boost.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnBoostPressed"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Boost Pressed.png",
+          "width": 347,
+          "height": 171,
+          "bytes": 3679
+        }
+      ]
+    },
+    {
+      "id": "ui.btnBoostDisabled",
+      "title": "UI — Btn_Boost Disable",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão de boost acinzentado (indisponível).",
+      "role": "Estado indisponível do boost (sem provedor de anúncios).",
+      "phase": "7",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnBoostDisabled"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Boost Disable.png",
+          "width": 347,
+          "height": 172,
+          "bytes": 3701
+        }
+      ]
+    },
+    {
+      "id": "ui.btnClose",
+      "title": "UI — Btn_Close",
+      "category": "UI",
+      "kind": "static",
+      "visual": "X branco com contorno escuro.",
+      "role": "Fechar popups/painéis.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnClose"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Close.png",
+          "width": 85,
+          "height": 85,
+          "bytes": 1481
+        }
+      ]
+    },
+    {
+      "id": "ui.btnGreen",
+      "title": "UI — Btn_Green",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão retangular verde claro com borda marrom.",
+      "role": "Ação principal (comprar / abrir melhorias).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnGreen"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Green.png",
+          "width": 256,
+          "height": 104,
+          "bytes": 1674
+        }
+      ]
+    },
+    {
+      "id": "ui.btnGreenPressed",
+      "title": "UI — Btn_Green Pressed",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Versão pressionada verde escura.",
+      "role": "Estado pressed da ação principal.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnGreenPressed"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Green Pressed.png",
+          "width": 256,
+          "height": 104,
+          "bytes": 1895
+        }
+      ]
+    },
+    {
+      "id": "ui.btnHelp",
+      "title": "UI — Btn_Help",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão quadrado laranja com lâmpada.",
+      "role": "Ajuda/explicações de sistemas.",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnHelp"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Help.png",
+          "width": 167,
+          "height": 163,
+          "bytes": 3890
+        }
+      ]
+    },
+    {
+      "id": "ui.btnMusic",
+      "title": "UI — Btn_Music",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão quadrado laranja com nota musical.",
+      "role": "Toggle de música (quando houver recurso de áudio).",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnMusic"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Music.png",
+          "width": 168,
+          "height": 163,
+          "bytes": 2975
+        }
+      ]
+    },
+    {
+      "id": "ui.btnMusicOff",
+      "title": "UI — Btn_Music_Off",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Mesmo botão com nota cortada (off).",
+      "role": "Estado off do toggle de música.",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnMusicOff"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Music_Off.png",
+          "width": 168,
+          "height": 162,
+          "bytes": 3105
+        }
+      ]
+    },
+    {
+      "id": "ui.btnOrange",
+      "title": "UI — Btn_Orange",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão retangular laranja grande.",
+      "role": "Ação secundária em popups.",
+      "phase": "4",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnOrange"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Orange.png",
+          "width": 568,
+          "height": 201,
+          "bytes": 3595
+        }
+      ]
+    },
+    {
+      "id": "ui.btnOrangePressed",
+      "title": "UI — Btn_Orange_Pressed",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Versão pressionada marrom.",
+      "role": "Estado pressed do botão laranja.",
+      "phase": "4",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnOrangePressed"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Orange_Pressed.png",
+          "width": 568,
+          "height": 201,
+          "bytes": 3489
+        }
+      ]
+    },
+    {
+      "id": "ui.btnOrangeSmall",
+      "title": "UI — Btn_Orange_Small",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão laranja menor.",
+      "role": "Toggles das configurações (usado hoje).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnOrangeSmall"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Orange_Small.png",
+          "width": 392,
+          "height": 143,
+          "bytes": 2426
+        }
+      ]
+    },
+    {
+      "id": "ui.btnOrangeSmallOff",
+      "title": "UI — Btn_Orange_Small_Off",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Versão off/acinzentada do botão menor.",
+      "role": "Estado off de toggles.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.btnOrangeSmallOff"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Orange_Small_Off.png",
+          "width": 393,
+          "height": 143,
+          "bytes": 2560
+        }
+      ]
+    },
+    {
+      "id": "ui.btnSound",
+      "title": "UI — Btn_Sound",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão quadrado laranja com alto-falante.",
+      "role": "Toggle de efeitos sonoros (quando houver áudio).",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnSound"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Sound.png",
+          "width": 167,
+          "height": 163,
+          "bytes": 3249
+        }
+      ]
+    },
+    {
+      "id": "ui.btnSoundOff",
+      "title": "UI — Btn_Sound_Off",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Mesmo botão com alto-falante cortado.",
+      "role": "Estado off do som.",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnSoundOff"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Sound_Off.png",
+          "width": 168,
+          "height": 162,
+          "bytes": 2907
+        }
+      ]
+    },
+    {
+      "id": "ui.btnVibra",
+      "title": "UI — Btn_Vibra",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão quadrado laranja com celular vibrando.",
+      "role": "Toggle de vibração (relevante só no app Android).",
+      "phase": "11",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnVibra"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Vibra.png",
+          "width": 168,
+          "height": 163,
+          "bytes": 3600
+        }
+      ]
+    },
+    {
+      "id": "ui.btnVibraOff",
+      "title": "UI — Btn_Vibra_Off",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Mesmo botão cortado (off).",
+      "role": "Estado off da vibração.",
+      "phase": "11",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.btnVibraOff"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Btn_Vibra_Off.png",
+          "width": 168,
+          "height": 162,
+          "bytes": 2972
+        }
+      ]
+    },
+    {
+      "id": "ui.coinIcon",
+      "title": "UI — CoinIcon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Moeda amarela com cifrão.",
+      "role": "Ícone de dinheiro na HUD.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.coinIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/CoinIcon.png",
+          "width": 57,
+          "height": 54,
+          "bytes": 2197
+        }
+      ]
+    },
+    {
+      "id": "ui.contentBox",
+      "title": "UI — ContentBox",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Barra pêssego clara com um ponto escuro à esquerda (linha de conteúdo com marcador).",
+      "role": "Fundo das linhas do painel de melhorias.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.contentBox"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/ContentBox.png",
+          "width": 695,
+          "height": 100,
+          "bytes": 1413
+        }
+      ]
+    },
+    {
+      "id": "ui.rewardGlow",
+      "title": "UI — Gams Image",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Monte de gemas verdes e moedas com brilho radial amarelo.",
+      "role": "Arte de recompensa (popup offline, conclusão de missão/evento).",
+      "phase": "4",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.rewardGlow"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Gams Image.png",
+          "width": 744,
+          "height": 765,
+          "bytes": 169734
+        }
+      ]
+    },
+    {
+      "id": "ui.gemsIcon",
+      "title": "UI — GemsIcon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Gema verde facetada.",
+      "role": "Ícone de moeda premium (somente se/quando existir).",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.gemsIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/GemsIcon.png",
+          "width": 61,
+          "height": 57,
+          "bytes": 2151
+        }
+      ]
+    },
+    {
+      "id": "ui.gemsPlus",
+      "title": "UI — GemsPlusBar",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Quadrado verde escuro com sinal de + branco.",
+      "role": "Botão \"comprar mais gemas\" ao lado do saldo premium.",
+      "phase": "9",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.gemsPlus"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/GemsPlusBar.png",
+          "width": 57,
+          "height": 55,
+          "bytes": 881
+        }
+      ]
+    },
+    {
+      "id": "ui.hubAreaBar",
+      "title": "UI — HubAreaBar",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Barra verde escura com mapa aparecendo no topo e pino laranja.",
+      "role": "Barra de área/hub do jogador na tela de cidades.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.hubAreaBar"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/HubAreaBar.png",
+          "width": 362,
+          "height": 159,
+          "bytes": 6672
+        }
+      ]
+    },
+    {
+      "id": "ui.hudCoinBar",
+      "title": "UI — HudCoinBar",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Barra âmbar arredondada com contorno escuro (suporte de saldo).",
+      "role": "Barra de dinheiro no topo da HUD.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.hudCoinBar"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/HudCoinBar.png",
+          "width": 310,
+          "height": 81,
+          "bytes": 1138
+        }
+      ]
+    },
+    {
+      "id": "ui.manyUpgradeBox",
+      "title": "UI — ManyUpgradeBox",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Caixa marrom clara dividida em 3 segmentos (seletor múltiplo).",
+      "role": "Seletor de compra múltipla (x1/x10/max) no painel.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.manyUpgradeBox"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/ManyUpgradeBox.png",
+          "width": 273,
+          "height": 85,
+          "bytes": 771
+        }
+      ]
+    },
+    {
+      "id": "ui.manyUpgradeBoxGreen",
+      "title": "UI — ManyUpgradeBoxGreen",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Quadrado verde (segmento ativo do seletor múltiplo).",
+      "role": "Segmento ativo do seletor de compra múltipla.",
+      "phase": "3",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.manyUpgradeBoxGreen"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/ManyUpgradeBoxGreen.png",
+          "width": 92,
+          "height": 75,
+          "bytes": 372
+        }
+      ]
+    },
+    {
+      "id": "ui.mapIcon",
+      "title": "UI — MapIcon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Mapa dobrado com pino laranja sobre base de madeira.",
+      "role": "Botão de mapa de cidades (hoje: indisponível com motivo).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.mapIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/MapIcon.png",
+          "width": 174,
+          "height": 169,
+          "bytes": 9656
+        }
+      ]
+    },
+    {
+      "id": "ui.popUpBox",
+      "title": "UI — PopUp_Box",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Painel bege alto com cabeçalho marrom escuro (janela genérica).",
+      "role": "Corpo do painel de melhorias e de popups futuros.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.popUpBox"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/PopUp_Box.png",
+          "width": 1065,
+          "height": 1297,
+          "bytes": 44630
+        }
+      ]
+    },
+    {
+      "id": "ui.requirementBox",
+      "title": "UI — RequermentBox",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Barra marrom escura arredondada (faixa de requisito).",
+      "role": "Linhas de requisito em popups de desbloqueio/cidade.",
+      "phase": "6",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.requirementBox"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/RequermentBox.png",
+          "width": 259,
+          "height": 59,
+          "bytes": 896
+        }
+      ]
+    },
+    {
+      "id": "ui.settingIcon",
+      "title": "UI — SettingIcon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Botão quadrado verde com engrenagem branca.",
+      "role": "Abrir configurações.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.settingsIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/SettingIcon.png",
+          "width": 128,
+          "height": 122,
+          "bytes": 3621
+        }
+      ]
+    },
+    {
+      "id": "ui.settingIconPressed",
+      "title": "UI — SettingIconPressed",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Mesmo botão pressionado (engrenagem rosada/fundo escuro).",
+      "role": "Estado pressed das configurações.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.settingsIconPressed"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/SettingIconPressed.png",
+          "width": 128,
+          "height": 122,
+          "bytes": 3779
+        }
+      ]
+    },
+    {
+      "id": "ui.settingsPopUp",
+      "title": "UI — Settings PopUp",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Painel bege com cabeçalho marrom (corpo do popup de configurações).",
+      "role": "Corpo do popup de configurações.",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.settingsPopUp"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/Settings PopUp.png",
+          "width": 953,
+          "height": 1286,
+          "bytes": 9950
+        }
+      ]
+    },
+    {
+      "id": "ui.shopIcon",
+      "title": "UI — ShopIcon",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Lojinha com toldo listrado vermelho/branco sobre base laranja.",
+      "role": "Botão de loja premium (hoje: indisponível com motivo).",
+      "phase": "2",
+      "status": "implementado",
+      "validated": true,
+      "registry": [
+        "ui.shopIcon"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/ShopIcon.png",
+          "width": 180,
+          "height": 172,
+          "bytes": 4649
+        }
+      ]
+    },
+    {
+      "id": "ui.volumeBarBg",
+      "title": "UI — VolumeBar_Bg",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Trilho arredondado vazado com barra laranja interna (slider).",
+      "role": "Slider de volume (quando houver áudio).",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.volumeBarBg"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/VolumeBar_Bg.png",
+          "width": 778,
+          "height": 214,
+          "bytes": 3158
+        }
+      ]
+    },
+    {
+      "id": "ui.volumeBarBtn",
+      "title": "UI — VolumeBar_Btn",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Knob creme arredondado com base avermelhada.",
+      "role": "Manopla do slider de volume.",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.volumeBarBtn"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/VolumeBar_Btn.png",
+          "width": 88,
+          "height": 89,
+          "bytes": 1242
+        }
+      ]
+    },
+    {
+      "id": "ui.volumeBarYellow",
+      "title": "UI — VolumeBar_Yellow",
+      "category": "UI",
+      "kind": "static",
+      "visual": "Filete amarelo (preenchimento de slider).",
+      "role": "Preenchimento do slider de volume.",
+      "phase": "10",
+      "status": "reservado",
+      "validated": false,
+      "registry": [
+        "ui.volumeBarYellow"
+      ],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Png/Ui and PopUp/VolumeBar_Yellow.png",
+          "width": 641,
+          "height": 52,
+          "bytes": 592
+        }
+      ]
+    },
+    {
+      "id": "src.ai",
+      "title": "Fontes vetoriais (Ai)",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Vetores Adobe Illustrator originais do kit (12 arquivos): Background, Cars, Cashier, Cashier Girl Parts, Chef Guy Parts, Floors, Floors Girl Parts, Lift, Lift Guy Parts, Open Area Map, PopUp and Ui, Shop Screen.",
+      "role": "Edição de arte fora do jogo; permite recortes futuros se necessário. Não entram no build.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 12,
+      "files": [
+        {
+          "path": "Ai/Background.ai",
+          "bytes": 876841
+        },
+        {
+          "path": "Ai/Cars.ai",
+          "bytes": 796643
+        },
+        {
+          "path": "Ai/Cashier Girl Parts.ai",
+          "bytes": 243159
+        },
+        {
+          "path": "Ai/Cashier.ai",
+          "bytes": 1467038
+        },
+        {
+          "path": "Ai/Chef Guy Parts.ai",
+          "bytes": 265485
+        },
+        {
+          "path": "Ai/Floors Girl Parts.ai",
+          "bytes": 230702
+        },
+        {
+          "path": "Ai/Floors.ai",
+          "bytes": 1463634
+        },
+        {
+          "path": "Ai/Lift Guy Parts.ai",
+          "bytes": 248907
+        },
+        {
+          "path": "Ai/Lift.ai",
+          "bytes": 297141
+        },
+        {
+          "path": "Ai/Open Area Map.ai",
+          "bytes": 2494300
+        },
+        {
+          "path": "Ai/PopUp and Ui.ai",
+          "bytes": 665603
+        },
+        {
+          "path": "Ai/Shop Screen.ai",
+          "bytes": 945298
+        }
+      ]
+    },
+    {
+      "id": "src.eps",
+      "title": "Fontes vetoriais (Eps)",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Vetores EPS equivalentes aos AI (12 arquivos), mesma classificação.",
+      "role": "Edição de arte fora do jogo; permite recortes futuros se necessário. Não entram no build.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 12,
+      "files": [
+        {
+          "path": "Eps/Background.eps",
+          "bytes": 6835470
+        },
+        {
+          "path": "Eps/Cars.eps",
+          "bytes": 3896402
+        },
+        {
+          "path": "Eps/Cashier Girl Parts.eps",
+          "bytes": 520754
+        },
+        {
+          "path": "Eps/Cashier.eps",
+          "bytes": 8742766
+        },
+        {
+          "path": "Eps/Chef Guy Parts.eps",
+          "bytes": 791826
+        },
+        {
+          "path": "Eps/Floors Girl Parts.eps",
+          "bytes": 501818
+        },
+        {
+          "path": "Eps/Floors.eps",
+          "bytes": 9033514
+        },
+        {
+          "path": "Eps/Lift Guy Parts.eps",
+          "bytes": 591910
+        },
+        {
+          "path": "Eps/Lift.eps",
+          "bytes": 810570
+        },
+        {
+          "path": "Eps/Open Area Map.eps",
+          "bytes": 10339446
+        },
+        {
+          "path": "Eps/PopUp and Ui.eps",
+          "bytes": 9299598
+        },
+        {
+          "path": "Eps/Shop Screen.eps",
+          "bytes": 7490602
+        }
+      ]
+    },
+    {
+      "id": "src.spine.cars",
+      "title": "Rig Spine — Cars",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Projeto Spine 4.2 dos veículos + partes (corpos Car1–Car5, Shade, Tire, TireFx).",
+      "role": "Fonte de animação esquelética. NÃO usado em runtime (ADR-0002): as sequências PNG oficiais cobrem todas as animações necessárias sem adicionar runtime Spine.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 9,
+      "files": [
+        {
+          "path": "Spine/Cars/Cars.spine",
+          "bytes": 5694
+        },
+        {
+          "path": "Spine/Cars/Images/Car1.png",
+          "width": 220,
+          "height": 144,
+          "bytes": 14960
+        },
+        {
+          "path": "Spine/Cars/Images/Car2.png",
+          "width": 218,
+          "height": 139,
+          "bytes": 13519
+        },
+        {
+          "path": "Spine/Cars/Images/Car3.png",
+          "width": 228,
+          "height": 136,
+          "bytes": 15717
+        },
+        {
+          "path": "Spine/Cars/Images/Car4.png",
+          "width": 188,
+          "height": 137,
+          "bytes": 14693
+        },
+        {
+          "path": "Spine/Cars/Images/Car5.png",
+          "width": 220,
+          "height": 140,
+          "bytes": 12071
+        },
+        {
+          "path": "Spine/Cars/Images/Shade.png",
+          "width": 224,
+          "height": 62,
+          "bytes": 809
+        },
+        {
+          "path": "Spine/Cars/Images/Tire.png",
+          "width": 50,
+          "height": 49,
+          "bytes": 1900
+        },
+        {
+          "path": "Spine/Cars/Images/TireFx.png",
+          "width": 26,
+          "height": 14,
+          "bytes": 210
+        }
+      ]
+    },
+    {
+      "id": "src.spine.cashierGirl",
+      "title": "Rig Spine — Cashier Girl",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Projeto Spine da atendente + partes (corpo, máquina de caixa, pedido, cabelo, mão).",
+      "role": "Fonte de animação esquelética. NÃO usado em runtime (ADR-0002): as sequências PNG oficiais cobrem todas as animações necessárias sem adicionar runtime Spine.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 6,
+      "files": [
+        {
+          "path": "Spine/Cashier Girl/CashierGirl.spine",
+          "bytes": 1645
+        },
+        {
+          "path": "Spine/Cashier Girl/Images/Cashier_Girl.png",
+          "width": 42,
+          "height": 65,
+          "bytes": 3232
+        },
+        {
+          "path": "Spine/Cashier Girl/Images/Cashier_Machine.png",
+          "width": 61,
+          "height": 52,
+          "bytes": 736
+        },
+        {
+          "path": "Spine/Cashier Girl/Images/Cashier_Order.png",
+          "width": 44,
+          "height": 33,
+          "bytes": 707
+        },
+        {
+          "path": "Spine/Cashier Girl/Images/HairB.png",
+          "width": 39,
+          "height": 28,
+          "bytes": 939
+        },
+        {
+          "path": "Spine/Cashier Girl/Images/HandB.png",
+          "width": 17,
+          "height": 18,
+          "bytes": 526
+        }
+      ]
+    },
+    {
+      "id": "src.spine.chef",
+      "title": "Rig Spine — Chef Guy",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Projeto Spine do chef + partes (corpos, roupas, mãos, cabeças, pernas, caixa de sushi).",
+      "role": "Fonte de animação esquelética. NÃO usado em runtime (ADR-0002): as sequências PNG oficiais cobrem todas as animações necessárias sem adicionar runtime Spine.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 11,
+      "files": [
+        {
+          "path": "Spine/Chef Guy/ChefGuy.spine",
+          "bytes": 4901
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Body1.png",
+          "width": 27,
+          "height": 39,
+          "bytes": 1119
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Body2.png",
+          "width": 28,
+          "height": 37,
+          "bytes": 1006
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Cloth.png",
+          "width": 18,
+          "height": 22,
+          "bytes": 391
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Hand1.png",
+          "width": 19,
+          "height": 36,
+          "bytes": 753
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Hand2.png",
+          "width": 19,
+          "height": 14,
+          "bytes": 556
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Head1.png",
+          "width": 51,
+          "height": 54,
+          "bytes": 2770
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Head2.png",
+          "width": 58,
+          "height": 55,
+          "bytes": 2335
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Leg1.png",
+          "width": 12,
+          "height": 15,
+          "bytes": 208
+        },
+        {
+          "path": "Spine/Chef Guy/Images/Leg2.png",
+          "width": 15,
+          "height": 15,
+          "bytes": 297
+        },
+        {
+          "path": "Spine/Chef Guy/Images/SushiBox.png",
+          "width": 38,
+          "height": 44,
+          "bytes": 737
+        }
+      ]
+    },
+    {
+      "id": "src.spine.floorGirl",
+      "title": "Rig Spine — Floor Girl",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Projeto Spine da funcionária de andar + partes (corpo, cabelo, mão, cabeça, máquina).",
+      "role": "Fonte de animação esquelética. NÃO usado em runtime (ADR-0002): as sequências PNG oficiais cobrem todas as animações necessárias sem adicionar runtime Spine.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 6,
+      "files": [
+        {
+          "path": "Spine/Floor Girl/Floor Girl.spine",
+          "bytes": 1605
+        },
+        {
+          "path": "Spine/Floor Girl/Images/Body.png",
+          "width": 31,
+          "height": 17,
+          "bytes": 745
+        },
+        {
+          "path": "Spine/Floor Girl/Images/Hair_Back.png",
+          "width": 40,
+          "height": 29,
+          "bytes": 903
+        },
+        {
+          "path": "Spine/Floor Girl/Images/Hand.png",
+          "width": 14,
+          "height": 8,
+          "bytes": 253
+        },
+        {
+          "path": "Spine/Floor Girl/Images/Head.png",
+          "width": 45,
+          "height": 47,
+          "bytes": 2189
+        },
+        {
+          "path": "Spine/Floor Girl/Images/Machine.png",
+          "width": 79,
+          "height": 36,
+          "bytes": 851
+        }
+      ]
+    },
+    {
+      "id": "src.spine.liftGuy",
+      "title": "Rig Spine — Lift Guy",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Projeto Spine do operador de elevador + partes (corpo, mãos, cabeça, perna).",
+      "role": "Fonte de animação esquelética. NÃO usado em runtime (ADR-0002): as sequências PNG oficiais cobrem todas as animações necessárias sem adicionar runtime Spine.",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 6,
+      "files": [
+        {
+          "path": "Spine/Lift Guy/Images/Body.png",
+          "width": 36,
+          "height": 46,
+          "bytes": 1876
+        },
+        {
+          "path": "Spine/Lift Guy/Images/HandL.png",
+          "width": 24,
+          "height": 13,
+          "bytes": 604
+        },
+        {
+          "path": "Spine/Lift Guy/Images/HandR.png",
+          "width": 24,
+          "height": 20,
+          "bytes": 762
+        },
+        {
+          "path": "Spine/Lift Guy/Images/Head.png",
+          "width": 37,
+          "height": 45,
+          "bytes": 2043
+        },
+        {
+          "path": "Spine/Lift Guy/Images/Leg.png",
+          "width": 31,
+          "height": 15,
+          "bytes": 401
+        },
+        {
+          "path": "Spine/Lift Guy/Lift Guy.spine",
+          "bytes": 1661
+        }
+      ]
+    },
+    {
+      "id": "src.atlas.cars",
+      "title": "Atlas TexturePacker — Cars",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Atlas TexturePacker (Cars.png 1024×256 + .json/.atlas) com corpos/peças dos veículos para o Spine.",
+      "role": "Acompanha os rigs Spine; sem uso em runtime (ADR-0002).",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 3,
+      "files": [
+        {
+          "path": "Json Atlas/Cars/Cars.atlas",
+          "bytes": 376
+        },
+        {
+          "path": "Json Atlas/Cars/Cars.json",
+          "bytes": 27313
+        },
+        {
+          "path": "Json Atlas/Cars/Cars.png",
+          "width": 1024,
+          "height": 256,
+          "bytes": 67901
+        }
+      ]
+    },
+    {
+      "id": "src.atlas.cashierGirl",
+      "title": "Atlas TexturePacker — Cashier Girl",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Atlas das partes da atendente (256×64) para o Spine.",
+      "role": "Acompanha os rigs Spine; sem uso em runtime (ADR-0002).",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 3,
+      "files": [
+        {
+          "path": "Json Atlas/Cashier Girl/ChashierGirl.atlas",
+          "bytes": 309
+        },
+        {
+          "path": "Json Atlas/Cashier Girl/ChashierGirl.json",
+          "bytes": 3746
+        },
+        {
+          "path": "Json Atlas/Cashier Girl/ChashierGirl.png",
+          "width": 256,
+          "height": 64,
+          "bytes": 4459
+        }
+      ]
+    },
+    {
+      "id": "src.atlas.chef",
+      "title": "Atlas TexturePacker — Chef Guy",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Atlas das partes do chef (256×64) para o Spine.",
+      "role": "Acompanha os rigs Spine; sem uso em runtime (ADR-0002).",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 3,
+      "files": [
+        {
+          "path": "Json Atlas/Chef Guy/ChefGuy.atlas",
+          "bytes": 505
+        },
+        {
+          "path": "Json Atlas/Chef Guy/ChefGuy.json",
+          "bytes": 21992
+        },
+        {
+          "path": "Json Atlas/Chef Guy/ChefGuy.png",
+          "width": 256,
+          "height": 64,
+          "bytes": 6338
+        }
+      ]
+    },
+    {
+      "id": "src.atlas.floorGirl",
+      "title": "Atlas TexturePacker — Floor Girl",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Atlas das partes da funcionária de andar (128×64) para o Spine.",
+      "role": "Acompanha os rigs Spine; sem uso em runtime (ADR-0002).",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 3,
+      "files": [
+        {
+          "path": "Json Atlas/Floor Girl/FloorGirl.atlas",
+          "bytes": 290
+        },
+        {
+          "path": "Json Atlas/Floor Girl/FloorGirl.json",
+          "bytes": 3566
+        },
+        {
+          "path": "Json Atlas/Floor Girl/FloorGirl.png",
+          "width": 128,
+          "height": 64,
+          "bytes": 3390
+        }
+      ]
+    },
+    {
+      "id": "src.atlas.liftGuy",
+      "title": "Atlas TexturePacker — Lift Guy",
+      "category": "Fontes",
+      "kind": "source",
+      "visual": "Atlas das partes do operador de elevador (128×64) para o Spine.",
+      "role": "Acompanha os rigs Spine; sem uso em runtime (ADR-0002).",
+      "phase": "-",
+      "status": "nao-usado-runtime",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 3,
+      "files": [
+        {
+          "path": "Json Atlas/Lift Guy/Lift Guy.atlas",
+          "bytes": 263
+        },
+        {
+          "path": "Json Atlas/Lift Guy/Lift Guy.json",
+          "bytes": 3517
+        },
+        {
+          "path": "Json Atlas/Lift Guy/Lift Guy.png",
+          "width": 128,
+          "height": 64,
+          "bytes": 3917
+        }
+      ]
+    },
+    {
+      "id": "meta.license",
+      "title": "Licença do kit",
+      "category": "Metadados",
+      "kind": "meta",
+      "visual": "Arquivo de texto apontando para https://craftpix.net/file-licenses/.",
+      "role": "Obrigação de licença; referenciado em docs/assets/ASSET_LICENSES.md e nos créditos do jogo.",
+      "phase": "-",
+      "status": "metadado",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "license.txt",
+          "bytes": 35
+        }
+      ]
+    },
+    {
+      "id": "meta.fonts",
+      "title": "Fontes sugeridas pelo kit",
+      "category": "Metadados",
+      "kind": "meta",
+      "visual": "Links Google Fonts: Bebas Neue, Passion One, Lilita One.",
+      "role": "O jogo usa Lilita One (OFL) via CSS, conforme sugestão do kit.",
+      "phase": "1",
+      "status": "metadado",
+      "validated": true,
+      "registry": [],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "FontLink.txt",
+          "bytes": 211
+        }
+      ]
+    },
+    {
+      "id": "meta.sourceUrl",
+      "title": "Atalho para a página do kit",
+      "category": "Metadados",
+      "kind": "meta",
+      "visual": "Atalho de internet Windows para https://craftpix.net/freebies/.",
+      "role": "Proveniência do pacote; preservado por auditoria.",
+      "phase": "-",
+      "status": "metadado",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 1,
+      "files": [
+        {
+          "path": "Free Assets Craftpix!.url",
+          "bytes": 115
+        }
+      ]
+    },
+    {
+      "id": "meta.dsstore",
+      "title": "Ruído de sistema operacional (.DS_Store)",
+      "category": "Metadados",
+      "kind": "meta",
+      "visual": "Arquivos ocultos de metadata do macOS, sem conteúdo visual.",
+      "role": "Nenhum. Mantidos para não tocar nos originais; ignorados pelo pipeline de build.",
+      "phase": "-",
+      "status": "metadado",
+      "validated": false,
+      "registry": [],
+      "notes": "",
+      "fileCount": 8,
+      "files": [
+        {
+          "path": "Png/.DS_Store",
+          "bytes": 10244
+        },
+        {
+          "path": "Png/Cars/.DS_Store",
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Cars/Car1/.DS_Store",
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Cars/Car2/.DS_Store",
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Cars/Car3/.DS_Store",
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Cars/Car4/.DS_Store",
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Cars/Car5/.DS_Store",
+          "bytes": 6148
+        },
+        {
+          "path": "Png/Chef Guy/.DS_Store",
+          "bytes": 6148
+        }
+      ]
+    }
+  ]
+}
