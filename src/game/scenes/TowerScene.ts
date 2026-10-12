@@ -211,6 +211,15 @@ export class TowerScene extends Phaser.Scene {
   }
 
   override update(): void {
+    // Camera resumes following the tower top once manual pan expires.
+    if (this.time.now >= this.manualCamUntil) {
+      const viewH = this.scale.height / this.cameras.main.zoom;
+      const target = this.camTargetY - viewH / 2;
+      const current = this.cameras.main.scrollY;
+      if (Math.abs(current - target) > 1) {
+        this.cameras.main.scrollY = Phaser.Math.Linear(current, target, 0.08);
+      }
+    }
     // Chef patrol: walk <-> cook cycle gives the kitchen visible life.
     if (this.chef && this.anims.exists('anim.chefWalk')) {
       const t = this.time.now / 1000;
